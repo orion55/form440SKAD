@@ -9,7 +9,7 @@ function Verba_script_no {
 	Start-Sleep -Seconds 3
 }
 
-function Verba_script {
+<#function Verba_script {
 	Param(
 		[String]$scrpt_name,
 		[String]$mask = "*.*")
@@ -109,7 +109,7 @@ if ($amount -eq 0) {
 $memoryConn.Close()
 
 Start-Sleep -Seconds 5
-}
+}#>
 
 #копируем каталоги рекурсивно на "волшебный" диск А: - туда и обратно
 function Copy_dirs {
@@ -620,7 +620,6 @@ Function 440_out {
 	Get-ChildItem "$work\b*.xml" -Exclude "$work\bz1*.xml" | rename-item -newname { $_.name -replace '\.xml', '.vrb' }
 
 	#подписываем все файлы
-	#Write-Log -EntryType Information -Message "Подписываем все файлы"
 	Write-Log -EntryType Information -Message "Загружаем ключевую дискету $vdkeys"
 	Copy_dirs -from $vdkeys -to 'a:'
 
@@ -628,14 +627,14 @@ Function 440_out {
 	if ($vrbFiles.count -gt 0) {
 		#зашифровываем и подписываем файлы
 		Write-Log -EntryType Information -Message "Зашифровываем и подписываем vrb-файлы"
-		SKAD_script -$encrypt true -maskFiles $vrbFiles
+		SKAD_script -encrypt $true -maskFiles "*.vrb"
 	}
 
-	$someFiles = Get-ChildItem "$work\*.*" -Exclude "*.vrb"
+	$someFiles = Get-ChildItem "$work\*.xml"
 	if ($someFiles.count -gt 0) {
 		#подписываем файлы
 		Write-Log -EntryType Information -Message "Подписываем оставшиеся файлы файлы"
-		SKAD_script -$encrypt false -maskFiles $someFiles
+		SKAD_script -encrypt $false -maskFiles "*.xml"
 	}
 	exit
 
@@ -674,8 +673,8 @@ Function 440_out {
 
 function SKAD_script {
 	Param(
-		[String]$encrypt = $false,
-		$maskFiles)
+		$encrypt = $false,
+		[string]$maskFiles = "*.*")
 
 	<#$Database = "$tmp\Names.SQLite"
 	if (Test-Path -Path $Database) {
@@ -701,7 +700,8 @@ function SKAD_script {
 
 		Invoke-SqliteQuery -Query $query -SQLiteConnection $memoryConn
 
-		$DataTable = Get-ChildItem $maskFiles | % {
+		$mask = Get-ChildItem -path $work $maskFiles
+		$DataTable = $mask | % {
 			[pscustomobject]@{
 				namefile   = $_.Name
 				lengthfile = $_.Length
@@ -717,8 +717,8 @@ function SKAD_script {
 
 	Write-Log -EntryType Information -Message "Начинаем преобразование..."
 
-	foreach ($file in $maskFiles) {
-		$tmpFile = $file.DirectoryName + '\' + $file.BaseName + '.test'
+	foreach ($file in $mask) {
+		$tmpFile = $file.FullName + '.test'
 
 		$arguments = ''
 		if ($encrypt) {
@@ -732,17 +732,17 @@ function SKAD_script {
 		Start-Process $spki $arguments -NoNewWindow -Wait
 	}
 
-	if ($encrypt) {
-		$msg = Get-ChildItem -path $work '*.vrb' | Remove-Item -Verbose -Force *>&1
-		Write-Log -EntryType Information -Message ($msg | Out-String)
-		$msg = Get-ChildItem -path $work '*.test' | Rename-Item -NewName { $_.Name -replace '.test$', '.vrb' } -Verbose *>&1
-		Write-Log -EntryType Information -Message ($msg | Out-String)
-	}
+
+	$msg = $mask | Remove-Item -Verbose -Force *>&1
+	Write-Log -EntryType Information -Message ($msg | Out-String)
+	$msg = Get-ChildItem -path $work '*.test' | Rename-Item -NewName { $_.Name -replace '.test$', '' } -Verbose *>&1
+	Write-Log -EntryType Information -Message ($msg | Out-String)
+
 
 	#проверяем действительно или все файлы подписаны\расшифрованы
 	Write-Log -EntryType Information -Message "Сравниваем до и после преобразования..."
 
-	$DataTable = $maskFiles | % {
+	$DataTable = Get-ChildItem -path $work $maskFiles | % {
 		[pscustomobject]@{
 			namefile   = $_.Name
 			lengthfile = $_.Length
@@ -796,5 +796,5 @@ if ($amount -eq 0) {
 
 $memoryConn.Close()
 
-Start-Sleep -Seconds 5
+#Start-Sleep -Seconds 5
 }
