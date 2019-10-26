@@ -738,6 +738,7 @@ function SKAD_script {
 	$msg = Get-ChildItem -path $work '*.test' | Rename-Item -NewName { $_.Name -replace '.test$', '' } -Verbose *>&1
 	Write-Log -EntryType Information -Message ($msg | Out-String)
 
+
 	#проверяем действительно или все файлы подписаны\расшифрованы
 	Write-Log -EntryType Information -Message "Сравниваем до и после преобразования..."
 
