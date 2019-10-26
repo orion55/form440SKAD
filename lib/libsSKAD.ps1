@@ -732,7 +732,6 @@ function SKAD_script {
 		Start-Process $spki $arguments -NoNewWindow -Wait
 	}
 
-
 	$msg = $mask | Remove-Item -Verbose -Force *>&1
 	Write-Log -EntryType Information -Message ($msg | Out-String)
 	$msg = Get-ChildItem -path $work '*.test' | Rename-Item -NewName { $_.Name -replace '.test$', '' } -Verbose *>&1
