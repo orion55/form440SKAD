@@ -717,6 +717,7 @@ function SKAD_script {
 	Write-Log -EntryType Information -Message "Начинаем преобразование..."
 
 	#Start-Process "$verba" "/@$scrpt_name" -NoNewWindow -Wait
+
 	$maskFiles
 
 	exit
