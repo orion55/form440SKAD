@@ -620,23 +620,24 @@ Function 440_out {
 	Get-ChildItem "$work\b*.xml" -Exclude "$work\bz1*.xml" | rename-item -newname { $_.name -replace '\.xml', '.vrb' }
 
 	#подписываем все файлы
-	Write-Log -EntryType Information -Message "Подписываем все файлы"
+	#Write-Log -EntryType Information -Message "Подписываем все файлы"
 	Write-Log -EntryType Information -Message "Загружаем ключевую дискету $vdkeys"
 	Copy_dirs -from $vdkeys -to 'a:'
 
 	$vrbFiles = Get-ChildItem "$work\*.vrb"
-	SKAD_script -$encrypt true -maskFiles $vrbFiles
-	exit
-
-	$vrbFiles = Get-ChildItem "$work\*.vrb"
 	if ($vrbFiles.count -gt 0) {
-		#зашифровываем файлы
-		Write-Log -EntryType Information -Message "Зашифровываем vrb-файлы"
-		Write-Log -EntryType Information -Message "Загружаем ключевую дискету $disk_crypt"
-		Remove-Item 'a:' -Recurse -ErrorAction "SilentlyContinue"
-		Copy_dirs -from $disk_crypt -to 'a:'
-		Verba_script -scrpt_name $script_crypt -mask "*.vrb"
+		#зашифровываем и подписываем файлы
+		Write-Log -EntryType Information -Message "Зашифровываем и подписываем vrb-файлы"
+		SKAD_script -$encrypt true -maskFiles $vrbFiles
 	}
+
+	$someFiles = Get-ChildItem "$work\*.*" -Exclude "*.vrb"
+	if ($someFiles.count -gt 0) {
+		#подписываем файлы
+		Write-Log -EntryType Information -Message "Подписываем оставшиеся файлы файлы"
+		SKAD_script -$encrypt false -maskFiles $someFiles
+	}
+	exit
 
 	$afnFiles = Get-ChildItem "$arhivePath\AFN_7102803_MIFNS00_*.arj"
 	$afnCount = ($afnFiles | Measure-Object).count
@@ -676,11 +677,11 @@ function SKAD_script {
 		[String]$encrypt = $false,
 		$maskFiles)
 
-	$Database = "$tmp\Names.SQLite"
+	<#$Database = "$tmp\Names.SQLite"
 	if (Test-Path -Path $Database) {
 		Remove-Item $Database
-	}
-	#$Database = ":MEMORY:"
+	}#>
+	$Database = ":MEMORY:"
 	$memoryConn = New-SQLiteConnection -DataSource $Database
 
 	[int]$amount = 0
@@ -716,17 +717,32 @@ function SKAD_script {
 
 	Write-Log -EntryType Information -Message "Начинаем преобразование..."
 
-	#Start-Process "$verba" "/@$scrpt_name" -NoNewWindow -Wait
+	foreach ($file in $maskFiles) {
+		$tmpFile = $file.DirectoryName + '\' + $file.BaseName + '.test'
 
-	$maskFiles
+		$arguments = ''
+		if ($encrypt) {
+			$arguments = "-sign -encrypt -profile $profile -registry -algorithm 1.2.643.7.1.1.2.2 -in $($file.FullName) -out $tmpFile -reclist $recList -silent $logSpki"
+		}
+		else {
+			$arguments = "-sign -profile $profile -registry -algorithm 1.2.643.7.1.1.2.2 -data $($file.FullName) -out $tmpFile -reclist $recList -silent $logSpki"
+		}
 
-	exit
-	Start-Sleep -Seconds 3
+		Write-Log -EntryType Information -Message "Обрабатываем файл $($file.Name)"
+		Start-Process $spki $arguments -NoNewWindow -Wait
+	}
 
-	#проверяем действительно или все файлы подписаны\расшифрованы. Верба иногда вылетает с ошибкой.
+	if ($encrypt) {
+		$msg = Get-ChildItem -path $work '*.vrb' | Remove-Item -Verbose -Force *>&1
+		Write-Log -EntryType Information -Message ($msg | Out-String)
+		$msg = Get-ChildItem -path $work '*.test' | Rename-Item -NewName { $_.Name -replace '.test$', '.vrb' } -Verbose *>&1
+		Write-Log -EntryType Information -Message ($msg | Out-String)
+	}
+
+	#проверяем действительно или все файлы подписаны\расшифрованы
 	Write-Log -EntryType Information -Message "Сравниваем до и после преобразования..."
 
-	$DataTable = Get-ChildItem "$work\$mask" | % {
+	$DataTable = $maskFiles | % {
 		[pscustomobject]@{
 			namefile   = $_.Name
 			lengthfile = $_.Length
@@ -761,7 +777,7 @@ if ($count -ne 0) {
 	}
 
 	$query = "drop table FiLES;
-            drop table NEWFiLES;"
+				drop table NEWFiLES;"
 
 	Invoke-SqliteQuery -Query $query -SQLiteConnection $memoryConn
 }

@@ -1,0 +1,55 @@
+Текущее время: Sat Oct 26 19:00:49 2019
+"C:\Program Files\MDPREI\spki\spki1utl.exe" -sign -encrypt -profile OT_TestFOIV -registry -algorithm 1.2.643.7.1.1.2.2 -in D:\SKAD\form440SKAD\temp\work\BVD1_ZSV17102803_720320191025_103582_20191025_0002_000001_000002.vrb -out D:\SKAD\form440SKAD\temp\work\BVD1_ZSV17102803_720320191025_103582_20191025_0002_000001_000002.test -reclist D:\SKAD\form440SKAD\util\Reclist.conf -silent D:\SKAD\form440SKAD\log\26102019_spki.log 
+Инициализация
+Установка ЭП и шифрование файла
+Результат: OK (00000000)
+Текущее время: Sat Oct 26 19:00:50 2019
+"C:\Program Files\MDPREI\spki\spki1utl.exe" -sign -encrypt -profile OT_TestFOIV -registry -algorithm 1.2.643.7.1.1.2.2 -in D:\SKAD\form440SKAD\temp\work\BVD1_ZSV17102803_720320191025_103582_20191025_0002_000001_000005.vrb -out D:\SKAD\form440SKAD\temp\work\BVD1_ZSV17102803_720320191025_103582_20191025_0002_000001_000005.test -reclist D:\SKAD\form440SKAD\util\Reclist.conf -silent D:\SKAD\form440SKAD\log\26102019_spki.log 
+Инициализация
+Установка ЭП и шифрование файла
+Результат: OK (00000000)
+Текущее время: Sat Oct 26 19:06:23 2019
+"C:\Program Files\MDPREI\spki\spki1utl.exe" -sign -encrypt -profile OT_TestFOIV -registry -algorithm 1.2.643.7.1.1.2.2 -in D:\SKAD\form440SKAD\temp\work\BVD1_ZSV17102803_720320191025_103582_20191025_0002_000001_000002.vrb -out D:\SKAD\form440SKAD\temp\work\BVD1_ZSV17102803_720320191025_103582_20191025_0002_000001_000002.test -reclist D:\SKAD\form440SKAD\util\Reclist.conf -silent D:\SKAD\form440SKAD\log\26102019_spki.log 
+Инициализация
+Установка ЭП и шифрование файла
+Результат: OK (00000000)
+Текущее время: Sat Oct 26 19:06:24 2019
+"C:\Program Files\MDPREI\spki\spki1utl.exe" -sign -encrypt -profile OT_TestFOIV -registry -algorithm 1.2.643.7.1.1.2.2 -in D:\SKAD\form440SKAD\temp\work\BVD1_ZSV17102803_720320191025_103582_20191025_0002_000001_000005.vrb -out D:\SKAD\form440SKAD\temp\work\BVD1_ZSV17102803_720320191025_103582_20191025_0002_000001_000005.test -reclist D:\SKAD\form440SKAD\util\Reclist.conf -silent D:\SKAD\form440SKAD\log\26102019_spki.log 
+Инициализация
+Установка ЭП и шифрование файла
+Результат: OK (00000000)
+Текущее время: Sat Oct 26 19:06:31 2019
+"C:\Program Files\MDPREI\spki\spki1utl.exe" -sign -encrypt -profile OT_TestFOIV -registry -algorithm 1.2.643.7.1.1.2.2 -in D:\SKAD\form440SKAD\temp\work\PB1_ZSV17102803_720320191025_104942.xml -out D:\SKAD\form440SKAD\temp\work\PB1_ZSV17102803_720320191025_104942.test -reclist D:\SKAD\form440SKAD\util\Reclist.conf -silent D:\SKAD\form440SKAD\log\26102019_spki.log 
+Инициализация
+Установка ЭП и шифрование файла
+Результат: OK (00000000)
+Текущее время: Sat Oct 26 19:06:32 2019
+"C:\Program Files\MDPREI\spki\spki1utl.exe" -sign -encrypt -profile OT_TestFOIV -registry -algorithm 1.2.643.7.1.1.2.2 -in D:\SKAD\form440SKAD\temp\work\PB1_ZSV17102803_720320191025_104942.xml -out D:\SKAD\form440SKAD\temp\work\PB1_ZSV17102803_720320191025_104942.test -reclist D:\SKAD\form440SKAD\util\Reclist.conf -silent D:\SKAD\form440SKAD\log\26102019_spki.log 
+Инициализация
+Установка ЭП и шифрование файла
+Результат: OK (00000000)
+Текущее время: Sat Oct 26 19:06:34 2019
+"C:\Program Files\MDPREI\spki\spki1utl.exe" -sign -encrypt -profile OT_TestFOIV -registry -algorithm 1.2.643.7.1.1.2.2 -in D:\SKAD\form440SKAD\temp\work\PB1_ZSV17102803_720320191025_104942.xml -out D:\SKAD\form440SKAD\temp\work\PB1_ZSV17102803_720320191025_104942.test -reclist D:\SKAD\form440SKAD\util\Reclist.conf -silent D:\SKAD\form440SKAD\log\26102019_spki.log 
+Инициализация
+Установка ЭП и шифрование файла
+Результат: OK (00000000)
+Текущее время: Sat Oct 26 19:06:35 2019
+"C:\Program Files\MDPREI\spki\spki1utl.exe" -sign -encrypt -profile OT_TestFOIV -registry -algorithm 1.2.643.7.1.1.2.2 -in D:\SKAD\form440SKAD\temp\work\PB1_ZSV17102803_720320191025_104942.xml -out D:\SKAD\form440SKAD\temp\work\PB1_ZSV17102803_720320191025_104942.test -reclist D:\SKAD\form440SKAD\util\Reclist.conf -silent D:\SKAD\form440SKAD\log\26102019_spki.log 
+Инициализация
+Установка ЭП и шифрование файла
+Результат: OK (00000000)
+Текущее время: Sat Oct 26 19:06:37 2019
+"C:\Program Files\MDPREI\spki\spki1utl.exe" -sign -encrypt -profile OT_TestFOIV -registry -algorithm 1.2.643.7.1.1.2.2 -in D:\SKAD\form440SKAD\temp\work\PB1_ZSV17102803_720320191025_104942.xml -out D:\SKAD\form440SKAD\temp\work\PB1_ZSV17102803_720320191025_104942.test -reclist D:\SKAD\form440SKAD\util\Reclist.conf -silent D:\SKAD\form440SKAD\log\26102019_spki.log 
+Инициализация
+Установка ЭП и шифрование файла
+Результат: OK (00000000)
+Текущее время: Sat Oct 26 19:06:38 2019
+"C:\Program Files\MDPREI\spki\spki1utl.exe" -sign -encrypt -profile OT_TestFOIV -registry -algorithm 1.2.643.7.1.1.2.2 -in D:\SKAD\form440SKAD\temp\work\PB1_ZSV17102803_720320191025_104942.xml -out D:\SKAD\form440SKAD\temp\work\PB1_ZSV17102803_720320191025_104942.test -reclist D:\SKAD\form440SKAD\util\Reclist.conf -silent D:\SKAD\form440SKAD\log\26102019_spki.log 
+Инициализация
+Установка ЭП и шифрование файла
+Результат: OK (00000000)
+Текущее время: Sat Oct 26 19:06:40 2019
+"C:\Program Files\MDPREI\spki\spki1utl.exe" -sign -encrypt -profile OT_TestFOIV -registry -algorithm 1.2.643.7.1.1.2.2 -in D:\SKAD\form440SKAD\temp\work\PB1_ZSV17102803_720320191025_104942.xml -out D:\SKAD\form440SKAD\temp\work\PB1_ZSV17102803_720320191025_104942.test -reclist D:\SKAD\form440SKAD\util\Reclist.conf -silent D:\SKAD\form440SKAD\log\26102019_spki.log 
+Инициализация
+Установка ЭП и шифрование файла
+Результат: OK (00000000)
