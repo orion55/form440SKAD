@@ -56,7 +56,8 @@ function kwtfcbCheck {
 		}
 		Write-Log -EntryType Information -Message "Пришли подтверждения"
 		foreach ($file in $successArr) {
-			Copy-Item -Path "$work\$file" -Destination $succPath -ErrorAction "SilentlyContinue"
+			$msg = Copy-Item -Path "$work\$file" -Destination $succPath -ErrorAction "SilentlyContinue" -Verbose -Force *>&1
+			Write-Log -EntryType Information -Message ($msg | Out-String)
 		}
 		$count = $successArr.Count
 		$body += "Пришли успешные подтверждения - $count шт.`n"
@@ -72,7 +73,8 @@ function kwtfcbCheck {
 		}
 		Write-Log -EntryType Error -Message "Пришли подтверждения с ошибками!"
 		foreach ($file in $errorArr) {
-			Copy-Item -Path "$work\$file" -Destination $errPath -ErrorAction "SilentlyContinue"
+			$msg = Copy-Item -Path "$work\$file" -Destination $errPath -ErrorAction "SilentlyContinue" -Verbose -Force *>&1
+			Write-Log -EntryType Information -Message ($msg | Out-String)
 		}
 		$count = $errorArr.Count
 		$body += "Пришли подтверждения с ошибками - $count шт.`n"
@@ -81,14 +83,21 @@ function kwtfcbCheck {
 		$body += "Потверждения находятся в каталоге $errPath`n"
 		$title = "Пришли подтверждения с ошибками по 440П"
 	}
-
-	$encoding = [System.Text.Encoding]::UTF8
-	Send-MailMessage -To $mail_addr -Body $body -Encoding $encoding -From $mail_from -Subject $title -SmtpServer $mail_server
+	if (Test-Connection $mail_server -Quiet -Count 2) {
+		$encoding = [System.Text.Encoding]::UTF8
+		Send-MailMessage -To $mail_addr -Body $body -Encoding $encoding -From $mail_from -Subject $title -SmtpServer $mail_server
+	}
+	else {
+		Write-Log -EntryType Error -Message "Не удалось соединиться с почтовым сервером $mail_server"
+	}
 	Write-Log -EntryType Information -Message $body
 
-	Copy-Item -Path "$work\KWTFCB_*.xml" -Destination $arm440 -ErrorAction "SilentlyContinue"
-	Copy-Item -Path "$work\KWTFCB_*.xml" -Destination $comita_in -ErrorAction "SilentlyContinue"
-	Remove-Item -Path "$work\KWTFCB_*.xml"
+	$msg = Copy-Item -Path "$work\KWTFCB_*.xml" -Destination $arm440 -ErrorAction "SilentlyContinue"  -Verbose -Force *>&1
+	Write-Log -EntryType Information -Message ($msg | Out-String)
+	$msg = Copy-Item -Path "$work\KWTFCB_*.xml" -Destination $comita_in -ErrorAction "SilentlyContinue"  -Verbose -Force *>&1
+	Write-Log -EntryType Information -Message ($msg | Out-String)
+	$msg = Remove-Item -Path "$work\KWTFCB_*.xml" -Verbose -Force *>&1
+	Write-Log -EntryType Information -Message ($msg | Out-String)
 }
 
 function documentsCheck {
@@ -142,19 +151,28 @@ function documentsCheck {
 		$body += "Прочие документы: " + $typeDocs.other + "`n"
 	}
 
-	$encoding = [System.Text.Encoding]::UTF8
-	Send-MailMessage -To $mail_addr -Body $body -Encoding $encoding -From $mail_from -Subject $title -SmtpServer $mail_server
-	Write-Log -EntryType Information -Message $body
+	if (Test-Connection $mail_server -Quiet -Count 2) {
+		$encoding = [System.Text.Encoding]::UTF8
+		Send-MailMessage -To $mail_addr -Body $body -Encoding $encoding -From $mail_from -Subject $title -SmtpServer $mail_server
+		Write-Log -EntryType Information -Message $body
+	}
+	else {
+		Write-Log -EntryType Error -Message "Не удалось соединиться с почтовым сервером $mail_server"
+	}
 
 	$curDate = Get-Date -Format "ddMMyyyy"
 	$arhivePath = $440p_arhive + '\' + $curDate
 	if (!(Test-Path $arhivePath)) {
 		New-Item -ItemType directory -Path $arhivePath | out-Null
 	}
-	Copy-Item -Path "$work\*.xml" -Destination $arhivePath -ErrorAction "SilentlyContinue"
-	Copy-Item -Path "$work\*.xml" -Destination $arm440 -ErrorAction "SilentlyContinue"
-	Copy-Item -Path "$work\*.xml" -Destination $comita_in -ErrorAction "SilentlyContinue"
-	Remove-Item -Path "$work\*.xml"
+	$msg = Copy-Item -Path "$work\*.xml" -Destination $arhivePath -ErrorAction "SilentlyContinue" -Verbose -Force *>&1
+	Write-Log -EntryType Information -Message ($msg | Out-String)
+	$msg = Copy-Item -Path "$work\*.xml" -Destination $arm440 -ErrorAction "SilentlyContinue" -Verbose -Force *>&1
+	Write-Log -EntryType Information -Message ($msg | Out-String)
+	$msg = Copy-Item -Path "$work\*.xml" -Destination $comita_in -ErrorAction "SilentlyContinue" -Verbose -Force *>&1
+	Write-Log -EntryType Information -Message ($msg | Out-String)
+	$msg = Remove-Item -Path "$work\*.xml" -Verbose -Force *>&1
+	Write-Log -EntryType Information -Message ($msg | Out-String)
 }
 
 function Test-FileLock {
@@ -205,62 +223,6 @@ function Check-FilesLock {
 	}
 }
 
-<#function 440_in {
-	$curDate = Get-Date -Format "ddMMyyyy"
-	$arhivePath = $440p_arhive + '\' + $curDate
-	if (!(Test-Path $arhivePath)) {
-		New-Item -ItemType directory -Path $arhivePath | out-Null
-	}
-
-	$arj_files = Get-ChildItem "$work\*.arj"
-	if ($arj_files.count -eq 0) {
-		Write-Log -EntryType Error -Message "Файлы отчетности не найдены в каталоге $work"
-		exit
-	}
-	#Проверяем блокировку файлов
-	Check-FilesLock -in_files $arj_files
-
-	#переносим файлы в архив
-	Write-Log -EntryType Information -Message "Копирование файлов в архив $arhivePath"
-	$msg = Copy-Item -Path "$work\*.arj" -Destination $arhivePath -Verbose -Force *>&1
-	Write-Log -EntryType Information -Message ($msg | Out-String)
-
-	#снимаем подпись с отчетов
-	Write-Log -EntryType Information -Message "Снимаем подпись с arj-архивов"
-	Write-Log -EntryType Information -Message "Загружаем ключевую дискету $disk_sig"
-	Copy_dirs -from $disk_sig -to 'a:'
-	Verba_script -scrpt_name $script_unsig -mask "*.arj"
-
-	arj_unpack
-
-	Set-Location $work
-	$vrbFiles = Get-ChildItem "$work\*.vrb"
-	if ($vrbFiles.count -gt 0) {
-		#расшифровываем файлы
-		Write-Log -EntryType Information -Message "Расшифровываем vrb-файлы"
-		Write-Log -EntryType Information -Message "Загружаем ключевую дискету $disk_crypt"
-		Remove-Item 'a:' -Recurse -ErrorAction "SilentlyContinue"
-		Copy_dirs -from $disk_crypt -to 'a:'
-		Verba_script -scrpt_name $script_uncrypt -mask "*.VRB"
-
-		Write-Log -EntryType Information -Message "Переименовываем файлы в xml"
-		Get-ChildItem '*.vrb' | Rename-Item -NewName { $_.Name -replace '.vrb$', '.xml' }
-	}
-
-	#снимаем подпись с xml-файлов
-	Write-Log -EntryType Information -Message "Снимаем подпись с xml-файлов"
-	Write-Log -EntryType Information -Message "Загружаем ключевую дискету $disk_sig"
-	Remove-Item 'a:' -Recurse -ErrorAction "SilentlyContinue"
-	Copy_dirs -from $disk_sig -to 'a:'
-	Verba_script -scrpt_name $script_unsig -mask "*.xml"
-
-	Write-Log -EntryType Information -Message "Форматируем xml-файлы"
-	$files_xml = Get-ChildItem -Path "*.xml"
-	foreach ($file_xml in $files_xml) {
-		[xml]$xml = Get-Content $file_xml
-		$xml.Save($file_xml)
-	}
-}#>
 function 440_in {
 	$curDate = Get-Date -Format "ddMMyyyy"
 	$arhivePath = $440p_arhive + '\' + $curDate
@@ -268,6 +230,9 @@ function 440_in {
 		New-Item -ItemType directory -Path $arhivePath | out-Null
 	}
 
+	Write-Log -EntryType Information -Message "Загружаем ключевую дискету $vdkeys"
+	Copy_dirs -from $vdkeys -to 'a:'
+
 	$arj_files = Get-ChildItem "$work\*.arj"
 	if ($arj_files.count -eq 0) {
 		Write-Log -EntryType Error -Message "Файлы отчетности не найдены в каталоге $work"
@@ -283,32 +248,28 @@ function 440_in {
 
 	#снимаем подпись с отчетов
 	Write-Log -EntryType Information -Message "Снимаем подпись с arj-архивов"
-	Write-Log -EntryType Information -Message "Загружаем ключевую дискету $disk_sig"
-	Copy_dirs -from $disk_sig -to 'a:'
-	Verba_script -scrpt_name $script_unsig -mask "*.arj"
-
+	SKAD_Decrypt -decrypt $false -maskFiles "*.arj"
 	arj_unpack
 
 	Set-Location $work
-	$vrbFiles = Get-ChildItem "$work\*.vrb"
-	if ($vrbFiles.count -gt 0) {
-		#расшифровываем файлы
-		Write-Log -EntryType Information -Message "Расшифровываем vrb-файлы"
-		Write-Log -EntryType Information -Message "Загружаем ключевую дискету $disk_crypt"
-		Remove-Item 'a:' -Recurse -ErrorAction "SilentlyContinue"
-		Copy_dirs -from $disk_crypt -to 'a:'
-		Verba_script -scrpt_name $script_uncrypt -mask "*.VRB"
-
-		Write-Log -EntryType Information -Message "Переименовываем файлы в xml"
-		Get-ChildItem '*.vrb' | Rename-Item -NewName { $_.Name -replace '.vrb$', '.xml' }
-	}
 
 	#снимаем подпись с xml-файлов
-	Write-Log -EntryType Information -Message "Снимаем подпись с xml-файлов"
-	Write-Log -EntryType Information -Message "Загружаем ключевую дискету $disk_sig"
-	Remove-Item 'a:' -Recurse -ErrorAction "SilentlyContinue"
-	Copy_dirs -from $disk_sig -to 'a:'
-	Verba_script -scrpt_name $script_unsig -mask "*.xml"
+	$xmlFiles = Get-ChildItem "$work\*.xml"
+	if (($xmlFiles | Measure-Object).count -gt 0) {
+		Write-Log -EntryType Information -Message "Снимаем подпись с xml-файлов"
+		SKAD_Decrypt -decrypt $false -maskFiles "*.xml"
+	}
+
+	$vrbFiles = Get-ChildItem "$work\*.vrb"
+	if (($vrbFiles | Measure-Object).count -gt 0) {
+		#расшифровываем файлы
+		Write-Log -EntryType Information -Message "Расшифровываем vrb-файлы"
+		SKAD_Decrypt -decrypt $true -maskFiles "*.VRB"
+
+		Write-Log -EntryType Information -Message "Переименовываем файлы в xml"
+		$msg = Get-ChildItem '*.vrb' | Rename-Item -NewName { $_.Name -replace '.vrb$', '.xml' } -Verbose -Force *>&1
+		Write-Log -EntryType Information -Message ($msg | Out-String)
+	}
 
 	Write-Log -EntryType Information -Message "Форматируем xml-файлы"
 	$files_xml = Get-ChildItem -Path "*.xml"
@@ -317,47 +278,6 @@ function 440_in {
 		$xml.Save($file_xml)
 	}
 }
-function arj_unpack_old {
-	Set-Location $work
-
-	Write-Log -EntryType Information -Message "Начинаем разархивацию..."
-	$cur_files = Get-ChildItem "$work\*.*" -Exclude "*.arj"
-	$cur_count = $cur_files.count;
-
-	$err_files = @()
-	foreach ($arj_file in $arj_files) {
-		Write-Log -EntryType Information -Message "Разархивация файла $arj_file"
-		$arg_list = "e -y $arj_file"
-		$arjProc = Start-Process -FilePath $arj32 -ArgumentList $arg_list -Wait -NoNewWindow
-
-		if ($arjProc -eq $null) {
-			$new_cur_files = Get-ChildItem "$work\*.*" -Exclude "*.arj"
-			$new_cur_count = $new_cur_files.count
-			if ($new_cur_count -gt $cur_count ) {
-				$cur_count = $new_cur_count
-			}
-			else {
-				$err_files += $arj_file.FullName;
-			}
-		}
-		else {
-			$err_files += $arj_file.FullName;
-		}
-	}
-
-	if ($err_files.count -gt 0) {
-		$encoding = [System.Text.Encoding]::UTF8
-		$title = "Автоматический приём по форме 440П - прекращён!"
-		$body = "Приём прекращён. Архивы повреждены`n"
-		$body += ($err_files | Out-String)
-		Send-MailMessage -To $mail_addr -Body $body -Encoding $encoding -From $mail_from -Subject $title -SmtpServer $mail_server
-		Write-Log -EntryType Error -Message $body
-		exit
-	}
-
-	Remove-Item -Path '*.arj'
-}
-
 function arj_unpack {
 	Write-Log -EntryType Information -Message "Начинаем разархивацию..."
 	$tmp_arj = "$curDir\tmp_arj"
@@ -384,11 +304,16 @@ function arj_unpack {
 	}
 
 	if ($err_files.count -gt 0) {
-		$encoding = [System.Text.Encoding]::UTF8
-		$title = "Автоматический приём по форме 440П - прекращён!"
-		$body = "Приём прекращён. Архивы повреждены`n"
-		$body += ($err_files | Out-String)
-		Send-MailMessage -To $mail_addr -Body $body -Encoding $encoding -From $mail_from -Subject $title -SmtpServer $mail_server
+		if (Test-Connection $mail_server -Quiet -Count 2) {
+			$encoding = [System.Text.Encoding]::UTF8
+			$title = "Автоматический приём по форме 440П - прекращён!"
+			$body = "Приём прекращён. Архивы повреждены`n"
+			$body += ($err_files | Out-String)
+			Send-MailMessage -To $mail_addr -Body $body -Encoding $encoding -From $mail_from -Subject $title -SmtpServer $mail_server
+		}
+		else {
+			Write-Log -EntryType Error -Message "Не удалось соединиться с почтовым сервером $mail_server"
+		}
 		Write-Log -EntryType Error -Message $body
 		exit
 	}
@@ -501,14 +426,14 @@ Function 440_out {
 	if ($vrbFiles.count -gt 0) {
 		#зашифровываем и подписываем файлы
 		Write-Log -EntryType Information -Message "Зашифровываем и подписываем vrb-файлы"
-		SKAD_script -encrypt $true -maskFiles "*.vrb"
+		SKAD_Encrypt -encrypt $true -maskFiles "*.vrb"
 	}
 
 	$someFiles = Get-ChildItem "$work\*.xml"
 	if ($someFiles.count -gt 0) {
 		#подписываем файлы
 		Write-Log -EntryType Information -Message "Подписываем оставшиеся файлы файлы"
-		SKAD_script -encrypt $false -maskFiles "*.xml"
+		SKAD_Encrypt -encrypt $false -maskFiles "*.xml"
 	}
 
 	$afnFiles = Get-ChildItem "$arhivePath\AFN_7102803_MIFNS00_*.arj"
@@ -528,7 +453,7 @@ Function 440_out {
 
 	#подписываем все файлы
 	Write-Log -EntryType Information -Message "Подписываем файл архива $work\$afnFileName"
-	SKAD_script -encrypt $false -maskFiles "*.arj"
+	SKAD_Encrypt -encrypt $false -maskFiles "*.arj"
 
 	Write-Log -EntryType Information -Message "Копируем файл архива $afnFileName в $arhivePath"
 	Copy-Item "$work\$afnFileName" -Destination $arhivePath -Force
@@ -543,13 +468,14 @@ Function 440_out {
 		$title = "Отправлены сообщения по 440П SKAD Signatura"
 		$encoding = [System.Text.Encoding]::UTF8
 		Send-MailMessage -To $mail_addr -Body $body -Encoding $encoding -From $mail_from -Subject $title -SmtpServer $mail_server
-	} else {
+	}
+	else {
 		Write-Log -EntryType Error -Message "Не удалось соединиться с почтовым сервером $mail_server"
 	}
 	Write-Log -EntryType Information -Message $body
 }
 
-function SKAD_script {
+function SKAD_Encrypt {
 	Param(
 		$encrypt = $false,
 		[string]$maskFiles = "*.*")
@@ -609,11 +535,16 @@ function SKAD_script {
 		Write-Log -EntryType Information -Message "Обрабатываем файл $($file.Name)"
 		Start-Process $spki $arguments -NoNewWindow -Wait
 	}
-
-	$msg = $mask | Remove-Item -Verbose -Force *>&1
-	Write-Log -EntryType Information -Message ($msg | Out-String)
-	$msg = Get-ChildItem -path $work '*.test' | Rename-Item -NewName { $_.Name -replace '.test$', '' } -Verbose *>&1
-	Write-Log -EntryType Information -Message ($msg | Out-String)
+	$testFiles = Get-ChildItem "$work\*.test"
+	if (($testFiles | Measure-Object).count -gt 0) {
+		$msg = $mask | Remove-Item -Verbose -Force *>&1
+		Write-Log -EntryType Information -Message ($msg | Out-String)
+		$msg = Get-ChildItem -path $work '*.test' | Rename-Item -NewName { $_.Name -replace '.test$', '' } -Verbose *>&1
+		Write-Log -EntryType Information -Message ($msg | Out-String)
+	}
+	else {
+		Write-Log -EntryType Error -Message "Ошибка при работе программы $spki"
+	}
 
 	#проверяем действительно или все файлы подписаны\расшифрованы
 	Write-Log -EntryType Information -Message "Сравниваем до и после преобразования..."
@@ -672,5 +603,39 @@ if ($amount -eq 0) {
 
 $memoryConn.Close()
 
-#Start-Sleep -Seconds 5
+}
+function SKAD_Decrypt {
+	Param(
+		$decrypt = $false,
+		[string]$maskFiles = "*.*")
+
+	Write-Log -EntryType Information -Message "Начинаем преобразование..."
+	$mask = Get-ChildItem -path $work $maskFiles
+
+	foreach ($file in $mask) {
+		$tmpFile = $file.FullName + '.test'
+
+		$arguments = ''
+		if ($decrypt) {
+			$arguments = "-decrypt -verify -delete -1 -profile $profile -registry -in $($file.FullName) -out $tmpFile -silent $logSpki"
+		}
+		else {
+			$arguments = "-verify -delete -1 -profile $profile -registry -in $($file.FullName) -out $tmpFile -silent $logSpki"
+		}
+
+		Write-Log -EntryType Information -Message "Обрабатываем файл $($file.Name)"
+		Start-Process $spki $arguments -NoNewWindow -Wait
+	}
+
+	$testFiles = Get-ChildItem "$work\*.test"
+	if (($testFiles | Measure-Object).count -gt 0) {
+		$msg = $mask | Remove-Item -Verbose -Force *>&1
+		Write-Log -EntryType Information -Message ($msg | Out-String)
+		$msg = Get-ChildItem -path $work '*.test' | Rename-Item -NewName { $_.Name -replace '.test$', '' } -Verbose *>&1
+		Write-Log -EntryType Information -Message ($msg | Out-String)
+	}
+	else {
+		Write-Log -EntryType Error -Message "Ошибка при работе программы $spki"
+	}
+
 }
