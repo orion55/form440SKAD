@@ -1,116 +1,3 @@
-function Verba_script_no {
-	Param(
-		[String]$scrpt_name,
-		[String]$mask = "*.*")
-
-
-	Write-Log -EntryType Information -Message "Начинаем преобразование..."
-	Start-Process "$verba" "/@$scrpt_name" -NoNewWindow -Wait
-	Start-Sleep -Seconds 3
-}
-
-<#function Verba_script {
-	Param(
-		[String]$scrpt_name,
-		[String]$mask = "*.*")
-
-	$memoryConn = New-SQLiteConnection -DataSource :MEMORY:
-
-	[int]$amount = 0
-	[string]$tmp = "$curDir\tmp"
-
-	do {
-		$query = "CREATE TABLE FiLES (
-	    namefile VARCHAR (100) NOT NULL UNIQUE,
-	    lengthfile INTEGER NOT NULL,
-	    PRIMARY KEY(namefile)
-        );
-        CREATE TABLE NEWFiLES (
-	    namefile VARCHAR (100) NOT NULL UNIQUE,
-	    lengthfile INTEGER NOT NULL,
-	    PRIMARY KEY(namefile)
-        );"
-
-		Invoke-SqliteQuery -Query $query -SQLiteConnection $memoryConn
-
-		$DataTable = Get-ChildItem "$work\$mask" | % {
-			[pscustomobject]@{
-				namefile   = $_.Name
-				lengthfile = $_.Length
-			}
-		} | Out-DataTable
-
-	if (($DataTable | Measure-Object).count -eq 0) {
-		$amount = 1
-		break
-	}
-
-	Invoke-SQLiteBulkCopy -DataTable $DataTable -Table FiLES -Force -SQLiteConnection $memoryConn
-
-	Write-Log -EntryType Information -Message "Начинаем преобразование..."
-	Start-Process "$verba" "/@$scrpt_name" -NoNewWindow -Wait
-	Start-Sleep -Seconds 3
-
-	#проверяем действительно или все файлы подписаны\расшифрованы. Верба иногда вылетает с ошибкой.
-	Write-Log -EntryType Information -Message "Сравниваем до и после преобразования..."
-
-	$DataTable = Get-ChildItem "$work\$mask" | % {
-		[pscustomobject]@{
-			namefile   = $_.Name
-			lengthfile = $_.Length
-		}
-	} | Out-DataTable
-
-if (($DataTable | Measure-Object).count -eq 0) {
-	$amount = 1
-	break
-}
-Invoke-SQLiteBulkCopy -DataTable $DataTable -Table NEWFiLES -Force -SQLiteConnection $memoryConn
-
-#сравниваем старую и новую длину файлов, и показываем те файлы у которых длина не изменилась (т.е. преобразование не было осуществлено)
-$query = "select FiLES.namefile from FiLES join NEWFiLES on FiLES.namefile = NEWFiLES.namefile where FiLES.lengthfile = NEWFiLES.lengthfile"
-$namefiles = Invoke-SqliteQuery -Query $query -SQLiteConnection $memoryConn
-
-#если не все преобразованы, повторяем процесс
-$count = ($namefiles | Measure-Object).Count
-if ($count -ne 0) {
-
-	Write-Log -EntryType Error -Message "Часть файлов не были преобразованы!"
-
-	if (!(Test-Path $tmp)) {
-		New-Item -ItemType directory -Path $tmp | out-Null
-	}
-	$excludeArray = @()
-	$namefiles.namefile | % { $excludeArray += $_ }
-
-	$files1 = Get-ChildItem "$work\$mask" -Exclude $excludeArray
-	foreach ($ff2 in $files1) {
-		Move-Item -Path $ff2 -Destination $tmp
-	}
-
-	$query = "drop table FiLES;
-            drop table NEWFiLES;"
-
-	Invoke-SqliteQuery -Query $query -SQLiteConnection $memoryConn
-}
-$amount--
-} until ($count -eq 0 -or $amount -eq 0)
-
-if (Test-Path $tmp) {
-	Move-Item -Path "$tmp\*.*" -Destination $work
-	Remove-Item -Recurse $tmp
-}
-
-if ($amount -eq 0) {
-	Write-Log -EntryType Error -Message "Ошибка при работе с Verba"
-	exit
-}
-
-$memoryConn.Close()
-
-Start-Sleep -Seconds 5
-}#>
-
 #копируем каталоги рекурсивно на "волшебный" диск А: - туда и обратно
 function Copy_dirs {
 	Param(
@@ -318,6 +205,62 @@ function Check-FilesLock {
 	}
 }
 
+<#function 440_in {
+	$curDate = Get-Date -Format "ddMMyyyy"
+	$arhivePath = $440p_arhive + '\' + $curDate
+	if (!(Test-Path $arhivePath)) {
+		New-Item -ItemType directory -Path $arhivePath | out-Null
+	}
+
+	$arj_files = Get-ChildItem "$work\*.arj"
+	if ($arj_files.count -eq 0) {
+		Write-Log -EntryType Error -Message "Файлы отчетности не найдены в каталоге $work"
+		exit
+	}
+	#Проверяем блокировку файлов
+	Check-FilesLock -in_files $arj_files
+
+	#переносим файлы в архив
+	Write-Log -EntryType Information -Message "Копирование файлов в архив $arhivePath"
+	$msg = Copy-Item -Path "$work\*.arj" -Destination $arhivePath -Verbose -Force *>&1
+	Write-Log -EntryType Information -Message ($msg | Out-String)
+
+	#снимаем подпись с отчетов
+	Write-Log -EntryType Information -Message "Снимаем подпись с arj-архивов"
+	Write-Log -EntryType Information -Message "Загружаем ключевую дискету $disk_sig"
+	Copy_dirs -from $disk_sig -to 'a:'
+	Verba_script -scrpt_name $script_unsig -mask "*.arj"
+
+	arj_unpack
+
+	Set-Location $work
+	$vrbFiles = Get-ChildItem "$work\*.vrb"
+	if ($vrbFiles.count -gt 0) {
+		#расшифровываем файлы
+		Write-Log -EntryType Information -Message "Расшифровываем vrb-файлы"
+		Write-Log -EntryType Information -Message "Загружаем ключевую дискету $disk_crypt"
+		Remove-Item 'a:' -Recurse -ErrorAction "SilentlyContinue"
+		Copy_dirs -from $disk_crypt -to 'a:'
+		Verba_script -scrpt_name $script_uncrypt -mask "*.VRB"
+
+		Write-Log -EntryType Information -Message "Переименовываем файлы в xml"
+		Get-ChildItem '*.vrb' | Rename-Item -NewName { $_.Name -replace '.vrb$', '.xml' }
+	}
+
+	#снимаем подпись с xml-файлов
+	Write-Log -EntryType Information -Message "Снимаем подпись с xml-файлов"
+	Write-Log -EntryType Information -Message "Загружаем ключевую дискету $disk_sig"
+	Remove-Item 'a:' -Recurse -ErrorAction "SilentlyContinue"
+	Copy_dirs -from $disk_sig -to 'a:'
+	Verba_script -scrpt_name $script_unsig -mask "*.xml"
+
+	Write-Log -EntryType Information -Message "Форматируем xml-файлы"
+	$files_xml = Get-ChildItem -Path "*.xml"
+	foreach ($file_xml in $files_xml) {
+		[xml]$xml = Get-Content $file_xml
+		$xml.Save($file_xml)
+	}
+}#>
 function 440_in {
 	$curDate = Get-Date -Format "ddMMyyyy"
 	$arhivePath = $440p_arhive + '\' + $curDate
@@ -374,7 +317,6 @@ function 440_in {
 		$xml.Save($file_xml)
 	}
 }
-
 function arj_unpack_old {
 	Set-Location $work
 
@@ -532,74 +474,6 @@ function documentsCheckSend {
 	return $body
 }
 
-<#Function 440_out_old{
-    #проверяем типы сообщений для отправки
-    [string]$body = documentsCheckSend
-
-    $curDate = Get-Date -Format "ddMMyyyy"
-	$arhivePath = $440p_arhive + '\' + $curDate
-	if (!(Test-Path $arhivePath)){
-			New-Item -ItemType directory -Path $arhivePath | out-Null
-	}
-
-    Stop-HostLog
-	$msg = Copy-Item -Path "$work\*.xml" -Destination $arhivePath -Verbose -Force *>&1
-    Write-Log -EntryType Information -Message ($msg | Out-String)
-    Start-HostLog -LogLevel Information
-    Write-Log -EntryType Information -Message "Копирование файлов в архив $arhivePath"
-
-    Write-Log -EntryType Information -Message "Переименовываем файлы *.xml -> *.vrb"
-    Get-ChildItem "$work\b*.xml" -Exclude "$work\bz1*.xml" | rename-item -newname { $_.name -replace '\.xml','.vrb' }
-
-    #подписываем все файлы
-	Write-Log -EntryType Information -Message "Подписываем все файлы"
-	Write-Log -EntryType Information -Message "Загружаем ключевую дискету $disk_sig_send"
-	Copy_dirs -from $disk_sig_send -to 'a:'
-	Verba_script -scrpt_name $script_sig -mask "*.*"
-
-    $vrbFiles = Get-ChildItem "$work\*.vrb"
-	if ($vrbFiles.count -gt 0){
-		#зашифровываем файлы
-		Write-Log -EntryType Information -Message "Зашифровываем vrb-файлы"
-		Write-Log -EntryType Information -Message "Загружаем ключевую дискету $disk_crypt"
-		Remove-Item 'a:' -Recurse -ErrorAction "SilentlyContinue"
-		Copy_dirs -from $disk_crypt -to 'a:'
-		Verba_script -scrpt_name $script_crypt -mask "*.vrb"
-	}
-
-    $afnFiles = Get-ChildItem "$arhivePath\AFN_7102803_MIFNS00_*.arj"
-    $afnCount = ($afnFiles | Measure-Object).count
-    $afnCount++
-    $afnCountStr = $afnCount.ToString("00000")
-
-    $curDateAfn = Get-Date -Format "yyyyMMdd"
-    $afnFileName = "AFN_7102803_MIFNS00_" + $curDateAfn + "_" + $afnCountStr + ".arj"
-
-    Write-Log -EntryType Information -Message "Начинаем архивацию..."
-	$AllArgs = @('a', '-e', "$work\$afnFileName", "$work\*.xml", "$work\*.vrb")
-	&$arj32	$AllArgs
-
-    Remove-Item "$work\*.*" -Exclude "AFN_7102803_MIFNS00_*.arj"
-
-    #подписываем все файлы
-	Write-Log -EntryType Information -Message "Подписываем файл архива $work\$afnFileName"
-	Write-Log -EntryType Information -Message "Загружаем ключевую дискету $disk_sig_send"
-	Copy_dirs -from $disk_sig_send -to 'a:'
-	Verba_script -scrpt_name $script_sig -mask "*.arj"
-
-    Write-Log -EntryType Information -Message "Копируем файл архива $afnFileName в $arhivePath"
-    Copy-Item "$work\$afnFileName" -Destination $arhivePath -Force
-    Write-Log -EntryType Information -Message "Копируем файл архива $afnFileName в $outcoming_post"
-    Copy-Item "$work\$afnFileName" -Destination $outcoming_post -Force
-
-    Remove-Item "$work\$afnFileName"
-
-    $title = "Отправлены сообщения по 440П"
-	$encoding = [System.Text.Encoding]::UTF8
-	Send-MailMessage -To $mail_addr -Body $body -Encoding $encoding -From $mail_from -Subject $title -SmtpServer $mail_server
-    Write-Log -EntryType Information -Message $body
-}#>
-
 Function 440_out {
 	#проверяем типы сообщений для отправки
 	[string]$body = documentsCheckSend
@@ -636,7 +510,6 @@ Function 440_out {
 		Write-Log -EntryType Information -Message "Подписываем оставшиеся файлы файлы"
 		SKAD_script -encrypt $false -maskFiles "*.xml"
 	}
-	exit
 
 	$afnFiles = Get-ChildItem "$arhivePath\AFN_7102803_MIFNS00_*.arj"
 	$afnCount = ($afnFiles | Measure-Object).count
@@ -650,24 +523,29 @@ Function 440_out {
 	$AllArgs = @('a', '-e', "$work\$afnFileName", "$work\*.xml", "$work\*.vrb")
 	&$arj32	$AllArgs
 
-	Remove-Item "$work\*.*" -Exclude "AFN_7102803_MIFNS00_*.arj"
+	$msg = Remove-Item "$work\*.*" -Exclude "AFN_7102803_MIFNS00_*.arj" -Verbose *>&1
+	Write-Log -EntryType Information -Message ($msg | Out-String)
 
 	#подписываем все файлы
 	Write-Log -EntryType Information -Message "Подписываем файл архива $work\$afnFileName"
-	Write-Log -EntryType Information -Message "Загружаем ключевую дискету $disk_sig_send"
-	Copy_dirs -from $disk_sig_send -to 'a:'
-	Verba_script -scrpt_name $script_sig -mask "*.arj"
+	SKAD_script -encrypt $false -maskFiles "*.arj"
 
 	Write-Log -EntryType Information -Message "Копируем файл архива $afnFileName в $arhivePath"
 	Copy-Item "$work\$afnFileName" -Destination $arhivePath -Force
 	Write-Log -EntryType Information -Message "Копируем файл архива $afnFileName в $outcoming_post"
 	Copy-Item "$work\$afnFileName" -Destination $outcoming_post -Force
 
-	Remove-Item "$work\$afnFileName"
+	$msg = Remove-Item "$work\$afnFileName" -Verbose *>&1
+	Write-Log -EntryType Information -Message ($msg | Out-String)
 
-	$title = "Отправлены сообщения по 440П SKAD Signatura"
-	$encoding = [System.Text.Encoding]::UTF8
-	Send-MailMessage -To $mail_addr -Body $body -Encoding $encoding -From $mail_from -Subject $title -SmtpServer $mail_server
+	Write-Log -EntryType Information -Message "Отправка почтового сообщения"
+	if (Test-Connection $mail_server -Quiet -Count 2) {
+		$title = "Отправлены сообщения по 440П SKAD Signatura"
+		$encoding = [System.Text.Encoding]::UTF8
+		Send-MailMessage -To $mail_addr -Body $body -Encoding $encoding -From $mail_from -Subject $title -SmtpServer $mail_server
+	} else {
+		Write-Log -EntryType Error -Message "Не удалось соединиться с почтовым сервером $mail_server"
+	}
 	Write-Log -EntryType Information -Message $body
 }
 
@@ -736,7 +614,6 @@ function SKAD_script {
 	Write-Log -EntryType Information -Message ($msg | Out-String)
 	$msg = Get-ChildItem -path $work '*.test' | Rename-Item -NewName { $_.Name -replace '.test$', '' } -Verbose *>&1
 	Write-Log -EntryType Information -Message ($msg | Out-String)
-
 
 	#проверяем действительно или все файлы подписаны\расшифрованы
 	Write-Log -EntryType Information -Message "Сравниваем до и после преобразования..."
