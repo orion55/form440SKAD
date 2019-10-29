@@ -436,16 +436,32 @@ Function 440_out {
 		SKAD_Encrypt -encrypt $false -maskFiles "*.xml"
 	}
 
-	$afnFiles = Get-ChildItem "$arhivePath\AFN_7102803_MIFNS00_*.arj"
+	if ($debug) {
+		$afnFiles = Get-ChildItem "$arhivePath\AFN_7102803_MIFNS00_*.arj.tst"
+	}
+	else {
+		$afnFiles = Get-ChildItem "$arhivePath\AFN_7102803_MIFNS00_*.arj"
+	}
 	$afnCount = ($afnFiles | Measure-Object).count
 	$afnCount++
 	$afnCountStr = $afnCount.ToString("00000")
 
 	$curDateAfn = Get-Date -Format "yyyyMMdd"
-	$afnFileName = "AFN_7102803_MIFNS00_" + $curDateAfn + "_" + $afnCountStr + ".arj"
+
+	if ($debug) {
+		$afnFileName = "AFN_7102803_MIFNS00_" + $curDateAfn + "_" + $afnCountStr + ".arj.tst"
+	}
+	else {
+		$afnFileName = "AFN_7102803_MIFNS00_" + $curDateAfn + "_" + $afnCountStr + ".arj"
+	}
 
 	Write-Log -EntryType Information -Message "Начинаем архивацию..."
-	$AllArgs = @('a', '-e', "$work\$afnFileName", "$work\*.xml", "$work\*.vrb")
+	if ($debug) {
+		$AllArgs = @('a', '-e', "$work\$afnFileName", "$work\*.xml.tst", "$work\*.vrb.tst")
+	}
+	else {
+		$AllArgs = @('a', '-e', "$work\$afnFileName", "$work\*.xml", "$work\*.vrb")
+	}
 	&$arj32	$AllArgs
 
 	$msg = Remove-Item "$work\*.*" -Exclude "AFN_7102803_MIFNS00_*.arj" -Verbose *>&1
@@ -539,7 +555,13 @@ function SKAD_Encrypt {
 	if (($testFiles | Measure-Object).count -gt 0) {
 		$msg = $mask | Remove-Item -Verbose -Force *>&1
 		Write-Log -EntryType Information -Message ($msg | Out-String)
-		$msg = Get-ChildItem -path $work '*.test' | Rename-Item -NewName { $_.Name -replace '.test$', '' } -Verbose *>&1
+		if ($debug) {
+			$msg = Get-ChildItem -path $work '*.test' | Rename-Item -NewName { $_.Name -replace '.test$', '.tst' } -Verbose *>&1
+		}
+		else {
+			$msg = Get-ChildItem -path $work '*.test' | Rename-Item -NewName { $_.Name -replace '.test$', '' } -Verbose *>&1
+		}
+
 		Write-Log -EntryType Information -Message ($msg | Out-String)
 	}
 	else {

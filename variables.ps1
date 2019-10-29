@@ -29,7 +29,7 @@
 [string]$logName = $curDir + "\log\form440p.log"
 
 [string]$spki = "C:\Program Files\MDPREI\spki\spki1utl.exe"
-[string]$vdkeys = "d:\SKAD\Floppy\DISKET2019-skad-test\test1"
+[string]$vdkeys = "c:\SKAD\Floppy\DISKET2019-skad-test\test1"
 [string]$profile = "OT_TestFOIV"
 [string]$recList = "$curDir\util\Reclist.conf"
 

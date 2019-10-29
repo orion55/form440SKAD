@@ -1,0 +1,507 @@
+﻿[2019-10-29 11:33:24Z] - INFO - Режим отладки
+[2019-10-29 11:33:24Z] - ERRR - Путь d:\SKAD\Floppy\DISKET2019-skad-test\test1 не найден!
+[2019-10-29 11:33:24Z] - INFO - Нажмите любую клавишу для продолжения
+[2019-10-29 11:34:00Z] - INFO - Режим отладки
+[2019-10-29 11:34:00Z] - INFO - Копируем файл AFN_MIFNS00_7102803_20191025_00001.arj
+[2019-10-29 11:34:00Z] - INFO - Сохраняем текущею ключевую дискету
+[2019-10-29 11:34:00Z] - INFO - Загружаем ключевую дискету c:\SKAD\Floppy\DISKET2019-skad-test\test1
+[2019-10-29 11:34:00Z] - INFO - Копирование файлов в архив C:\SKAD\form440SKAD\temp\440p\Arhive\29102019
+[2019-10-29 11:34:00Z] - INFO - Performing the operation "Copy File" on target "Item: C:\SKAD\form440SKAD\temp\work\AFN_MIFNS00_7102803_20191025_00001.arj Destination: C:\SKAD\form440SKAD\temp\440p\Arhive\29102019\AFN_MIFNS00_7102803_20191025_00001.arj".
+
+[2019-10-29 11:34:00Z] - INFO - Снимаем подпись с arj-архивов
+[2019-10-29 11:34:00Z] - INFO - Начинаем преобразование...
+[2019-10-29 11:34:00Z] - INFO - Обрабатываем файл AFN_MIFNS00_7102803_20191025_00001.arj
+[2019-10-29 11:34:01Z] - INFO - Performing the operation "Remove File" on target "C:\SKAD\form440SKAD\temp\work\AFN_MIFNS00_7102803_20191025_00001.arj".
+
+[2019-10-29 11:34:01Z] - INFO - Performing the operation "Rename File" on target "Item: C:\SKAD\form440SKAD\temp\work\AFN_MIFNS00_7102803_20191025_00001.arj.test Destination: C:\SKAD\form440SKAD\temp\work\AFN_MIFNS00_7102803_20191025_00001.arj".
+
+[2019-10-29 11:34:01Z] - INFO - Начинаем разархивацию...
+[2019-10-29 11:34:01Z] - INFO - Разархивация файла C:\SKAD\form440SKAD\temp\work\AFN_MIFNS00_7102803_20191025_00001.arj
+[2019-10-29 11:34:03Z] - INFO - Снимаем подпись с xml-файлов
+[2019-10-29 11:34:03Z] - INFO - Начинаем преобразование...
+[2019-10-29 11:34:03Z] - INFO - Обрабатываем файл PB1_ZSV17102803_720320191025_104942.xml
+[2019-10-29 11:34:04Z] - INFO - Performing the operation "Remove File" on target "C:\SKAD\form440SKAD\temp\work\PB1_ZSV17102803_720320191025_104942.xml".
+
+[2019-10-29 11:34:04Z] - INFO - Performing the operation "Rename File" on target "Item: C:\SKAD\form440SKAD\temp\work\PB1_ZSV17102803_720320191025_104942.xml.test Destination: C:\SKAD\form440SKAD\temp\work\PB1_ZSV17102803_720320191025_104942.xml".
+
+[2019-10-29 11:34:04Z] - INFO - Расшифровываем vrb-файлы
+[2019-10-29 11:34:04Z] - INFO - Начинаем преобразование...
+[2019-10-29 11:34:04Z] - INFO - Обрабатываем файл BVD1_ZSV17102803_720320191025_103582_20191025_0002_000001_000002.vrb
+[2019-10-29 11:34:05Z] - INFO - Обрабатываем файл BVD1_ZSV17102803_720320191025_103582_20191025_0002_000001_000005.vrb
+[2019-10-29 11:34:06Z] - INFO - Performing the operation "Remove File" on target "C:\SKAD\form440SKAD\temp\work\BVD1_ZSV17102803_720320191025_103582_20191025_0002_000001_000002.vrb".
+Performing the operation "Remove File" on target "C:\SKAD\form440SKAD\temp\work\BVD1_ZSV17102803_720320191025_103582_20191025_0002_000001_000005.vrb".
+
+[2019-10-29 11:34:06Z] - INFO - Performing the operation "Rename File" on target "Item: C:\SKAD\form440SKAD\temp\work\BVD1_ZSV17102803_720320191025_103582_20191025_0002_000001_000002.vrb.test Destination: C:\SKAD\form440SKAD\temp\work\BVD1_ZSV17102803_72032
+0191025_103582_20191025_0002_000001_000002.vrb".
+Performing the operation "Rename File" on target "Item: C:\SKAD\form440SKAD\temp\work\BVD1_ZSV17102803_720320191025_103582_20191025_0002_000001_000005.vrb.test Destination: C:\SKAD\form440SKAD\temp\work\BVD1_ZSV17102803_72032
+0191025_103582_20191025_0002_000001_000005.vrb".
+
+[2019-10-29 11:34:06Z] - INFO - Переименовываем файлы в xml
+[2019-10-29 11:34:06Z] - INFO - Performing the operation "Rename File" on target "Item: C:\SKAD\form440SKAD\temp\work\BVD1_ZSV17102803_720320191025_103582_20191025_0002_000001_000002.vrb Destination: C:\SKAD\form440SKAD\temp\work\BVD1_ZSV17102803_7203201910
+25_103582_20191025_0002_000001_000002.xml".
+Performing the operation "Rename File" on target "Item: C:\SKAD\form440SKAD\temp\work\BVD1_ZSV17102803_720320191025_103582_20191025_0002_000001_000005.vrb Destination: C:\SKAD\form440SKAD\temp\work\BVD1_ZSV17102803_7203201910
+25_103582_20191025_0002_000001_000005.xml".
+
+[2019-10-29 11:34:06Z] - INFO - Форматируем xml-файлы
+[2019-10-29 11:34:16Z] - INFO - Пришло всего 3 сообщений
+Из них:
+Прочие документы: 3
+
+[2019-10-29 11:34:16Z] - INFO - Performing the operation "Copy File" on target "Item: C:\SKAD\form440SKAD\temp\work\BVD1_ZSV17102803_720320191025_103582_20191025_0002_000001_000002.xml Destination: C:\SKAD\form440SKAD\temp\440p\Arhive\29102019\BVD1_ZSV17102
+803_720320191025_103582_20191025_0002_000001_000002.xml".
+Performing the operation "Copy File" on target "Item: C:\SKAD\form440SKAD\temp\work\BVD1_ZSV17102803_720320191025_103582_20191025_0002_000001_000005.xml Destination: C:\SKAD\form440SKAD\temp\440p\Arhive\29102019\BVD1_ZSV17102
+803_720320191025_103582_20191025_0002_000001_000005.xml".
+Performing the operation "Copy File" on target "Item: C:\SKAD\form440SKAD\temp\work\PB1_ZSV17102803_720320191025_104942.xml Destination: C:\SKAD\form440SKAD\temp\440p\Arhive\29102019\PB1_ZSV17102803_720320191025_104942.xml".
+
+[2019-10-29 11:34:16Z] - INFO - Performing the operation "Copy File" on target "Item: C:\SKAD\form440SKAD\temp\work\BVD1_ZSV17102803_720320191025_103582_20191025_0002_000001_000002.xml Destination: C:\SKAD\form440SKAD\temp\ARM_440\BVD1_ZSV17102803_720320191
+025_103582_20191025_0002_000001_000002.xml".
+Performing the operation "Copy File" on target "Item: C:\SKAD\form440SKAD\temp\work\BVD1_ZSV17102803_720320191025_103582_20191025_0002_000001_000005.xml Destination: C:\SKAD\form440SKAD\temp\ARM_440\BVD1_ZSV17102803_720320191
+025_103582_20191025_0002_000001_000005.xml".
+Performing the operation "Copy File" on target "Item: C:\SKAD\form440SKAD\temp\work\PB1_ZSV17102803_720320191025_104942.xml Destination: C:\SKAD\form440SKAD\temp\ARM_440\PB1_ZSV17102803_720320191025_104942.xml".
+
+[2019-10-29 11:34:16Z] - INFO - Performing the operation "Copy File" on target "Item: C:\SKAD\form440SKAD\temp\work\BVD1_ZSV17102803_720320191025_103582_20191025_0002_000001_000002.xml Destination: C:\SKAD\form440SKAD\temp\BANK\BVD1_ZSV17102803_720320191025
+_103582_20191025_0002_000001_000002.xml".
+Performing the operation "Copy File" on target "Item: C:\SKAD\form440SKAD\temp\work\BVD1_ZSV17102803_720320191025_103582_20191025_0002_000001_000005.xml Destination: C:\SKAD\form440SKAD\temp\BANK\BVD1_ZSV17102803_720320191025
+_103582_20191025_0002_000001_000005.xml".
+Performing the operation "Copy File" on target "Item: C:\SKAD\form440SKAD\temp\work\PB1_ZSV17102803_720320191025_104942.xml Destination: C:\SKAD\form440SKAD\temp\BANK\PB1_ZSV17102803_720320191025_104942.xml".
+
+[2019-10-29 11:34:16Z] - INFO - Performing the operation "Remove File" on target "C:\SKAD\form440SKAD\temp\work\BVD1_ZSV17102803_720320191025_103582_20191025_0002_000001_000002.xml".
+Performing the operation "Remove File" on target "C:\SKAD\form440SKAD\temp\work\BVD1_ZSV17102803_720320191025_103582_20191025_0002_000001_000005.xml".
+Performing the operation "Remove File" on target "C:\SKAD\form440SKAD\temp\work\PB1_ZSV17102803_720320191025_104942.xml".
+
+[2019-10-29 11:34:16Z] - INFO - Performing the operation "Remove File" on target "C:\SKAD\form440SKAD\temp\OUT\AFN_MIFNS00_7102803_20191025_00001.arj".
+
+[2019-10-29 11:34:16Z] - INFO - Загружаем исходную ключевую дискету
+[2019-10-29 11:34:16Z] - INFO - Конец работы скрипта!
+[2019-10-29 11:38:16Z] - INFO - Режим отладки
+[2019-10-29 11:38:16Z] - INFO - Performing the operation "Move File" on target "Item: C:\SKAD\form440SKAD\temp\BANK\BVD1_ZSV17102803_720320191025_103582_20191025_0002_000001_000002.xml Destination: C:\SKAD\form440SKAD\temp\work\BVD1_ZSV17102803_720320191025
+_103582_20191025_0002_000001_000002.xml".
+Performing the operation "Move File" on target "Item: C:\SKAD\form440SKAD\temp\BANK\BVD1_ZSV17102803_720320191025_103582_20191025_0002_000001_000005.xml Destination: C:\SKAD\form440SKAD\temp\work\BVD1_ZSV17102803_720320191025
+_103582_20191025_0002_000001_000005.xml".
+Performing the operation "Move File" on target "Item: C:\SKAD\form440SKAD\temp\BANK\PB1_ZSV17102803_720320191025_104942.xml Destination: C:\SKAD\form440SKAD\temp\work\PB1_ZSV17102803_720320191025_104942.xml".
+
+[2019-10-29 11:38:16Z] - INFO - Сохраняем текущею ключевую дискету
+[2019-10-29 11:38:16Z] - INFO - Performing the operation "Copy File" on target "Item: C:\SKAD\form440SKAD\temp\work\BVD1_ZSV17102803_720320191025_103582_20191025_0002_000001_000002.xml Destination: C:\SKAD\form440SKAD\temp\440p\Arhive\29102019\BVD1_ZSV17102
+803_720320191025_103582_20191025_0002_000001_000002.xml".
+Performing the operation "Copy File" on target "Item: C:\SKAD\form440SKAD\temp\work\BVD1_ZSV17102803_720320191025_103582_20191025_0002_000001_000005.xml Destination: C:\SKAD\form440SKAD\temp\440p\Arhive\29102019\BVD1_ZSV17102
+803_720320191025_103582_20191025_0002_000001_000005.xml".
+Performing the operation "Copy File" on target "Item: C:\SKAD\form440SKAD\temp\work\PB1_ZSV17102803_720320191025_104942.xml Destination: C:\SKAD\form440SKAD\temp\440p\Arhive\29102019\PB1_ZSV17102803_720320191025_104942.xml".
+
+[2019-10-29 11:38:16Z] - INFO - Копирование файлов в архив C:\SKAD\form440SKAD\temp\440p\Arhive\29102019
+[2019-10-29 11:38:16Z] - INFO - Переименовываем файлы *.xml -> *.vrb
+[2019-10-29 11:38:16Z] - INFO - Загружаем ключевую дискету c:\SKAD\Floppy\DISKET2019-skad-test\test1
+[2019-10-29 11:38:16Z] - INFO - Зашифровываем и подписываем vrb-файлы
+[2019-10-29 11:38:18Z] - INFO - Начинаем преобразование...
+[2019-10-29 11:38:18Z] - INFO - Обрабатываем файл BVD1_ZSV17102803_720320191025_103582_20191025_0002_000001_000002.vrb
+[2019-10-29 11:38:19Z] - INFO - Обрабатываем файл BVD1_ZSV17102803_720320191025_103582_20191025_0002_000001_000005.vrb
+[2019-10-29 11:38:20Z] - INFO - Performing the operation "Remove File" on target "C:\SKAD\form440SKAD\temp\work\BVD1_ZSV17102803_720320191025_103582_20191025_0002_000001_000002.vrb".
+Performing the operation "Remove File" on target "C:\SKAD\form440SKAD\temp\work\BVD1_ZSV17102803_720320191025_103582_20191025_0002_000001_000005.vrb".
+
+[2019-10-29 11:38:20Z] - INFO - Performing the operation "Rename File" on target "Item: C:\SKAD\form440SKAD\temp\work\BVD1_ZSV17102803_720320191025_103582_20191025_0002_000001_000002.vrb.test Destination: C:\SKAD\form440SKAD\temp\work\BVD1_ZSV17102803_72032
+0191025_103582_20191025_0002_000001_000002.vrb".
+Performing the operation "Rename File" on target "Item: C:\SKAD\form440SKAD\temp\work\BVD1_ZSV17102803_720320191025_103582_20191025_0002_000001_000005.vrb.test Destination: C:\SKAD\form440SKAD\temp\work\BVD1_ZSV17102803_72032
+0191025_103582_20191025_0002_000001_000005.vrb".
+
+[2019-10-29 11:38:20Z] - INFO - Сравниваем до и после преобразования...
+[2019-10-29 11:38:20Z] - INFO - Подписываем оставшиеся файлы файлы
+[2019-10-29 11:38:20Z] - INFO - Начинаем преобразование...
+[2019-10-29 11:38:20Z] - INFO - Обрабатываем файл PB1_ZSV17102803_720320191025_104942.xml
+[2019-10-29 11:38:21Z] - INFO - Performing the operation "Remove File" on target "C:\SKAD\form440SKAD\temp\work\PB1_ZSV17102803_720320191025_104942.xml".
+
+[2019-10-29 11:38:21Z] - INFO - Performing the operation "Rename File" on target "Item: C:\SKAD\form440SKAD\temp\work\PB1_ZSV17102803_720320191025_104942.xml.test Destination: C:\SKAD\form440SKAD\temp\work\PB1_ZSV17102803_720320191025_104942.xml".
+
+[2019-10-29 11:38:21Z] - INFO - Сравниваем до и после преобразования...
+[2019-10-29 11:38:21Z] - INFO - Начинаем архивацию...
+[2019-10-29 11:38:21Z] - INFO - Performing the operation "Remove File" on target "C:\SKAD\form440SKAD\temp\work\BVD1_ZSV17102803_720320191025_103582_20191025_0002_000001_000002.vrb".
+Performing the operation "Remove File" on target "C:\SKAD\form440SKAD\temp\work\BVD1_ZSV17102803_720320191025_103582_20191025_0002_000001_000005.vrb".
+Performing the operation "Remove File" on target "C:\SKAD\form440SKAD\temp\work\PB1_ZSV17102803_720320191025_104942.xml".
+
+[2019-10-29 11:38:21Z] - INFO - Подписываем файл архива C:\SKAD\form440SKAD\temp\work\AFN_7102803_MIFNS00_20191029_00001.arj
+[2019-10-29 11:38:21Z] - INFO - Начинаем преобразование...
+[2019-10-29 11:38:21Z] - INFO - Обрабатываем файл AFN_7102803_MIFNS00_20191029_00001.arj
+[2019-10-29 11:38:22Z] - INFO - Performing the operation "Remove File" on target "C:\SKAD\form440SKAD\temp\work\AFN_7102803_MIFNS00_20191029_00001.arj".
+
+[2019-10-29 11:38:22Z] - INFO - Performing the operation "Rename File" on target "Item: C:\SKAD\form440SKAD\temp\work\AFN_7102803_MIFNS00_20191029_00001.arj.test Destination: C:\SKAD\form440SKAD\temp\work\AFN_7102803_MIFNS00_20191029_00001.arj".
+
+[2019-10-29 11:38:22Z] - INFO - Сравниваем до и после преобразования...
+[2019-10-29 11:38:22Z] - INFO - Копируем файл архива AFN_7102803_MIFNS00_20191029_00001.arj в C:\SKAD\form440SKAD\temp\440p\Arhive\29102019
+[2019-10-29 11:38:22Z] - INFO - Копируем файл архива AFN_7102803_MIFNS00_20191029_00001.arj в C:\SKAD\form440SKAD\temp\Post
+[2019-10-29 11:38:22Z] - INFO - Performing the operation "Remove File" on target "C:\SKAD\form440SKAD\temp\work\AFN_7102803_MIFNS00_20191029_00001.arj".
+
+[2019-10-29 11:38:22Z] - INFO - Отправка почтового сообщения
+[2019-10-29 11:38:32Z] - INFO - Отправленно всего 3 сообщений
+Из них:
+Сведения: 2
+Потверждения: 1
+
+[2019-10-29 11:38:32Z] - INFO - Загружаем исходную ключевую дискету
+[2019-10-29 11:38:32Z] - INFO - Конец работы скрипта!
+[2019-10-29 11:44:14Z] - INFO - Режим отладки
+[2019-10-29 11:44:14Z] - INFO - Performing the operation "Move File" on target "Item: C:\SKAD\form440SKAD\temp\BANK\BVD1_ZSV17102803_720320191025_103582_20191025_0002_000001_000002.xml Destination: C:\SKAD\form440SKAD\temp\work\BVD1_ZSV17102803_720320191025
+_103582_20191025_0002_000001_000002.xml".
+Performing the operation "Move File" on target "Item: C:\SKAD\form440SKAD\temp\BANK\BVD1_ZSV17102803_720320191025_103582_20191025_0002_000001_000005.xml Destination: C:\SKAD\form440SKAD\temp\work\BVD1_ZSV17102803_720320191025
+_103582_20191025_0002_000001_000005.xml".
+Performing the operation "Move File" on target "Item: C:\SKAD\form440SKAD\temp\BANK\PB1_ZSV17102803_720320191025_104942.xml Destination: C:\SKAD\form440SKAD\temp\work\PB1_ZSV17102803_720320191025_104942.xml".
+
+[2019-10-29 11:44:14Z] - INFO - Сохраняем текущею ключевую дискету
+[2019-10-29 11:44:14Z] - INFO - Performing the operation "Copy File" on target "Item: C:\SKAD\form440SKAD\temp\work\BVD1_ZSV17102803_720320191025_103582_20191025_0002_000001_000002.xml Destination: C:\SKAD\form440SKAD\temp\440p\Arhive\29102019\BVD1_ZSV17102
+803_720320191025_103582_20191025_0002_000001_000002.xml".
+Performing the operation "Copy File" on target "Item: C:\SKAD\form440SKAD\temp\work\BVD1_ZSV17102803_720320191025_103582_20191025_0002_000001_000005.xml Destination: C:\SKAD\form440SKAD\temp\440p\Arhive\29102019\BVD1_ZSV17102
+803_720320191025_103582_20191025_0002_000001_000005.xml".
+Performing the operation "Copy File" on target "Item: C:\SKAD\form440SKAD\temp\work\PB1_ZSV17102803_720320191025_104942.xml Destination: C:\SKAD\form440SKAD\temp\440p\Arhive\29102019\PB1_ZSV17102803_720320191025_104942.xml".
+
+[2019-10-29 11:44:14Z] - INFO - Копирование файлов в архив C:\SKAD\form440SKAD\temp\440p\Arhive\29102019
+[2019-10-29 11:44:14Z] - INFO - Переименовываем файлы *.xml -> *.vrb
+[2019-10-29 11:44:14Z] - INFO - Загружаем ключевую дискету c:\SKAD\Floppy\DISKET2019-skad-test\test1
+[2019-10-29 11:44:14Z] - INFO - Зашифровываем и подписываем vrb-файлы
+[2019-10-29 11:44:14Z] - INFO - Начинаем преобразование...
+[2019-10-29 11:44:14Z] - INFO - Обрабатываем файл BVD1_ZSV17102803_720320191025_103582_20191025_0002_000001_000002.vrb
+[2019-10-29 11:44:15Z] - INFO - Обрабатываем файл BVD1_ZSV17102803_720320191025_103582_20191025_0002_000001_000005.vrb
+[2019-10-29 11:44:16Z] - INFO - Performing the operation "Remove File" on target "C:\SKAD\form440SKAD\temp\work\BVD1_ZSV17102803_720320191025_103582_20191025_0002_000001_000002.vrb".
+Performing the operation "Remove File" on target "C:\SKAD\form440SKAD\temp\work\BVD1_ZSV17102803_720320191025_103582_20191025_0002_000001_000005.vrb".
+
+[2019-10-29 11:44:16Z] - INFO - Performing the operation "Rename File" on target "Item: C:\SKAD\form440SKAD\temp\work\BVD1_ZSV17102803_720320191025_103582_20191025_0002_000001_000002.vrb.test Destination: C:\SKAD\form440SKAD\temp\work\BVD1_ZSV17102803_72032
+0191025_103582_20191025_0002_000001_000002.vrb.tst".
+Performing the operation "Rename File" on target "Item: C:\SKAD\form440SKAD\temp\work\BVD1_ZSV17102803_720320191025_103582_20191025_0002_000001_000005.vrb.test Destination: C:\SKAD\form440SKAD\temp\work\BVD1_ZSV17102803_72032
+0191025_103582_20191025_0002_000001_000005.vrb.tst".
+
+[2019-10-29 11:44:16Z] - INFO - Сравниваем до и после преобразования...
+[2019-10-29 11:44:16Z] - INFO - Подписываем оставшиеся файлы файлы
+[2019-10-29 11:44:16Z] - INFO - Начинаем преобразование...
+[2019-10-29 11:44:16Z] - INFO - Обрабатываем файл PB1_ZSV17102803_720320191025_104942.xml
+[2019-10-29 11:44:17Z] - INFO - Performing the operation "Remove File" on target "C:\SKAD\form440SKAD\temp\work\PB1_ZSV17102803_720320191025_104942.xml".
+
+[2019-10-29 11:44:17Z] - INFO - Performing the operation "Rename File" on target "Item: C:\SKAD\form440SKAD\temp\work\PB1_ZSV17102803_720320191025_104942.xml.test Destination: C:\SKAD\form440SKAD\temp\work\PB1_ZSV17102803_720320191025_104942.xml.tst".
+
+[2019-10-29 11:44:17Z] - INFO - Сравниваем до и после преобразования...
+[2019-10-29 11:44:17Z] - INFO - Начинаем архивацию...
+[2019-10-29 11:44:17Z] - INFO - Performing the operation "Remove File" on target "C:\SKAD\form440SKAD\temp\work\BVD1_ZSV17102803_720320191025_103582_20191025_0002_000001_000002.vrb.tst".
+Performing the operation "Remove File" on target "C:\SKAD\form440SKAD\temp\work\BVD1_ZSV17102803_720320191025_103582_20191025_0002_000001_000005.vrb.tst".
+Performing the operation "Remove File" on target "C:\SKAD\form440SKAD\temp\work\PB1_ZSV17102803_720320191025_104942.xml.tst".
+
+[2019-10-29 11:44:17Z] - INFO - Подписываем файл архива C:\SKAD\form440SKAD\temp\work\AFN_7102803_MIFNS00_20191029_00002.arj
+[2019-10-29 11:44:17Z] - INFO - Копируем файл архива AFN_7102803_MIFNS00_20191029_00002.arj в C:\SKAD\form440SKAD\temp\440p\Arhive\29102019
+[2019-10-29 11:44:18Z] - INFO - Копируем файл архива AFN_7102803_MIFNS00_20191029_00002.arj в C:\SKAD\form440SKAD\temp\Post
+[2019-10-29 11:44:18Z] - INFO - Remove-Item : Cannot find path 'C:\SKAD\form440SKAD\temp\work\AFN_7102803_MIFNS00_20191029_00002.arj' because it does not exist.
+At C:\SKAD\form440SKAD\lib\libsSKAD.ps1:463 char:9
++     $msg = Remove-Item "$work\$afnFileName" -Verbose *>&1
++            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (C:\SKAD\form440...91029_00002.arj:String) [Remove-Item], ItemNotFoundException
+    + FullyQualifiedErrorId : PathNotFound,Microsoft.PowerShell.Commands.RemoveItemCommand
+ 
+
+[2019-10-29 11:44:18Z] - INFO - Отправка почтового сообщения
+[2019-10-29 11:44:27Z] - INFO - Отправленно всего 3 сообщений
+Из них:
+Сведения: 2
+Потверждения: 1
+
+[2019-10-29 11:44:27Z] - INFO - Загружаем исходную ключевую дискету
+[2019-10-29 11:44:27Z] - INFO - Конец работы скрипта!
+[2019-10-29 11:45:45Z] - INFO - Режим отладки
+[2019-10-29 11:45:45Z] - INFO - Performing the operation "Move File" on target "Item: C:\SKAD\form440SKAD\temp\BANK\BVD1_ZSV17102803_720320191025_103582_20191025_0002_000001_000002.xml Destination: C:\SKAD\form440SKAD\temp\work\BVD1_ZSV17102803_720320191025
+_103582_20191025_0002_000001_000002.xml".
+Performing the operation "Move File" on target "Item: C:\SKAD\form440SKAD\temp\BANK\BVD1_ZSV17102803_720320191025_103582_20191025_0002_000001_000005.xml Destination: C:\SKAD\form440SKAD\temp\work\BVD1_ZSV17102803_720320191025
+_103582_20191025_0002_000001_000005.xml".
+Performing the operation "Move File" on target "Item: C:\SKAD\form440SKAD\temp\BANK\PB1_ZSV17102803_720320191025_104942.xml Destination: C:\SKAD\form440SKAD\temp\work\PB1_ZSV17102803_720320191025_104942.xml".
+
+[2019-10-29 11:45:45Z] - INFO - Сохраняем текущею ключевую дискету
+[2019-10-29 11:45:45Z] - INFO - Performing the operation "Copy File" on target "Item: C:\SKAD\form440SKAD\temp\work\BVD1_ZSV17102803_720320191025_103582_20191025_0002_000001_000002.xml Destination: C:\SKAD\form440SKAD\temp\440p\Arhive\29102019\BVD1_ZSV17102
+803_720320191025_103582_20191025_0002_000001_000002.xml".
+Performing the operation "Copy File" on target "Item: C:\SKAD\form440SKAD\temp\work\BVD1_ZSV17102803_720320191025_103582_20191025_0002_000001_000005.xml Destination: C:\SKAD\form440SKAD\temp\440p\Arhive\29102019\BVD1_ZSV17102
+803_720320191025_103582_20191025_0002_000001_000005.xml".
+Performing the operation "Copy File" on target "Item: C:\SKAD\form440SKAD\temp\work\PB1_ZSV17102803_720320191025_104942.xml Destination: C:\SKAD\form440SKAD\temp\440p\Arhive\29102019\PB1_ZSV17102803_720320191025_104942.xml".
+
+[2019-10-29 11:45:45Z] - INFO - Копирование файлов в архив C:\SKAD\form440SKAD\temp\440p\Arhive\29102019
+[2019-10-29 11:45:45Z] - INFO - Переименовываем файлы *.xml -> *.vrb
+[2019-10-29 11:45:45Z] - INFO - Загружаем ключевую дискету c:\SKAD\Floppy\DISKET2019-skad-test\test1
+[2019-10-29 11:45:45Z] - INFO - Зашифровываем и подписываем vrb-файлы
+[2019-10-29 11:46:07Z] - INFO - Начинаем преобразование...
+[2019-10-29 11:46:07Z] - INFO - Обрабатываем файл BVD1_ZSV17102803_720320191025_103582_20191025_0002_000001_000002.vrb
+[2019-10-29 11:46:08Z] - INFO - Обрабатываем файл BVD1_ZSV17102803_720320191025_103582_20191025_0002_000001_000005.vrb
+[2019-10-29 11:46:09Z] - INFO - Performing the operation "Remove File" on target "C:\SKAD\form440SKAD\temp\work\BVD1_ZSV17102803_720320191025_103582_20191025_0002_000001_000002.vrb".
+Performing the operation "Remove File" on target "C:\SKAD\form440SKAD\temp\work\BVD1_ZSV17102803_720320191025_103582_20191025_0002_000001_000005.vrb".
+
+[2019-10-29 11:46:09Z] - INFO - Performing the operation "Rename File" on target "Item: C:\SKAD\form440SKAD\temp\work\BVD1_ZSV17102803_720320191025_103582_20191025_0002_000001_000002.vrb.test Destination: C:\SKAD\form440SKAD\temp\work\BVD1_ZSV17102803_72032
+0191025_103582_20191025_0002_000001_000002.vrb.tst".
+Performing the operation "Rename File" on target "Item: C:\SKAD\form440SKAD\temp\work\BVD1_ZSV17102803_720320191025_103582_20191025_0002_000001_000005.vrb.test Destination: C:\SKAD\form440SKAD\temp\work\BVD1_ZSV17102803_72032
+0191025_103582_20191025_0002_000001_000005.vrb.tst".
+
+[2019-10-29 11:46:09Z] - INFO - Сравниваем до и после преобразования...
+[2019-10-29 11:46:31Z] - INFO - Подписываем оставшиеся файлы файлы
+[2019-10-29 11:46:34Z] - INFO - Начинаем преобразование...
+[2019-10-29 11:46:34Z] - INFO - Обрабатываем файл PB1_ZSV17102803_720320191025_104942.xml
+[2019-10-29 11:46:35Z] - INFO - Performing the operation "Remove File" on target "C:\SKAD\form440SKAD\temp\work\PB1_ZSV17102803_720320191025_104942.xml".
+
+[2019-10-29 11:46:35Z] - INFO - Performing the operation "Rename File" on target "Item: C:\SKAD\form440SKAD\temp\work\PB1_ZSV17102803_720320191025_104942.xml.test Destination: C:\SKAD\form440SKAD\temp\work\PB1_ZSV17102803_720320191025_104942.xml.tst".
+
+[2019-10-29 11:46:35Z] - INFO - Сравниваем до и после преобразования...
+[2019-10-29 11:54:42Z] - INFO - Режим отладки
+[2019-10-29 11:54:42Z] - INFO - Performing the operation "Move File" on target "Item: C:\SKAD\form440SKAD\temp\BANK\BVD1_ZSV17102803_720320191025_103582_20191025_0002_000001_000002.xml Destination: C:\SKAD\form440SKAD\temp\work\BVD1_ZSV17102803_720320191025
+_103582_20191025_0002_000001_000002.xml".
+Performing the operation "Move File" on target "Item: C:\SKAD\form440SKAD\temp\BANK\BVD1_ZSV17102803_720320191025_103582_20191025_0002_000001_000005.xml Destination: C:\SKAD\form440SKAD\temp\work\BVD1_ZSV17102803_720320191025
+_103582_20191025_0002_000001_000005.xml".
+Performing the operation "Move File" on target "Item: C:\SKAD\form440SKAD\temp\BANK\PB1_ZSV17102803_720320191025_104942.xml Destination: C:\SKAD\form440SKAD\temp\work\PB1_ZSV17102803_720320191025_104942.xml".
+
+[2019-10-29 11:54:42Z] - INFO - Сохраняем текущею ключевую дискету
+[2019-10-29 11:54:42Z] - INFO - Performing the operation "Copy File" on target "Item: C:\SKAD\form440SKAD\temp\work\BVD1_ZSV17102803_720320191025_103582_20191025_0002_000001_000002.xml Destination: C:\SKAD\form440SKAD\temp\440p\Arhive\29102019\BVD1_ZSV17102
+803_720320191025_103582_20191025_0002_000001_000002.xml".
+Performing the operation "Copy File" on target "Item: C:\SKAD\form440SKAD\temp\work\BVD1_ZSV17102803_720320191025_103582_20191025_0002_000001_000005.xml Destination: C:\SKAD\form440SKAD\temp\440p\Arhive\29102019\BVD1_ZSV17102
+803_720320191025_103582_20191025_0002_000001_000005.xml".
+Performing the operation "Copy File" on target "Item: C:\SKAD\form440SKAD\temp\work\PB1_ZSV17102803_720320191025_104942.xml Destination: C:\SKAD\form440SKAD\temp\440p\Arhive\29102019\PB1_ZSV17102803_720320191025_104942.xml".
+
+[2019-10-29 11:54:42Z] - INFO - Копирование файлов в архив C:\SKAD\form440SKAD\temp\440p\Arhive\29102019
+[2019-10-29 11:54:42Z] - INFO - Переименовываем файлы *.xml -> *.vrb
+[2019-10-29 11:54:42Z] - INFO - Загружаем ключевую дискету c:\SKAD\Floppy\DISKET2019-skad-test\test1
+[2019-10-29 11:54:42Z] - INFO - Зашифровываем и подписываем vrb-файлы
+[2019-10-29 11:54:49Z] - INFO - Начинаем преобразование...
+[2019-10-29 11:54:49Z] - INFO - Обрабатываем файл BVD1_ZSV17102803_720320191025_103582_20191025_0002_000001_000002.vrb
+[2019-10-29 11:54:50Z] - INFO - Обрабатываем файл BVD1_ZSV17102803_720320191025_103582_20191025_0002_000001_000005.vrb
+[2019-10-29 11:54:51Z] - INFO - Performing the operation "Remove File" on target "C:\SKAD\form440SKAD\temp\work\BVD1_ZSV17102803_720320191025_103582_20191025_0002_000001_000002.vrb".
+Performing the operation "Remove File" on target "C:\SKAD\form440SKAD\temp\work\BVD1_ZSV17102803_720320191025_103582_20191025_0002_000001_000005.vrb".
+
+[2019-10-29 11:54:51Z] - INFO - Performing the operation "Rename File" on target "Item: C:\SKAD\form440SKAD\temp\work\BVD1_ZSV17102803_720320191025_103582_20191025_0002_000001_000002.vrb.test Destination: C:\SKAD\form440SKAD\temp\work\BVD1_ZSV17102803_72032
+0191025_103582_20191025_0002_000001_000002.vrb.tst".
+Performing the operation "Rename File" on target "Item: C:\SKAD\form440SKAD\temp\work\BVD1_ZSV17102803_720320191025_103582_20191025_0002_000001_000005.vrb.test Destination: C:\SKAD\form440SKAD\temp\work\BVD1_ZSV17102803_72032
+0191025_103582_20191025_0002_000001_000005.vrb.tst".
+
+[2019-10-29 11:54:51Z] - INFO - Сравниваем до и после преобразования...
+[2019-10-29 11:54:51Z] - INFO - Подписываем оставшиеся файлы файлы
+[2019-10-29 11:54:51Z] - INFO - Начинаем преобразование...
+[2019-10-29 11:54:51Z] - INFO - Обрабатываем файл PB1_ZSV17102803_720320191025_104942.xml
+[2019-10-29 11:54:52Z] - INFO - Performing the operation "Remove File" on target "C:\SKAD\form440SKAD\temp\work\PB1_ZSV17102803_720320191025_104942.xml".
+
+[2019-10-29 11:54:52Z] - INFO - Performing the operation "Rename File" on target "Item: C:\SKAD\form440SKAD\temp\work\PB1_ZSV17102803_720320191025_104942.xml.test Destination: C:\SKAD\form440SKAD\temp\work\PB1_ZSV17102803_720320191025_104942.xml.tst".
+
+[2019-10-29 11:54:52Z] - INFO - Сравниваем до и после преобразования...
+[2019-10-29 11:54:52Z] - INFO - Начинаем архивацию...
+[2019-10-29 11:54:52Z] - INFO - Performing the operation "Remove File" on target "C:\SKAD\form440SKAD\temp\work\BVD1_ZSV17102803_720320191025_103582_20191025_0002_000001_000002.vrb.tst".
+Performing the operation "Remove File" on target "C:\SKAD\form440SKAD\temp\work\BVD1_ZSV17102803_720320191025_103582_20191025_0002_000001_000005.vrb.tst".
+Performing the operation "Remove File" on target "C:\SKAD\form440SKAD\temp\work\PB1_ZSV17102803_720320191025_104942.xml.tst".
+
+[2019-10-29 11:54:52Z] - INFO - Подписываем файл архива C:\SKAD\form440SKAD\temp\work\AFN_7102803_MIFNS00_20191029_00001.arj.tst
+[2019-10-29 11:54:52Z] - INFO - Копируем файл архива AFN_7102803_MIFNS00_20191029_00001.arj.tst в C:\SKAD\form440SKAD\temp\440p\Arhive\29102019
+[2019-10-29 11:54:52Z] - INFO - Копируем файл архива AFN_7102803_MIFNS00_20191029_00001.arj.tst в C:\SKAD\form440SKAD\temp\Post
+[2019-10-29 11:54:52Z] - INFO - Performing the operation "Remove File" on target "C:\SKAD\form440SKAD\temp\work\AFN_7102803_MIFNS00_20191029_00001.arj.tst".
+
+[2019-10-29 11:54:52Z] - INFO - Отправка почтового сообщения
+[2019-10-29 11:55:02Z] - INFO - Отправленно всего 3 сообщений
+Из них:
+Сведения: 2
+Потверждения: 1
+
+[2019-10-29 11:55:02Z] - INFO - Загружаем исходную ключевую дискету
+[2019-10-29 11:55:02Z] - INFO - Конец работы скрипта!
+[2019-10-29 13:18:04Z] - INFO - Режим отладки
+[2019-10-29 13:18:04Z] - INFO - Performing the operation "Move File" on target "Item: C:\SKAD\form440SKAD\temp\BANK\BVD1_ZSV17102803_667120191025_145425_20191028_0002_000006_000001.xml Destination: C:\SKAD\form440SKAD\temp\work\BVD1_ZSV17102803_667120191025
+_145425_20191028_0002_000006_000001.xml".
+Performing the operation "Move File" on target "Item: C:\SKAD\form440SKAD\temp\BANK\BVS1_ZSV17102803_667120191025_145425_20191028_0002.xml Destination: C:\SKAD\form440SKAD\temp\work\BVS1_ZSV17102803_667120191025_145425_201910
+28_0002.xml".
+Performing the operation "Move File" on target "Item: C:\SKAD\form440SKAD\temp\BANK\PB1_ROO17102803_720520191028_504535.xml Destination: C:\SKAD\form440SKAD\temp\work\PB1_ROO17102803_720520191028_504535.xml".
+
+[2019-10-29 13:18:04Z] - INFO - Сохраняем текущею ключевую дискету
+[2019-10-29 13:18:04Z] - INFO - Performing the operation "Copy File" on target "Item: C:\SKAD\form440SKAD\temp\work\BVD1_ZSV17102803_667120191025_145425_20191028_0002_000006_000001.xml Destination: C:\SKAD\form440SKAD\temp\440p\Arhive\29102019\BVD1_ZSV17102
+803_667120191025_145425_20191028_0002_000006_000001.xml".
+Performing the operation "Copy File" on target "Item: C:\SKAD\form440SKAD\temp\work\BVS1_ZSV17102803_667120191025_145425_20191028_0002.xml Destination: C:\SKAD\form440SKAD\temp\440p\Arhive\29102019\BVS1_ZSV17102803_6671201910
+25_145425_20191028_0002.xml".
+Performing the operation "Copy File" on target "Item: C:\SKAD\form440SKAD\temp\work\PB1_ROO17102803_720520191028_504535.xml Destination: C:\SKAD\form440SKAD\temp\440p\Arhive\29102019\PB1_ROO17102803_720520191028_504535.xml".
+
+[2019-10-29 13:18:04Z] - INFO - Копирование файлов в архив C:\SKAD\form440SKAD\temp\440p\Arhive\29102019
+[2019-10-29 13:18:04Z] - INFO - Переименовываем файлы *.xml -> *.vrb
+[2019-10-29 13:18:04Z] - INFO - Загружаем ключевую дискету c:\SKAD\Floppy\DISKET2019-skad-test\test1
+[2019-10-29 13:18:04Z] - INFO - Зашифровываем и подписываем vrb-файлы
+[2019-10-29 13:18:04Z] - INFO - Начинаем преобразование...
+[2019-10-29 13:18:04Z] - INFO - Обрабатываем файл BVD1_ZSV17102803_667120191025_145425_20191028_0002_000006_000001.vrb
+[2019-10-29 13:18:05Z] - INFO - Обрабатываем файл BVS1_ZSV17102803_667120191025_145425_20191028_0002.vrb
+[2019-10-29 13:18:06Z] - INFO - Performing the operation "Remove File" on target "C:\SKAD\form440SKAD\temp\work\BVD1_ZSV17102803_667120191025_145425_20191028_0002_000006_000001.vrb".
+Performing the operation "Remove File" on target "C:\SKAD\form440SKAD\temp\work\BVS1_ZSV17102803_667120191025_145425_20191028_0002.vrb".
+
+[2019-10-29 13:18:06Z] - INFO - Performing the operation "Rename File" on target "Item: C:\SKAD\form440SKAD\temp\work\BVD1_ZSV17102803_667120191025_145425_20191028_0002_000006_000001.vrb.test Destination: C:\SKAD\form440SKAD\temp\work\BVD1_ZSV17102803_66712
+0191025_145425_20191028_0002_000006_000001.vrb.tst".
+Performing the operation "Rename File" on target "Item: C:\SKAD\form440SKAD\temp\work\BVS1_ZSV17102803_667120191025_145425_20191028_0002.vrb.test Destination: C:\SKAD\form440SKAD\temp\work\BVS1_ZSV17102803_667120191025_145425
+_20191028_0002.vrb.tst".
+
+[2019-10-29 13:18:06Z] - INFO - Сравниваем до и после преобразования...
+[2019-10-29 13:18:06Z] - INFO - Подписываем оставшиеся файлы файлы
+[2019-10-29 13:18:06Z] - INFO - Начинаем преобразование...
+[2019-10-29 13:18:06Z] - INFO - Обрабатываем файл PB1_ROO17102803_720520191028_504535.xml
+[2019-10-29 13:18:07Z] - INFO - Performing the operation "Remove File" on target "C:\SKAD\form440SKAD\temp\work\PB1_ROO17102803_720520191028_504535.xml".
+
+[2019-10-29 13:18:07Z] - INFO - Performing the operation "Rename File" on target "Item: C:\SKAD\form440SKAD\temp\work\PB1_ROO17102803_720520191028_504535.xml.test Destination: C:\SKAD\form440SKAD\temp\work\PB1_ROO17102803_720520191028_504535.xml.tst".
+
+[2019-10-29 13:18:07Z] - INFO - Сравниваем до и после преобразования...
+[2019-10-29 13:18:36Z] - INFO - Режим отладки
+[2019-10-29 13:18:36Z] - INFO - Performing the operation "Move File" on target "Item: C:\SKAD\form440SKAD\temp\BANK\BVD1_ZSV17102803_667120191025_145425_20191028_0002_000006_000001.xml Destination: C:\SKAD\form440SKAD\temp\work\BVD1_ZSV17102803_667120191025
+_145425_20191028_0002_000006_000001.xml".
+Performing the operation "Move File" on target "Item: C:\SKAD\form440SKAD\temp\BANK\BVS1_ZSV17102803_667120191025_145425_20191028_0002.xml Destination: C:\SKAD\form440SKAD\temp\work\BVS1_ZSV17102803_667120191025_145425_201910
+28_0002.xml".
+Performing the operation "Move File" on target "Item: C:\SKAD\form440SKAD\temp\BANK\PB1_ROO17102803_720520191028_504535.xml Destination: C:\SKAD\form440SKAD\temp\work\PB1_ROO17102803_720520191028_504535.xml".
+
+[2019-10-29 13:18:36Z] - INFO - Сохраняем текущею ключевую дискету
+[2019-10-29 13:18:36Z] - INFO - Performing the operation "Copy File" on target "Item: C:\SKAD\form440SKAD\temp\work\BVD1_ZSV17102803_667120191025_145425_20191028_0002_000006_000001.xml Destination: C:\SKAD\form440SKAD\temp\440p\Arhive\29102019\BVD1_ZSV17102
+803_667120191025_145425_20191028_0002_000006_000001.xml".
+Performing the operation "Copy File" on target "Item: C:\SKAD\form440SKAD\temp\work\BVS1_ZSV17102803_667120191025_145425_20191028_0002.xml Destination: C:\SKAD\form440SKAD\temp\440p\Arhive\29102019\BVS1_ZSV17102803_6671201910
+25_145425_20191028_0002.xml".
+Performing the operation "Copy File" on target "Item: C:\SKAD\form440SKAD\temp\work\PB1_ROO17102803_720520191028_504535.xml Destination: C:\SKAD\form440SKAD\temp\440p\Arhive\29102019\PB1_ROO17102803_720520191028_504535.xml".
+
+[2019-10-29 13:18:36Z] - INFO - Копирование файлов в архив C:\SKAD\form440SKAD\temp\440p\Arhive\29102019
+[2019-10-29 13:18:36Z] - INFO - Переименовываем файлы *.xml -> *.vrb
+[2019-10-29 13:18:36Z] - INFO - Загружаем ключевую дискету c:\SKAD\Floppy\DISKET2019-skad-test\test1
+[2019-10-29 13:18:36Z] - INFO - Зашифровываем и подписываем vrb-файлы
+[2019-10-29 13:18:36Z] - INFO - Начинаем преобразование...
+[2019-10-29 13:18:36Z] - INFO - Обрабатываем файл BVD1_ZSV17102803_667120191025_145425_20191028_0002_000006_000001.vrb
+[2019-10-29 13:18:37Z] - INFO - Обрабатываем файл BVS1_ZSV17102803_667120191025_145425_20191028_0002.vrb
+[2019-10-29 13:18:38Z] - INFO - Performing the operation "Remove File" on target "C:\SKAD\form440SKAD\temp\work\BVD1_ZSV17102803_667120191025_145425_20191028_0002_000006_000001.vrb".
+Performing the operation "Remove File" on target "C:\SKAD\form440SKAD\temp\work\BVS1_ZSV17102803_667120191025_145425_20191028_0002.vrb".
+
+[2019-10-29 13:18:38Z] - INFO - Performing the operation "Rename File" on target "Item: C:\SKAD\form440SKAD\temp\work\BVD1_ZSV17102803_667120191025_145425_20191028_0002_000006_000001.vrb.test Destination: C:\SKAD\form440SKAD\temp\work\BVD1_ZSV17102803_66712
+0191025_145425_20191028_0002_000006_000001.vrb.tst".
+Performing the operation "Rename File" on target "Item: C:\SKAD\form440SKAD\temp\work\BVS1_ZSV17102803_667120191025_145425_20191028_0002.vrb.test Destination: C:\SKAD\form440SKAD\temp\work\BVS1_ZSV17102803_667120191025_145425
+_20191028_0002.vrb.tst".
+
+[2019-10-29 13:18:39Z] - INFO - Сравниваем до и после преобразования...
+[2019-10-29 13:18:39Z] - INFO - Подписываем оставшиеся файлы файлы
+[2019-10-29 13:18:39Z] - INFO - Начинаем преобразование...
+[2019-10-29 13:18:39Z] - INFO - Обрабатываем файл PB1_ROO17102803_720520191028_504535.xml
+[2019-10-29 13:18:40Z] - INFO - Performing the operation "Remove File" on target "C:\SKAD\form440SKAD\temp\work\PB1_ROO17102803_720520191028_504535.xml".
+
+[2019-10-29 13:18:40Z] - INFO - Performing the operation "Rename File" on target "Item: C:\SKAD\form440SKAD\temp\work\PB1_ROO17102803_720520191028_504535.xml.test Destination: C:\SKAD\form440SKAD\temp\work\PB1_ROO17102803_720520191028_504535.xml.tst".
+
+[2019-10-29 13:18:40Z] - INFO - Сравниваем до и после преобразования...
+[2019-10-29 13:18:40Z] - INFO - Начинаем архивацию...
+[2019-10-29 13:18:40Z] - INFO - Performing the operation "Remove File" on target "C:\SKAD\form440SKAD\temp\work\BVD1_ZSV17102803_667120191025_145425_20191028_0002_000006_000001.vrb.tst".
+Performing the operation "Remove File" on target "C:\SKAD\form440SKAD\temp\work\BVS1_ZSV17102803_667120191025_145425_20191028_0002.vrb.tst".
+Performing the operation "Remove File" on target "C:\SKAD\form440SKAD\temp\work\PB1_ROO17102803_720520191028_504535.xml.tst".
+
+[2019-10-29 13:18:40Z] - INFO - Подписываем файл архива C:\SKAD\form440SKAD\temp\work\AFN_7102803_MIFNS00_20191029_00002.arj.tst
+[2019-10-29 13:18:40Z] - INFO - Копируем файл архива AFN_7102803_MIFNS00_20191029_00002.arj.tst в C:\SKAD\form440SKAD\temp\440p\Arhive\29102019
+[2019-10-29 13:18:40Z] - INFO - Копируем файл архива AFN_7102803_MIFNS00_20191029_00002.arj.tst в C:\SKAD\form440SKAD\temp\Post
+[2019-10-29 13:18:40Z] - INFO - Performing the operation "Remove File" on target "C:\SKAD\form440SKAD\temp\work\AFN_7102803_MIFNS00_20191029_00002.arj.tst".
+
+[2019-10-29 13:18:40Z] - INFO - Отправка почтового сообщения
+[2019-10-29 13:18:49Z] - INFO - Отправленно всего 3 сообщений
+Из них:
+Сведения: 1
+Выписка: 1
+Потверждения: 1
+
+[2019-10-29 13:18:50Z] - INFO - Загружаем исходную ключевую дискету
+[2019-10-29 13:18:50Z] - INFO - Конец работы скрипта!
+[2019-10-29 13:24:33Z] - INFO - Режим отладки
+[2019-10-29 13:24:33Z] - INFO - Performing the operation "Move File" on target "Item: C:\SKAD\form440SKAD\temp\BANK\BVD1_ZSV17102803_667120191025_145425_20191028_0002_000006_000001.xml Destination: C:\SKAD\form440SKAD\temp\work\BVD1_ZSV17102803_667120191025
+_145425_20191028_0002_000006_000001.xml".
+Performing the operation "Move File" on target "Item: C:\SKAD\form440SKAD\temp\BANK\BVS1_ZSV17102803_667120191025_145425_20191028_0002.xml Destination: C:\SKAD\form440SKAD\temp\work\BVS1_ZSV17102803_667120191025_145425_201910
+28_0002.xml".
+Performing the operation "Move File" on target "Item: C:\SKAD\form440SKAD\temp\BANK\PB1_ROO17102803_720520191028_504535.xml Destination: C:\SKAD\form440SKAD\temp\work\PB1_ROO17102803_720520191028_504535.xml".
+
+[2019-10-29 13:24:33Z] - INFO - Сохраняем текущею ключевую дискету
+[2019-10-29 13:24:33Z] - INFO - Performing the operation "Copy File" on target "Item: C:\SKAD\form440SKAD\temp\work\BVD1_ZSV17102803_667120191025_145425_20191028_0002_000006_000001.xml Destination: C:\SKAD\form440SKAD\temp\440p\Arhive\29102019\BVD1_ZSV17102
+803_667120191025_145425_20191028_0002_000006_000001.xml".
+Performing the operation "Copy File" on target "Item: C:\SKAD\form440SKAD\temp\work\BVS1_ZSV17102803_667120191025_145425_20191028_0002.xml Destination: C:\SKAD\form440SKAD\temp\440p\Arhive\29102019\BVS1_ZSV17102803_6671201910
+25_145425_20191028_0002.xml".
+Performing the operation "Copy File" on target "Item: C:\SKAD\form440SKAD\temp\work\PB1_ROO17102803_720520191028_504535.xml Destination: C:\SKAD\form440SKAD\temp\440p\Arhive\29102019\PB1_ROO17102803_720520191028_504535.xml".
+
+[2019-10-29 13:24:33Z] - INFO - Копирование файлов в архив C:\SKAD\form440SKAD\temp\440p\Arhive\29102019
+[2019-10-29 13:24:33Z] - INFO - Переименовываем файлы *.xml -> *.vrb
+[2019-10-29 13:24:33Z] - INFO - Загружаем ключевую дискету c:\SKAD\Floppy\DISKET2019-skad-test\test1
+[2019-10-29 13:24:33Z] - INFO - Зашифровываем и подписываем vrb-файлы
+[2019-10-29 13:24:33Z] - INFO - Начинаем преобразование...
+[2019-10-29 13:24:33Z] - INFO - Обрабатываем файл BVD1_ZSV17102803_667120191025_145425_20191028_0002_000006_000001.vrb
+[2019-10-29 13:24:34Z] - INFO - Обрабатываем файл BVS1_ZSV17102803_667120191025_145425_20191028_0002.vrb
+[2019-10-29 13:24:35Z] - INFO - Performing the operation "Remove File" on target "C:\SKAD\form440SKAD\temp\work\BVD1_ZSV17102803_667120191025_145425_20191028_0002_000006_000001.vrb".
+Performing the operation "Remove File" on target "C:\SKAD\form440SKAD\temp\work\BVS1_ZSV17102803_667120191025_145425_20191028_0002.vrb".
+
+[2019-10-29 13:24:35Z] - INFO - Performing the operation "Rename File" on target "Item: C:\SKAD\form440SKAD\temp\work\BVD1_ZSV17102803_667120191025_145425_20191028_0002_000006_000001.vrb.test Destination: C:\SKAD\form440SKAD\temp\work\BVD1_ZSV17102803_66712
+0191025_145425_20191028_0002_000006_000001.vrb.tst".
+Performing the operation "Rename File" on target "Item: C:\SKAD\form440SKAD\temp\work\BVS1_ZSV17102803_667120191025_145425_20191028_0002.vrb.test Destination: C:\SKAD\form440SKAD\temp\work\BVS1_ZSV17102803_667120191025_145425
+_20191028_0002.vrb.tst".
+
+[2019-10-29 13:24:35Z] - INFO - Сравниваем до и после преобразования...
+[2019-10-29 13:24:35Z] - INFO - Подписываем оставшиеся файлы файлы
+[2019-10-29 13:24:36Z] - INFO - Начинаем преобразование...
+[2019-10-29 13:24:36Z] - INFO - Обрабатываем файл PB1_ROO17102803_720520191028_504535.xml
+[2019-10-29 13:24:37Z] - INFO - Performing the operation "Remove File" on target "C:\SKAD\form440SKAD\temp\work\PB1_ROO17102803_720520191028_504535.xml".
+
+[2019-10-29 13:24:37Z] - INFO - Performing the operation "Rename File" on target "Item: C:\SKAD\form440SKAD\temp\work\PB1_ROO17102803_720520191028_504535.xml.test Destination: C:\SKAD\form440SKAD\temp\work\PB1_ROO17102803_720520191028_504535.xml.tst".
+
+[2019-10-29 13:24:37Z] - INFO - Сравниваем до и после преобразования...
+[2019-10-29 13:24:37Z] - INFO - Начинаем архивацию...
+[2019-10-29 13:24:37Z] - INFO - Performing the operation "Remove File" on target "C:\SKAD\form440SKAD\temp\work\BVD1_ZSV17102803_667120191025_145425_20191028_0002_000006_000001.vrb.tst".
+Performing the operation "Remove File" on target "C:\SKAD\form440SKAD\temp\work\BVS1_ZSV17102803_667120191025_145425_20191028_0002.vrb.tst".
+Performing the operation "Remove File" on target "C:\SKAD\form440SKAD\temp\work\PB1_ROO17102803_720520191028_504535.xml.tst".
+
+[2019-10-29 13:24:37Z] - INFO - Подписываем файл архива C:\SKAD\form440SKAD\temp\work\AFN_7102803_MIFNS00_20191029_00003.arj.tst
+[2019-10-29 13:24:37Z] - INFO - Начинаем преобразование...
+[2019-10-29 13:24:37Z] - INFO - Обрабатываем файл AFN_7102803_MIFNS00_20191029_00003.arj.tst
+[2019-10-29 13:24:38Z] - INFO - Performing the operation "Remove File" on target "C:\SKAD\form440SKAD\temp\work\AFN_7102803_MIFNS00_20191029_00003.arj.tst".
+
+[2019-10-29 13:24:38Z] - INFO - Performing the operation "Rename File" on target "Item: C:\SKAD\form440SKAD\temp\work\AFN_7102803_MIFNS00_20191029_00003.arj.tst.test Destination: C:\SKAD\form440SKAD\temp\work\AFN_7102803_MIFNS00_20191029_00003.arj.tst.tst".
+
+[2019-10-29 13:24:38Z] - INFO - Сравниваем до и после преобразования...
+[2019-10-29 13:24:38Z] - INFO - Копируем файл архива AFN_7102803_MIFNS00_20191029_00003.arj.tst в C:\SKAD\form440SKAD\temp\440p\Arhive\29102019
+[2019-10-29 13:24:38Z] - INFO - Копируем файл архива AFN_7102803_MIFNS00_20191029_00003.arj.tst в C:\SKAD\form440SKAD\temp\Post
+[2019-10-29 13:24:38Z] - INFO - Remove-Item : Cannot find path 'C:\SKAD\form440SKAD\temp\work\AFN_7102803_MIFNS00_20191029_00003.arj.tst' because it does not exist.
+At C:\SKAD\form440SKAD\lib\libsSKAD.ps1:489 char:9
++     $msg = Remove-Item "$work\$afnFileName" -Verbose *>&1
++            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (C:\SKAD\form440...9_00003.arj.tst:String) [Remove-Item], ItemNotFoundException
+    + FullyQualifiedErrorId : PathNotFound,Microsoft.PowerShell.Commands.RemoveItemCommand
+ 
+
+[2019-10-29 13:24:38Z] - INFO - Отправка почтового сообщения
+[2019-10-29 13:24:48Z] - INFO - Отправленно всего 3 сообщений
+Из них:
+Сведения: 1
+Выписка: 1
+Потверждения: 1
+
+[2019-10-29 13:24:48Z] - INFO - Загружаем исходную ключевую дискету
+[2019-10-29 13:24:48Z] - INFO - Конец работы скрипта!
+[2019-10-29 13:25:41Z] - INFO - Режим отладки
+[2019-10-29 13:25:41Z] - INFO - Performing the operation "Move File" on target "Item: C:\SKAD\form440SKAD\temp\BANK\BVD1_ZSV17102803_667120191025_145425_20191028_0002_000006_000001.xml Destination: C:\SKAD\form440SKAD\temp\work\BVD1_ZSV17102803_667120191025
+_145425_20191028_0002_000006_000001.xml".
+Performing the operation "Move File" on target "Item: C:\SKAD\form440SKAD\temp\BANK\BVS1_ZSV17102803_667120191025_145425_20191028_0002.xml Destination: C:\SKAD\form440SKAD\temp\work\BVS1_ZSV17102803_667120191025_145425_201910
+28_0002.xml".
+Performing the operation "Move File" on target "Item: C:\SKAD\form440SKAD\temp\BANK\PB1_ROO17102803_720520191028_504535.xml Destination: C:\SKAD\form440SKAD\temp\work\PB1_ROO17102803_720520191028_504535.xml".
+
+[2019-10-29 13:25:41Z] - INFO - Сохраняем текущею ключевую дискету
+[2019-10-29 13:25:41Z] - INFO - Performing the operation "Copy File" on target "Item: C:\SKAD\form440SKAD\temp\work\BVD1_ZSV17102803_667120191025_145425_20191028_0002_000006_000001.xml Destination: C:\SKAD\form440SKAD\temp\440p\Arhive\29102019\BVD1_ZSV17102
+803_667120191025_145425_20191028_0002_000006_000001.xml".
+Performing the operation "Copy File" on target "Item: C:\SKAD\form440SKAD\temp\work\BVS1_ZSV17102803_667120191025_145425_20191028_0002.xml Destination: C:\SKAD\form440SKAD\temp\440p\Arhive\29102019\BVS1_ZSV17102803_6671201910
+25_145425_20191028_0002.xml".
+Performing the operation "Copy File" on target "Item: C:\SKAD\form440SKAD\temp\work\PB1_ROO17102803_720520191028_504535.xml Destination: C:\SKAD\form440SKAD\temp\440p\Arhive\29102019\PB1_ROO17102803_720520191028_504535.xml".
+
+[2019-10-29 13:25:41Z] - INFO - Копирование файлов в архив C:\SKAD\form440SKAD\temp\440p\Arhive\29102019
+[2019-10-29 13:25:41Z] - INFO - Переименовываем файлы *.xml -> *.vrb
+[2019-10-29 13:25:41Z] - INFO - Загружаем ключевую дискету c:\SKAD\Floppy\DISKET2019-skad-test\test1
+[2019-10-29 13:25:41Z] - INFO - Зашифровываем и подписываем vrb-файлы
+[2019-10-29 13:25:41Z] - INFO - Начинаем преобразование...
+[2019-10-29 13:25:41Z] - INFO - Обрабатываем файл BVD1_ZSV17102803_667120191025_145425_20191028_0002_000006_000001.vrb
+[2019-10-29 13:25:42Z] - INFO - Обрабатываем файл BVS1_ZSV17102803_667120191025_145425_20191028_0002.vrb
+[2019-10-29 13:25:43Z] - INFO - Performing the operation "Remove File" on target "C:\SKAD\form440SKAD\temp\work\BVD1_ZSV17102803_667120191025_145425_20191028_0002_000006_000001.vrb".
+Performing the operation "Remove File" on target "C:\SKAD\form440SKAD\temp\work\BVS1_ZSV17102803_667120191025_145425_20191028_0002.vrb".
+
+[2019-10-29 13:25:43Z] - INFO - Performing the operation "Rename File" on target "Item: C:\SKAD\form440SKAD\temp\work\BVD1_ZSV17102803_667120191025_145425_20191028_0002_000006_000001.vrb.test Destination: C:\SKAD\form440SKAD\temp\work\BVD1_ZSV17102803_66712
+0191025_145425_20191028_0002_000006_000001.vrb.tst".
+Performing the operation "Rename File" on target "Item: C:\SKAD\form440SKAD\temp\work\BVS1_ZSV17102803_667120191025_145425_20191028_0002.vrb.test Destination: C:\SKAD\form440SKAD\temp\work\BVS1_ZSV17102803_667120191025_145425
+_20191028_0002.vrb.tst".
+
+[2019-10-29 13:25:43Z] - INFO - Сравниваем до и после преобразования...
+[2019-10-29 13:25:44Z] - INFO - Подписываем оставшиеся файлы файлы
+[2019-10-29 13:25:44Z] - INFO - Начинаем преобразование...
+[2019-10-29 13:25:44Z] - INFO - Обрабатываем файл PB1_ROO17102803_720520191028_504535.xml
+[2019-10-29 13:25:45Z] - INFO - Performing the operation "Remove File" on target "C:\SKAD\form440SKAD\temp\work\PB1_ROO17102803_720520191028_504535.xml".
+
+[2019-10-29 13:25:45Z] - INFO - Performing the operation "Rename File" on target "Item: C:\SKAD\form440SKAD\temp\work\PB1_ROO17102803_720520191028_504535.xml.test Destination: C:\SKAD\form440SKAD\temp\work\PB1_ROO17102803_720520191028_504535.xml.tst".
+
+[2019-10-29 13:25:45Z] - INFO - Сравниваем до и после преобразования...
+[2019-10-29 13:25:45Z] - INFO - Начинаем архивацию...
+[2019-10-29 13:25:45Z] - INFO - Performing the operation "Remove File" on target "C:\SKAD\form440SKAD\temp\work\BVD1_ZSV17102803_667120191025_145425_20191028_0002_000006_000001.vrb.tst".
+Performing the operation "Remove File" on target "C:\SKAD\form440SKAD\temp\work\BVS1_ZSV17102803_667120191025_145425_20191028_0002.vrb.tst".
+Performing the operation "Remove File" on target "C:\SKAD\form440SKAD\temp\work\PB1_ROO17102803_720520191028_504535.xml.tst".
+
+[2019-10-29 13:25:45Z] - INFO - Подписываем файл архива C:\SKAD\form440SKAD\temp\work\AFN_7102803_MIFNS00_20191029_00003.arj.tst
+[2019-10-29 13:26:25Z] - INFO - Начинаем преобразование...
+[2019-10-29 13:26:58Z] - INFO - Обрабатываем файл AFN_7102803_MIFNS00_20191029_00003.arj.tst
+[2019-10-29 13:27:12Z] - INFO - Performing the operation "Remove File" on target "C:\SKAD\form440SKAD\temp\work\AFN_7102803_MIFNS00_20191029_00003.arj.tst".
+
