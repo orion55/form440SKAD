@@ -32,10 +32,10 @@
 [string]$vdkeys = "c:\SKAD\Floppy\DISKET2019-skad-test\test1"
 [string]$profile = "OT_TestFOIV"
 [string]$recList = "$curDir\util\Reclist.conf"
+[string]$arm440 = "$tmp\ARM_440"
 
 
-
-#скрипты для подписи и шифрования
+<#скрипты для подписи и шифрования
 [string]$scripts = "$curDir\scripts"
 [string]$script_unsig = "$scripts\440UnSign.scr"
 [string]$script_uncrypt = "$scripts\440UnCript.scr"
@@ -54,6 +54,6 @@
 [string]$schemaCatalog = "$curDir\xsd-schemas"
 
 #каталог на московском сервере, с отчетами для налоговой
-[string]$arm440 = "$tmp\ARM_440"
+
 [string]$arm440_ul = "$arm440\ANSWER_UL"
-[string]$arm440_fl = "$arm440\ANSWER_FL"
+[string]$arm440_fl = "$arm440\ANSWER_FL"#>
