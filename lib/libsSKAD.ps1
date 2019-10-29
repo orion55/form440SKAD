@@ -318,7 +318,8 @@ function arj_unpack {
 		exit
 	}
 
-	Remove-Item $tmp_arj -Force -ErrorAction SilentlyContinue
+	Remove-Item $tmp_arj -Force -ErrorAction SilentlyContinue -Recurse
+
 	Remove-Item -Path "$work\*.arj"
 
 	Set-Location $curDir
@@ -448,12 +449,7 @@ Function 440_out {
 
 	$curDateAfn = Get-Date -Format "yyyyMMdd"
 
-	if ($debug) {
-		$afnFileName = "AFN_7102803_MIFNS00_" + $curDateAfn + "_" + $afnCountStr + ".arj.tst"
-	}
-	else {
-		$afnFileName = "AFN_7102803_MIFNS00_" + $curDateAfn + "_" + $afnCountStr + ".arj"
-	}
+	$afnFileName = "AFN_7102803_MIFNS00_" + $curDateAfn + "_" + $afnCountStr + ".arj"
 
 	Write-Log -EntryType Information -Message "Начинаем архивацию..."
 	if ($debug) {
@@ -470,6 +466,10 @@ Function 440_out {
 	#подписываем все файлы
 	Write-Log -EntryType Information -Message "Подписываем файл архива $work\$afnFileName"
 	SKAD_Encrypt -encrypt $false -maskFiles "*.arj"
+
+	if ($debug) {
+		$afnFileName = $afnFileName + ".tst"
+	}
 
 	Write-Log -EntryType Information -Message "Копируем файл архива $afnFileName в $arhivePath"
 	Copy-Item "$work\$afnFileName" -Destination $arhivePath -Force
