@@ -233,7 +233,7 @@ function 440_in {
 	Write-Log -EntryType Information -Message "Загружаем ключевую дискету $vdkeys"
 	Copy_dirs -from $vdkeys -to 'a:'
 
-	$arj_files = Get-ChildItem "$work\*.arj"
+	$arj_files = Get-ChildItem "$work\*.$extArchiver"
 	if ($arj_files.count -eq 0) {
 		Write-Log -EntryType Error -Message "Файлы отчетности не найдены в каталоге $work"
 		exit
@@ -243,12 +243,12 @@ function 440_in {
 
 	#переносим файлы в архив
 	Write-Log -EntryType Information -Message "Копирование файлов в архив $arhivePath"
-	$msg = Copy-Item -Path "$work\*.arj" -Destination $arhivePath -Verbose -Force *>&1
+	$msg = Copy-Item -Path "$work\*.$extArchiver" -Destination $arhivePath -Verbose -Force *>&1
 	Write-Log -EntryType Information -Message ($msg | Out-String)
 
 	#снимаем подпись с отчетов
-	Write-Log -EntryType Information -Message "Снимаем подпись с arj-архивов"
-	SKAD_Decrypt -decrypt $false -maskFiles "*.arj"
+	Write-Log -EntryType Information -Message "Снимаем подпись с $extArchiver-архивов"
+	SKAD_Decrypt -decrypt $false -maskFiles "*.$extArchiver"
 	arj_unpack
 
 	Set-Location $work
@@ -291,11 +291,17 @@ function arj_unpack {
 	foreach ($arj_file in $arj_files) {
 		Write-Log -EntryType Information -Message "Разархивация файла $arj_file"
 
-		$arg_list = "e -y $arj_file"
-		$arjProc = Start-Process -FilePath $arj32 -ArgumentList $arg_list -Wait -NoNewWindow
+		if ($extArchiver -eq 'arj'){
+			$arg_list = "e -y $arj_file"
+		}
+		if ($extArchiver -eq 'zip'){
+			$arg_list = "e $arj_file -o""$tmp_arj"""
+		}
+
+		$arjProc = Start-Process -FilePath $archiver -ArgumentList $arg_list -Wait -NoNewWindow
 
 		if ($arjProc -eq $null) {
-			Copy-Item "$tmp_arj\*.*" -Destination $work -Force -Exclude "*.arj"
+			Copy-Item "$tmp_arj\*.*" -Destination $work -Force -Exclude "*.$extArchiver"
 			Remove-Item "$tmp_arj\*.*"
 		}
 		else {
@@ -320,7 +326,7 @@ function arj_unpack {
 
 	Remove-Item $tmp_arj -Force -ErrorAction SilentlyContinue -Recurse
 
-	Remove-Item -Path "$work\*.arj"
+	Remove-Item -Path "$work\*.$extArchiver"
 
 	Set-Location $curDir
 }

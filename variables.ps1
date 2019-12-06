@@ -17,7 +17,7 @@
 
 #входящие - настройки
 [string]$incoming_out = "$tmp\OUT"
-[string]$incoming_files = "AFN_MIFNS00_7102803_*_000??.ARJ"
+[string]$incoming_files = "AFN_MIFNS00_7102803_*_000??.$extArchiver"
 [string]$outcoming_post = "$tmp\Post"
 
 #архив
