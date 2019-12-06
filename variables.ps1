@@ -4,7 +4,10 @@
 [string]$tmp = "$curDir\temp"
 [string]$work = "$tmp\work"
 
-[string]$arj32 = "$curDir\util\arj32.exe"
+#[string]$arj32 = "$curDir\util\arj32.exe"
+[string]$archiver = "$curDir\util\7z.exe"
+#[string]$extArchiver = "arj"
+[string]$extArchiver = "zip"
 
 #настройка почты
 #[string]$mail_addr = "tmn-f365@tmn.apkbank.apk"
@@ -29,7 +32,7 @@
 [string]$logName = $curDir + "\log\form440p.log"
 
 [string]$spki = "C:\Program Files\MDPREI\spki\spki1utl.exe"
-[string]$vdkeys = "c:\SKAD\Floppy\DISKET2019-skad-test\test1"
+[string]$vdkeys = "d:\SKAD\Floppy\DISKET2019-skad-test\test1"
 [string]$profile = "OT_TestFOIV"
 [string]$recList = "$curDir\util\Reclist.conf"
 [string]$arm440 = "$tmp\ARM_440"

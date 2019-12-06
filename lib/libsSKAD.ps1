@@ -5,14 +5,14 @@ function Copy_dirs {
 		[string]$to)
 
 	Get-ChildItem -Path $from -Recurse |
-		Copy-Item -Destination {
-			if ($_.PSIsContainer) {
-				Join-Path $to $_.Parent.FullName.Substring($from.length)
-			}
-			else {
-				Join-Path $to $_.FullName.Substring($from.length)
-			}
-		} -Force
+	Copy-Item -Destination {
+		if ($_.PSIsContainer) {
+			Join-Path $to $_.Parent.FullName.Substring($from.length)
+		}
+		else {
+			Join-Path $to $_.FullName.Substring($from.length)
+		}
+	} -Force
 }
 
 function kwtfcbCheck {
@@ -438,10 +438,10 @@ Function 440_out {
 	}
 
 	if ($debug) {
-		$afnFiles = Get-ChildItem "$arhivePath\AFN_7102803_MIFNS00_*.arj.tst"
+		$afnFiles = Get-ChildItem "$arhivePath\AFN_7102803_MIFNS00_*.$extArchiver.tst"
 	}
 	else {
-		$afnFiles = Get-ChildItem "$arhivePath\AFN_7102803_MIFNS00_*.arj"
+		$afnFiles = Get-ChildItem "$arhivePath\AFN_7102803_MIFNS00_*.$extArchiver"
 	}
 	$afnCount = ($afnFiles | Measure-Object).count
 	$afnCount++
@@ -449,23 +449,34 @@ Function 440_out {
 
 	$curDateAfn = Get-Date -Format "yyyyMMdd"
 
-	$afnFileName = "AFN_7102803_MIFNS00_" + $curDateAfn + "_" + $afnCountStr + ".arj"
+	$afnFileName = "AFN_7102803_MIFNS00_" + $curDateAfn + "_" + $afnCountStr + "." + $extArchiver
 
 	Write-Log -EntryType Information -Message "Начинаем архивацию..."
 	if ($debug) {
-		$AllArgs = @('a', '-e', "$work\$afnFileName", "$work\*.xml.tst", "$work\*.vrb.tst")
+		if ($extArchiver -eq 'arj') {
+			$AllArgs = @('a', '-e', "$work\$afnFileName", "$work\*.xml.tst", "$work\*.vrb.tst")
+		}
+		if ($extArchiver -eq 'zip') {
+			$AllArgs = @('a', '-tzip', '-ssw', "$work\$afnFileName", "$work\*.xml.tst", "$work\*.vrb.tst")
+		}
+
 	}
 	else {
-		$AllArgs = @('a', '-e', "$work\$afnFileName", "$work\*.xml", "$work\*.vrb")
+		if ($extArchiver -eq 'arj') {
+			$AllArgs = @('a', '-e', "$work\$afnFileName", "$work\*.xml", "$work\*.vrb")
+		}
+		if ($extArchiver -eq 'zip') {
+			$AllArgs = @('a', '-tzip', '-ssw', "$work\$afnFileName", "$work\*.xml", "$work\*.vrb")
+		}
 	}
-	&$arj32	$AllArgs
+	&$archiver	$AllArgs
 
-	$msg = Remove-Item "$work\*.*" -Exclude "AFN_7102803_MIFNS00_*.arj" -Verbose *>&1
+	$msg = Remove-Item "$work\*.*" -Exclude "AFN_7102803_MIFNS00_*.$extArchiver" -Verbose *>&1
 	Write-Log -EntryType Information -Message ($msg | Out-String)
 
 	#подписываем все файлы
 	Write-Log -EntryType Information -Message "Подписываем файл архива $work\$afnFileName"
-	SKAD_Encrypt -encrypt $false -maskFiles "*.arj"
+	SKAD_Encrypt -encrypt $false -maskFiles "*.$extArchiver"
 
 	if ($debug) {
 		$afnFileName = $afnFileName + ".tst"
@@ -528,103 +539,103 @@ function SKAD_Encrypt {
 			}
 		} | Out-DataTable
 
-	if (($DataTable | Measure-Object).count -eq 0) {
-		$amount = 1
-		break
-	}
+		if (($DataTable | Measure-Object).count -eq 0) {
+			$amount = 1
+			break
+		}
 
-	Invoke-SQLiteBulkCopy -DataTable $DataTable -Table FiLES -Force -SQLiteConnection $memoryConn
+		Invoke-SQLiteBulkCopy -DataTable $DataTable -Table FiLES -Force -SQLiteConnection $memoryConn
 
-	Write-Log -EntryType Information -Message "Начинаем преобразование..."
+		Write-Log -EntryType Information -Message "Начинаем преобразование..."
 
-	foreach ($file in $mask) {
-		$tmpFile = $file.FullName + '.test'
+		foreach ($file in $mask) {
+			$tmpFile = $file.FullName + '.test'
 
-		$arguments = ''
-		if ($encrypt) {
-			$arguments = "-sign -encrypt -profile $profile -registry -algorithm 1.2.643.7.1.1.2.2 -in $($file.FullName) -out $tmpFile -reclist $recList -silent $logSpki"
+			$arguments = ''
+			if ($encrypt) {
+				$arguments = "-sign -encrypt -profile $profile -registry -algorithm 1.2.643.7.1.1.2.2 -in $($file.FullName) -out $tmpFile -reclist $recList -silent $logSpki"
+			}
+			else {
+				$arguments = "-sign -profile $profile -registry -algorithm 1.2.643.7.1.1.2.2 -data $($file.FullName) -out $tmpFile -reclist $recList -silent $logSpki"
+			}
+
+			Write-Log -EntryType Information -Message "Обрабатываем файл $($file.Name)"
+			Start-Process $spki $arguments -NoNewWindow -Wait
+		}
+		$testFiles = Get-ChildItem "$work\*.test"
+		if (($testFiles | Measure-Object).count -gt 0) {
+			$msg = $mask | Remove-Item -Verbose -Force *>&1
+			Write-Log -EntryType Information -Message ($msg | Out-String)
+			if ($debug) {
+				$msg = Get-ChildItem -path $work '*.test' | Rename-Item -NewName { $_.Name -replace '.test$', '.tst' } -Verbose *>&1
+			}
+			else {
+				$msg = Get-ChildItem -path $work '*.test' | Rename-Item -NewName { $_.Name -replace '.test$', '' } -Verbose *>&1
+			}
+
+			Write-Log -EntryType Information -Message ($msg | Out-String)
 		}
 		else {
-			$arguments = "-sign -profile $profile -registry -algorithm 1.2.643.7.1.1.2.2 -data $($file.FullName) -out $tmpFile -reclist $recList -silent $logSpki"
+			Write-Log -EntryType Error -Message "Ошибка при работе программы $spki"
+			exit
 		}
 
-		Write-Log -EntryType Information -Message "Обрабатываем файл $($file.Name)"
-		Start-Process $spki $arguments -NoNewWindow -Wait
-	}
-	$testFiles = Get-ChildItem "$work\*.test"
-	if (($testFiles | Measure-Object).count -gt 0) {
-		$msg = $mask | Remove-Item -Verbose -Force *>&1
-		Write-Log -EntryType Information -Message ($msg | Out-String)
-		if ($debug) {
-			$msg = Get-ChildItem -path $work '*.test' | Rename-Item -NewName { $_.Name -replace '.test$', '.tst' } -Verbose *>&1
-		}
-		else {
-			$msg = Get-ChildItem -path $work '*.test' | Rename-Item -NewName { $_.Name -replace '.test$', '' } -Verbose *>&1
-		}
+		#проверяем действительно или все файлы подписаны\расшифрованы
+		Write-Log -EntryType Information -Message "Сравниваем до и после преобразования..."
 
-		Write-Log -EntryType Information -Message ($msg | Out-String)
+		$DataTable = Get-ChildItem -path $work $maskFiles | % {
+			[pscustomobject]@{
+				namefile   = $_.Name
+				lengthfile = $_.Length
+			}
+		} | Out-DataTable
+
+		if (($DataTable | Measure-Object).count -eq 0) {
+			$amount = 1
+			break
+		}
+		Invoke-SQLiteBulkCopy -DataTable $DataTable -Table NEWFiLES -Force -SQLiteConnection $memoryConn
+
+		#сравниваем старую и новую длину файлов, и показываем те файлы у которых длина не изменилась (т.е. преобразование не было осуществлено)
+		$query = "select FiLES.namefile from FiLES join NEWFiLES on FiLES.namefile = NEWFiLES.namefile where FiLES.lengthfile = NEWFiLES.lengthfile"
+		$namefiles = Invoke-SqliteQuery -Query $query -SQLiteConnection $memoryConn
+
+		#если не все преобразованы, повторяем процесс
+		$count = ($namefiles | Measure-Object).Count
+		if ($count -ne 0) {
+
+			Write-Log -EntryType Error -Message "Часть файлов не были преобразованы!"
+
+			if (!(Test-Path $tmp)) {
+				New-Item -ItemType directory -Path $tmp | out-Null
+			}
+			$excludeArray = @()
+			$namefiles.namefile | % { $excludeArray += $_ }
+
+			$files1 = Get-ChildItem "$work\$mask" -Exclude $excludeArray
+			foreach ($ff2 in $files1) {
+				Move-Item -Path $ff2 -Destination $tmp
+			}
+
+			$query = "drop table FiLES;
+				drop table NEWFiLES;"
+
+			Invoke-SqliteQuery -Query $query -SQLiteConnection $memoryConn
+		}
+		$amount--
+	} until ($count -eq 0 -or $amount -eq 0)
+
+	if (Test-Path $tmp) {
+		Move-Item -Path "$tmp\*.*" -Destination $work
+		Remove-Item -Recurse $tmp
 	}
-	else {
-		Write-Log -EntryType Error -Message "Ошибка при работе программы $spki"
+
+	if ($amount -eq 0) {
+		Write-Log -EntryType Error -Message "Ошибка при работе со SKAD Signatura"
 		exit
 	}
 
-	#проверяем действительно или все файлы подписаны\расшифрованы
-	Write-Log -EntryType Information -Message "Сравниваем до и после преобразования..."
-
-	$DataTable = Get-ChildItem -path $work $maskFiles | % {
-		[pscustomobject]@{
-			namefile   = $_.Name
-			lengthfile = $_.Length
-		}
-	} | Out-DataTable
-
-if (($DataTable | Measure-Object).count -eq 0) {
-	$amount = 1
-	break
-}
-Invoke-SQLiteBulkCopy -DataTable $DataTable -Table NEWFiLES -Force -SQLiteConnection $memoryConn
-
-#сравниваем старую и новую длину файлов, и показываем те файлы у которых длина не изменилась (т.е. преобразование не было осуществлено)
-$query = "select FiLES.namefile from FiLES join NEWFiLES on FiLES.namefile = NEWFiLES.namefile where FiLES.lengthfile = NEWFiLES.lengthfile"
-$namefiles = Invoke-SqliteQuery -Query $query -SQLiteConnection $memoryConn
-
-#если не все преобразованы, повторяем процесс
-$count = ($namefiles | Measure-Object).Count
-if ($count -ne 0) {
-
-	Write-Log -EntryType Error -Message "Часть файлов не были преобразованы!"
-
-	if (!(Test-Path $tmp)) {
-		New-Item -ItemType directory -Path $tmp | out-Null
-	}
-	$excludeArray = @()
-	$namefiles.namefile | % { $excludeArray += $_ }
-
-	$files1 = Get-ChildItem "$work\$mask" -Exclude $excludeArray
-	foreach ($ff2 in $files1) {
-		Move-Item -Path $ff2 -Destination $tmp
-	}
-
-	$query = "drop table FiLES;
-				drop table NEWFiLES;"
-
-	Invoke-SqliteQuery -Query $query -SQLiteConnection $memoryConn
-}
-$amount--
-} until ($count -eq 0 -or $amount -eq 0)
-
-if (Test-Path $tmp) {
-	Move-Item -Path "$tmp\*.*" -Destination $work
-	Remove-Item -Recurse $tmp
-}
-
-if ($amount -eq 0) {
-	Write-Log -EntryType Error -Message "Ошибка при работе со SKAD Signatura"
-	exit
-}
-
-$memoryConn.Close()
+	$memoryConn.Close()
 
 }
 function SKAD_Decrypt {
