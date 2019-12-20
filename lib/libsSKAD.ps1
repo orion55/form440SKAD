@@ -291,10 +291,10 @@ function arj_unpack {
 	foreach ($arj_file in $arj_files) {
 		Write-Log -EntryType Information -Message "Разархивация файла $arj_file"
 
-		if ($extArchiver -eq 'arj'){
+		if ($extArchiver -eq 'arj') {
 			$arg_list = "e -y $arj_file"
 		}
-		if ($extArchiver -eq 'zip'){
+		if ($extArchiver -eq 'zip') {
 			$arg_list = "e $arj_file -o""$tmp_arj"""
 		}
 
@@ -416,39 +416,31 @@ Function 440_out {
 		New-Item -ItemType directory -Path $arhivePath | out-Null
 	}
 
-	Stop-HostLog
+	Write-Log -EntryType Information -Message "Копирование файлов в архив $arhivePath"
 	$msg = Copy-Item -Path "$work\*.xml" -Destination $arhivePath -Verbose -Force *>&1
 	Write-Log -EntryType Information -Message ($msg | Out-String)
-	Start-HostLog -LogLevel Information
-	Write-Log -EntryType Information -Message "Копирование файлов в архив $arhivePath"
+
+	Write-Log -EntryType Information -Message "Загружаем ключевую дискету $vdkeys"
+	Copy_dirs -from $vdkeys -to 'a:'
 
 	Write-Log -EntryType Information -Message "Переименовываем файлы *.xml -> *.vrb"
 	Get-ChildItem "$work\b*.xml" -Exclude "$work\bz1*.xml" | rename-item -newname { $_.name -replace '\.xml', '.vrb' }
 
-	#подписываем все файлы
-	Write-Log -EntryType Information -Message "Загружаем ключевую дискету $vdkeys"
-	Copy_dirs -from $vdkeys -to 'a:'
+	Write-Log -EntryType Information -Message "Подписываем все файлы"
+	SKAD_Encrypt -encrypt $false -maskFiles "*.*"
 
 	$vrbFiles = Get-ChildItem "$work\*.vrb"
 	if ($vrbFiles.count -gt 0) {
+		Write-Log -EntryType Information -Message "Архивируем vrb-файлы"
+		SKAD_archive -maskFiles "*.vrb"
+
 		#зашифровываем и подписываем файлы
-		Write-Log -EntryType Information -Message "Зашифровываем и подписываем vrb-файлы"
+		Write-Log -EntryType Information -Message "Зашифровываем vrb-файлы"
 		SKAD_Encrypt -encrypt $true -maskFiles "*.vrb"
 	}
 
-	$someFiles = Get-ChildItem "$work\*.xml"
-	if ($someFiles.count -gt 0) {
-		#подписываем файлы
-		Write-Log -EntryType Information -Message "Подписываем оставшиеся файлы файлы"
-		SKAD_Encrypt -encrypt $false -maskFiles "*.xml"
-	}
+	$afnFiles = Get-ChildItem "$arhivePath\AFN_7102803_MIFNS00_*.$extArchiver"
 
-	if ($debug) {
-		$afnFiles = Get-ChildItem "$arhivePath\AFN_7102803_MIFNS00_*.$extArchiver.tst"
-	}
-	else {
-		$afnFiles = Get-ChildItem "$arhivePath\AFN_7102803_MIFNS00_*.$extArchiver"
-	}
 	$afnCount = ($afnFiles | Measure-Object).count
 	$afnCount++
 	$afnCountStr = $afnCount.ToString("00000")
@@ -508,7 +500,7 @@ Function 440_out {
 	Write-Log -EntryType Information -Message $body
 }
 
-function SKAD_Encrypt {
+function SKAD_Encrypt_old {
 	Param(
 		$encrypt = $false,
 		[string]$maskFiles = "*.*")
@@ -679,4 +671,58 @@ function SKAD_Decrypt {
 		exit
 	}
 
+}
+
+function SKAD_Encrypt {
+	Param(
+		$encrypt = $false,
+		[string]$maskFiles = "*.*")
+
+
+	$mask = Get-ChildItem -path $work $maskFiles
+
+	foreach ($file in $mask) {
+		$tmpFile = $file.FullName + '.test'
+
+		$arguments = ''
+		if ($encrypt) {
+			$arguments = "-sign -encrypt -profile $profile -registry -algorithm 1.2.643.7.1.1.2.2 -in ""$($file.FullName)"" -out ""$tmpFile"" -reclist $recList -silent $logSpki"
+		}
+		else {
+			$arguments = "-sign -profile $profile -registry -algorithm 1.2.643.7.1.1.2.2 -data ""$($file.FullName)"" -out ""$tmpFile"" -reclist $recList -silent $logSpki"
+		}
+
+		Write-Log -EntryType Information -Message "Обрабатываем файл $($file.Name)"
+		Start-Process $spki $arguments -NoNewWindow -Wait
+	}
+
+	$testFiles = Get-ChildItem "$work\*.test"
+	if (($testFiles | Measure-Object).count -gt 0) {
+		$msg = $mask | Remove-Item -Verbose -Force *>&1
+		Write-Log -EntryType Information -Message ($msg | Out-String)
+		$msg = Get-ChildItem -path $work '*.test' | Rename-Item -NewName { $_.Name -replace '.test$', '' } -Verbose *>&1
+		Write-Log -EntryType Information -Message ($msg | Out-String)
+	}
+	else {
+		Write-Log -EntryType Error -Message "Ошибка при работе программы $spki"
+		exit
+	}
+}
+function SKAD_archive {
+	Param([string]$maskFiles = "*.*")
+
+	$arguments = "-f -k $work\$maskFiles"
+	Start-Process $archiver $arguments -NoNewWindow -Wait
+
+	$gzFiles = Get-ChildItem "$work\*.gz"
+	if (($gzFiles | Measure-Object).count -gt 0) {
+		$msg = "$work\$maskFiles" | Remove-Item -Verbose -Force -Exclude "$work\*.gz" *>&1
+		Write-Log -EntryType Information -Message ($msg | Out-String)
+		$msg = Get-ChildItem -path $work '*.gz' | Rename-Item -NewName { $_.Name -replace '.gz$', '' } -Verbose *>&1
+		Write-Log -EntryType Information -Message ($msg | Out-String)
+	}
+	else {
+		Write-Log -EntryType Error -Message "Ошибка при работе программы $archiver"
+		exit
+	}
 }

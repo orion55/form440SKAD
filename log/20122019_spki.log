@@ -1,0 +1,175 @@
+Текущее время: Fri Dec 20 23:19:29 2019
+"C:\Program Files\MDPREI\spki\spki1utl.exe" -sign -profile r2880_2 -registry -algorithm 1.2.643.7.1.1.2.2 -data "D:\SKAD\form440SKAD\temp\work\BOS1_RPO17102803_890120191218_606125_20191219_0002.vrb" -out "D:\SKAD\form440SKAD\temp\work\BOS1_RPO17102803_890120191218_606125_20191219_0002.vrb.test" -reclist D:\SKAD\form440SKAD\util\Reclist.conf -silent D:\SKAD\form440SKAD\log\20122019_spki.log 
+Инициализация
+Установка ЭП файла
+Результат: OK (00000000)
+Текущее время: Fri Dec 20 23:19:31 2019
+"C:\Program Files\MDPREI\spki\spki1utl.exe" -sign -profile r2880_2 -registry -algorithm 1.2.643.7.1.1.2.2 -data "D:\SKAD\form440SKAD\temp\work\BVD1_ZSV17102803_860220191219_102912_20191219_0002_000001_000001.vrb" -out "D:\SKAD\form440SKAD\temp\work\BVD1_ZSV17102803_860220191219_102912_20191219_0002_000001_000001.vrb.test" -reclist D:\SKAD\form440SKAD\util\Reclist.conf -silent D:\SKAD\form440SKAD\log\20122019_spki.log 
+Инициализация
+Установка ЭП файла
+Результат: OK (00000000)
+Текущее время: Fri Dec 20 23:19:32 2019
+"C:\Program Files\MDPREI\spki\spki1utl.exe" -sign -profile r2880_2 -registry -algorithm 1.2.643.7.1.1.2.2 -data "D:\SKAD\form440SKAD\temp\work\BVS1_ZSV17102803_860220191219_102912_20191219_0002.vrb" -out "D:\SKAD\form440SKAD\temp\work\BVS1_ZSV17102803_860220191219_102912_20191219_0002.vrb.test" -reclist D:\SKAD\form440SKAD\util\Reclist.conf -silent D:\SKAD\form440SKAD\log\20122019_spki.log 
+Инициализация
+Установка ЭП файла
+Результат: OK (00000000)
+Текущее время: Fri Dec 20 23:19:33 2019
+"C:\Program Files\MDPREI\spki\spki1utl.exe" -sign -profile r2880_2 -registry -algorithm 1.2.643.7.1.1.2.2 -data "D:\SKAD\form440SKAD\temp\work\PB1_RPO17102803_860320191218_590125.xml" -out "D:\SKAD\form440SKAD\temp\work\PB1_RPO17102803_860320191218_590125.xml.test" -reclist D:\SKAD\form440SKAD\util\Reclist.conf -silent D:\SKAD\form440SKAD\log\20122019_spki.log 
+Инициализация
+Установка ЭП файла
+Результат: OK (00000000)
+Текущее время: Fri Dec 20 23:19:34 2019
+"C:\Program Files\MDPREI\spki\spki1utl.exe" -sign -profile r2880_2 -registry -algorithm 1.2.643.7.1.1.2.2 -data "D:\SKAD\form440SKAD\temp\work\PB1_RPO17102803_860320191218_595139.xml" -out "D:\SKAD\form440SKAD\temp\work\PB1_RPO17102803_860320191218_595139.xml.test" -reclist D:\SKAD\form440SKAD\util\Reclist.conf -silent D:\SKAD\form440SKAD\log\20122019_spki.log 
+Инициализация
+Установка ЭП файла
+Результат: OK (00000000)
+Текущее время: Fri Dec 20 23:19:35 2019
+"C:\Program Files\MDPREI\spki\spki1utl.exe" -sign -profile r2880_2 -registry -algorithm 1.2.643.7.1.1.2.2 -data "D:\SKAD\form440SKAD\temp\work\PB1_ZSV17102803_860220191219_102912.xml" -out "D:\SKAD\form440SKAD\temp\work\PB1_ZSV17102803_860220191219_102912.xml.test" -reclist D:\SKAD\form440SKAD\util\Reclist.conf -silent D:\SKAD\form440SKAD\log\20122019_spki.log 
+Инициализация
+Установка ЭП файла
+Результат: OK (00000000)
+Текущее время: Fri Dec 20 23:19:36 2019
+"C:\Program Files\MDPREI\spki\spki1utl.exe" -sign -profile r2880_2 -registry -algorithm 1.2.643.7.1.1.2.2 -data "D:\SKAD\form440SKAD\temp\work\PB2_APZ17102803_723020191219_504225_0002.xml" -out "D:\SKAD\form440SKAD\temp\work\PB2_APZ17102803_723020191219_504225_0002.xml.test" -reclist D:\SKAD\form440SKAD\util\Reclist.conf -silent D:\SKAD\form440SKAD\log\20122019_spki.log 
+Инициализация
+Установка ЭП файла
+Результат: OK (00000000)
+Текущее время: Fri Dec 20 23:38:25 2019
+"C:\Program Files\MDPREI\spki\spki1utl.exe" -sign -profile r2880_2 -registry -algorithm 1.2.643.7.1.1.2.2 -data "D:\SKAD\form440SKAD\temp\work\BOS1_RPO17102803_890120191218_606125_20191219_0002.vrb" -out "D:\SKAD\form440SKAD\temp\work\BOS1_RPO17102803_890120191218_606125_20191219_0002.vrb.test" -reclist D:\SKAD\form440SKAD\util\Reclist.conf -silent D:\SKAD\form440SKAD\log\20122019_spki.log 
+Инициализация
+Установка ЭП файла
+Результат: OK (00000000)
+Текущее время: Fri Dec 20 23:38:26 2019
+"C:\Program Files\MDPREI\spki\spki1utl.exe" -sign -profile r2880_2 -registry -algorithm 1.2.643.7.1.1.2.2 -data "D:\SKAD\form440SKAD\temp\work\BVD1_ZSV17102803_860220191219_102912_20191219_0002_000001_000001.vrb" -out "D:\SKAD\form440SKAD\temp\work\BVD1_ZSV17102803_860220191219_102912_20191219_0002_000001_000001.vrb.test" -reclist D:\SKAD\form440SKAD\util\Reclist.conf -silent D:\SKAD\form440SKAD\log\20122019_spki.log 
+Инициализация
+Установка ЭП файла
+Результат: OK (00000000)
+Текущее время: Fri Dec 20 23:38:27 2019
+"C:\Program Files\MDPREI\spki\spki1utl.exe" -sign -profile r2880_2 -registry -algorithm 1.2.643.7.1.1.2.2 -data "D:\SKAD\form440SKAD\temp\work\BVS1_ZSV17102803_860220191219_102912_20191219_0002.vrb" -out "D:\SKAD\form440SKAD\temp\work\BVS1_ZSV17102803_860220191219_102912_20191219_0002.vrb.test" -reclist D:\SKAD\form440SKAD\util\Reclist.conf -silent D:\SKAD\form440SKAD\log\20122019_spki.log 
+Инициализация
+Установка ЭП файла
+Результат: OK (00000000)
+Текущее время: Fri Dec 20 23:38:28 2019
+"C:\Program Files\MDPREI\spki\spki1utl.exe" -sign -profile r2880_2 -registry -algorithm 1.2.643.7.1.1.2.2 -data "D:\SKAD\form440SKAD\temp\work\PB1_RPO17102803_860320191218_590125.xml" -out "D:\SKAD\form440SKAD\temp\work\PB1_RPO17102803_860320191218_590125.xml.test" -reclist D:\SKAD\form440SKAD\util\Reclist.conf -silent D:\SKAD\form440SKAD\log\20122019_spki.log 
+Инициализация
+Установка ЭП файла
+Результат: OK (00000000)
+Текущее время: Fri Dec 20 23:38:30 2019
+"C:\Program Files\MDPREI\spki\spki1utl.exe" -sign -profile r2880_2 -registry -algorithm 1.2.643.7.1.1.2.2 -data "D:\SKAD\form440SKAD\temp\work\PB1_RPO17102803_860320191218_595139.xml" -out "D:\SKAD\form440SKAD\temp\work\PB1_RPO17102803_860320191218_595139.xml.test" -reclist D:\SKAD\form440SKAD\util\Reclist.conf -silent D:\SKAD\form440SKAD\log\20122019_spki.log 
+Инициализация
+Установка ЭП файла
+Результат: OK (00000000)
+Текущее время: Fri Dec 20 23:38:31 2019
+"C:\Program Files\MDPREI\spki\spki1utl.exe" -sign -profile r2880_2 -registry -algorithm 1.2.643.7.1.1.2.2 -data "D:\SKAD\form440SKAD\temp\work\PB1_ZSV17102803_860220191219_102912.xml" -out "D:\SKAD\form440SKAD\temp\work\PB1_ZSV17102803_860220191219_102912.xml.test" -reclist D:\SKAD\form440SKAD\util\Reclist.conf -silent D:\SKAD\form440SKAD\log\20122019_spki.log 
+Инициализация
+Установка ЭП файла
+Результат: OK (00000000)
+Текущее время: Fri Dec 20 23:38:32 2019
+"C:\Program Files\MDPREI\spki\spki1utl.exe" -sign -profile r2880_2 -registry -algorithm 1.2.643.7.1.1.2.2 -data "D:\SKAD\form440SKAD\temp\work\PB2_APZ17102803_723020191219_504225_0002.xml" -out "D:\SKAD\form440SKAD\temp\work\PB2_APZ17102803_723020191219_504225_0002.xml.test" -reclist D:\SKAD\form440SKAD\util\Reclist.conf -silent D:\SKAD\form440SKAD\log\20122019_spki.log 
+Инициализация
+Установка ЭП файла
+Результат: OK (00000000)
+Текущее время: Fri Dec 20 23:39:54 2019
+"C:\Program Files\MDPREI\spki\spki1utl.exe" -sign -profile r2880_2 -registry -algorithm 1.2.643.7.1.1.2.2 -data "D:\SKAD\form440SKAD\temp\work\BOS1_RPO17102803_890120191218_606125_20191219_0002.vrb" -out "D:\SKAD\form440SKAD\temp\work\BOS1_RPO17102803_890120191218_606125_20191219_0002.vrb.test" -reclist D:\SKAD\form440SKAD\util\Reclist.conf -silent D:\SKAD\form440SKAD\log\20122019_spki.log 
+Инициализация
+Установка ЭП файла
+Результат: OK (00000000)
+Текущее время: Fri Dec 20 23:39:55 2019
+"C:\Program Files\MDPREI\spki\spki1utl.exe" -sign -profile r2880_2 -registry -algorithm 1.2.643.7.1.1.2.2 -data "D:\SKAD\form440SKAD\temp\work\BVD1_ZSV17102803_860220191219_102912_20191219_0002_000001_000001.vrb" -out "D:\SKAD\form440SKAD\temp\work\BVD1_ZSV17102803_860220191219_102912_20191219_0002_000001_000001.vrb.test" -reclist D:\SKAD\form440SKAD\util\Reclist.conf -silent D:\SKAD\form440SKAD\log\20122019_spki.log 
+Инициализация
+Установка ЭП файла
+Результат: OK (00000000)
+Текущее время: Fri Dec 20 23:39:56 2019
+"C:\Program Files\MDPREI\spki\spki1utl.exe" -sign -profile r2880_2 -registry -algorithm 1.2.643.7.1.1.2.2 -data "D:\SKAD\form440SKAD\temp\work\BVS1_ZSV17102803_860220191219_102912_20191219_0002.vrb" -out "D:\SKAD\form440SKAD\temp\work\BVS1_ZSV17102803_860220191219_102912_20191219_0002.vrb.test" -reclist D:\SKAD\form440SKAD\util\Reclist.conf -silent D:\SKAD\form440SKAD\log\20122019_spki.log 
+Инициализация
+Установка ЭП файла
+Результат: OK (00000000)
+Текущее время: Fri Dec 20 23:39:57 2019
+"C:\Program Files\MDPREI\spki\spki1utl.exe" -sign -profile r2880_2 -registry -algorithm 1.2.643.7.1.1.2.2 -data "D:\SKAD\form440SKAD\temp\work\PB1_RPO17102803_860320191218_590125.xml" -out "D:\SKAD\form440SKAD\temp\work\PB1_RPO17102803_860320191218_590125.xml.test" -reclist D:\SKAD\form440SKAD\util\Reclist.conf -silent D:\SKAD\form440SKAD\log\20122019_spki.log 
+Инициализация
+Установка ЭП файла
+Результат: OK (00000000)
+Текущее время: Fri Dec 20 23:39:58 2019
+"C:\Program Files\MDPREI\spki\spki1utl.exe" -sign -profile r2880_2 -registry -algorithm 1.2.643.7.1.1.2.2 -data "D:\SKAD\form440SKAD\temp\work\PB1_RPO17102803_860320191218_595139.xml" -out "D:\SKAD\form440SKAD\temp\work\PB1_RPO17102803_860320191218_595139.xml.test" -reclist D:\SKAD\form440SKAD\util\Reclist.conf -silent D:\SKAD\form440SKAD\log\20122019_spki.log 
+Инициализация
+Установка ЭП файла
+Результат: OK (00000000)
+Текущее время: Fri Dec 20 23:39:59 2019
+"C:\Program Files\MDPREI\spki\spki1utl.exe" -sign -profile r2880_2 -registry -algorithm 1.2.643.7.1.1.2.2 -data "D:\SKAD\form440SKAD\temp\work\PB1_ZSV17102803_860220191219_102912.xml" -out "D:\SKAD\form440SKAD\temp\work\PB1_ZSV17102803_860220191219_102912.xml.test" -reclist D:\SKAD\form440SKAD\util\Reclist.conf -silent D:\SKAD\form440SKAD\log\20122019_spki.log 
+Инициализация
+Установка ЭП файла
+Результат: OK (00000000)
+Текущее время: Fri Dec 20 23:40:00 2019
+"C:\Program Files\MDPREI\spki\spki1utl.exe" -sign -profile r2880_2 -registry -algorithm 1.2.643.7.1.1.2.2 -data "D:\SKAD\form440SKAD\temp\work\PB2_APZ17102803_723020191219_504225_0002.xml" -out "D:\SKAD\form440SKAD\temp\work\PB2_APZ17102803_723020191219_504225_0002.xml.test" -reclist D:\SKAD\form440SKAD\util\Reclist.conf -silent D:\SKAD\form440SKAD\log\20122019_spki.log 
+Инициализация
+Установка ЭП файла
+Результат: OK (00000000)
+Текущее время: Fri Dec 20 23:42:13 2019
+"C:\Program Files\MDPREI\spki\spki1utl.exe" -sign -profile r2880_2 -registry -algorithm 1.2.643.7.1.1.2.2 -data "D:\SKAD\form440SKAD\temp\work\BOS1_RPO17102803_890120191218_606125_20191219_0002.vrb" -out "D:\SKAD\form440SKAD\temp\work\BOS1_RPO17102803_890120191218_606125_20191219_0002.vrb.test" -reclist D:\SKAD\form440SKAD\util\Reclist.conf -silent D:\SKAD\form440SKAD\log\20122019_spki.log 
+Инициализация
+Установка ЭП файла
+Результат: OK (00000000)
+Текущее время: Fri Dec 20 23:42:14 2019
+"C:\Program Files\MDPREI\spki\spki1utl.exe" -sign -profile r2880_2 -registry -algorithm 1.2.643.7.1.1.2.2 -data "D:\SKAD\form440SKAD\temp\work\BVD1_ZSV17102803_860220191219_102912_20191219_0002_000001_000001.vrb" -out "D:\SKAD\form440SKAD\temp\work\BVD1_ZSV17102803_860220191219_102912_20191219_0002_000001_000001.vrb.test" -reclist D:\SKAD\form440SKAD\util\Reclist.conf -silent D:\SKAD\form440SKAD\log\20122019_spki.log 
+Инициализация
+Установка ЭП файла
+Результат: OK (00000000)
+Текущее время: Fri Dec 20 23:42:15 2019
+"C:\Program Files\MDPREI\spki\spki1utl.exe" -sign -profile r2880_2 -registry -algorithm 1.2.643.7.1.1.2.2 -data "D:\SKAD\form440SKAD\temp\work\BVS1_ZSV17102803_860220191219_102912_20191219_0002.vrb" -out "D:\SKAD\form440SKAD\temp\work\BVS1_ZSV17102803_860220191219_102912_20191219_0002.vrb.test" -reclist D:\SKAD\form440SKAD\util\Reclist.conf -silent D:\SKAD\form440SKAD\log\20122019_spki.log 
+Инициализация
+Установка ЭП файла
+Результат: OK (00000000)
+Текущее время: Fri Dec 20 23:42:16 2019
+"C:\Program Files\MDPREI\spki\spki1utl.exe" -sign -profile r2880_2 -registry -algorithm 1.2.643.7.1.1.2.2 -data "D:\SKAD\form440SKAD\temp\work\PB1_RPO17102803_860320191218_590125.xml" -out "D:\SKAD\form440SKAD\temp\work\PB1_RPO17102803_860320191218_590125.xml.test" -reclist D:\SKAD\form440SKAD\util\Reclist.conf -silent D:\SKAD\form440SKAD\log\20122019_spki.log 
+Инициализация
+Установка ЭП файла
+Результат: OK (00000000)
+Текущее время: Fri Dec 20 23:42:18 2019
+"C:\Program Files\MDPREI\spki\spki1utl.exe" -sign -profile r2880_2 -registry -algorithm 1.2.643.7.1.1.2.2 -data "D:\SKAD\form440SKAD\temp\work\PB1_RPO17102803_860320191218_595139.xml" -out "D:\SKAD\form440SKAD\temp\work\PB1_RPO17102803_860320191218_595139.xml.test" -reclist D:\SKAD\form440SKAD\util\Reclist.conf -silent D:\SKAD\form440SKAD\log\20122019_spki.log 
+Инициализация
+Установка ЭП файла
+Результат: OK (00000000)
+Текущее время: Fri Dec 20 23:42:19 2019
+"C:\Program Files\MDPREI\spki\spki1utl.exe" -sign -profile r2880_2 -registry -algorithm 1.2.643.7.1.1.2.2 -data "D:\SKAD\form440SKAD\temp\work\PB1_ZSV17102803_860220191219_102912.xml" -out "D:\SKAD\form440SKAD\temp\work\PB1_ZSV17102803_860220191219_102912.xml.test" -reclist D:\SKAD\form440SKAD\util\Reclist.conf -silent D:\SKAD\form440SKAD\log\20122019_spki.log 
+Инициализация
+Установка ЭП файла
+Результат: OK (00000000)
+Текущее время: Fri Dec 20 23:42:20 2019
+"C:\Program Files\MDPREI\spki\spki1utl.exe" -sign -profile r2880_2 -registry -algorithm 1.2.643.7.1.1.2.2 -data "D:\SKAD\form440SKAD\temp\work\PB2_APZ17102803_723020191219_504225_0002.xml" -out "D:\SKAD\form440SKAD\temp\work\PB2_APZ17102803_723020191219_504225_0002.xml.test" -reclist D:\SKAD\form440SKAD\util\Reclist.conf -silent D:\SKAD\form440SKAD\log\20122019_spki.log 
+Инициализация
+Установка ЭП файла
+Результат: OK (00000000)
+Текущее время: Fri Dec 20 23:45:28 2019
+"C:\Program Files\MDPREI\spki\spki1utl.exe" -sign -profile r2880_2 -registry -algorithm 1.2.643.7.1.1.2.2 -data "D:\SKAD\form440SKAD\temp\work\BOS1_RPO17102803_890120191218_606125_20191219_0002.vrb" -out "D:\SKAD\form440SKAD\temp\work\BOS1_RPO17102803_890120191218_606125_20191219_0002.vrb.test" -reclist D:\SKAD\form440SKAD\util\Reclist.conf -silent D:\SKAD\form440SKAD\log\20122019_spki.log 
+Инициализация
+Установка ЭП файла
+Результат: OK (00000000)
+Текущее время: Fri Dec 20 23:45:30 2019
+"C:\Program Files\MDPREI\spki\spki1utl.exe" -sign -profile r2880_2 -registry -algorithm 1.2.643.7.1.1.2.2 -data "D:\SKAD\form440SKAD\temp\work\BVD1_ZSV17102803_860220191219_102912_20191219_0002_000001_000001.vrb" -out "D:\SKAD\form440SKAD\temp\work\BVD1_ZSV17102803_860220191219_102912_20191219_0002_000001_000001.vrb.test" -reclist D:\SKAD\form440SKAD\util\Reclist.conf -silent D:\SKAD\form440SKAD\log\20122019_spki.log 
+Инициализация
+Установка ЭП файла
+Результат: OK (00000000)
+Текущее время: Fri Dec 20 23:45:31 2019
+"C:\Program Files\MDPREI\spki\spki1utl.exe" -sign -profile r2880_2 -registry -algorithm 1.2.643.7.1.1.2.2 -data "D:\SKAD\form440SKAD\temp\work\BVS1_ZSV17102803_860220191219_102912_20191219_0002.vrb" -out "D:\SKAD\form440SKAD\temp\work\BVS1_ZSV17102803_860220191219_102912_20191219_0002.vrb.test" -reclist D:\SKAD\form440SKAD\util\Reclist.conf -silent D:\SKAD\form440SKAD\log\20122019_spki.log 
+Инициализация
+Установка ЭП файла
+Результат: OK (00000000)
+Текущее время: Fri Dec 20 23:45:32 2019
+"C:\Program Files\MDPREI\spki\spki1utl.exe" -sign -profile r2880_2 -registry -algorithm 1.2.643.7.1.1.2.2 -data "D:\SKAD\form440SKAD\temp\work\PB1_RPO17102803_860320191218_590125.xml" -out "D:\SKAD\form440SKAD\temp\work\PB1_RPO17102803_860320191218_590125.xml.test" -reclist D:\SKAD\form440SKAD\util\Reclist.conf -silent D:\SKAD\form440SKAD\log\20122019_spki.log 
+Инициализация
+Установка ЭП файла
+Результат: OK (00000000)
+Текущее время: Fri Dec 20 23:45:33 2019
+"C:\Program Files\MDPREI\spki\spki1utl.exe" -sign -profile r2880_2 -registry -algorithm 1.2.643.7.1.1.2.2 -data "D:\SKAD\form440SKAD\temp\work\PB1_RPO17102803_860320191218_595139.xml" -out "D:\SKAD\form440SKAD\temp\work\PB1_RPO17102803_860320191218_595139.xml.test" -reclist D:\SKAD\form440SKAD\util\Reclist.conf -silent D:\SKAD\form440SKAD\log\20122019_spki.log 
+Инициализация
+Установка ЭП файла
+Результат: OK (00000000)
+Текущее время: Fri Dec 20 23:45:34 2019
+"C:\Program Files\MDPREI\spki\spki1utl.exe" -sign -profile r2880_2 -registry -algorithm 1.2.643.7.1.1.2.2 -data "D:\SKAD\form440SKAD\temp\work\PB1_ZSV17102803_860220191219_102912.xml" -out "D:\SKAD\form440SKAD\temp\work\PB1_ZSV17102803_860220191219_102912.xml.test" -reclist D:\SKAD\form440SKAD\util\Reclist.conf -silent D:\SKAD\form440SKAD\log\20122019_spki.log 
+Инициализация
+Установка ЭП файла
+Результат: OK (00000000)
+Текущее время: Fri Dec 20 23:45:35 2019
+"C:\Program Files\MDPREI\spki\spki1utl.exe" -sign -profile r2880_2 -registry -algorithm 1.2.643.7.1.1.2.2 -data "D:\SKAD\form440SKAD\temp\work\PB2_APZ17102803_723020191219_504225_0002.xml" -out "D:\SKAD\form440SKAD\temp\work\PB2_APZ17102803_723020191219_504225_0002.xml.test" -reclist D:\SKAD\form440SKAD\util\Reclist.conf -silent D:\SKAD\form440SKAD\log\20122019_spki.log 
+Инициализация
+Установка ЭП файла
+Результат: OK (00000000)
