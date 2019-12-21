@@ -154,11 +154,11 @@ function documentsCheck {
 	if (Test-Connection $mail_server -Quiet -Count 2) {
 		$encoding = [System.Text.Encoding]::UTF8
 		Send-MailMessage -To $mail_addr -Body $body -Encoding $encoding -From $mail_from -Subject $title -SmtpServer $mail_server
-		Write-Log -EntryType Information -Message $body
 	}
 	else {
 		Write-Log -EntryType Error -Message "Не удалось соединиться с почтовым сервером $mail_server"
 	}
+	Write-Log -EntryType Information -Message $body
 
 	$curDate = Get-Date -Format "ddMMyyyy"
 	$arhivePath = $440p_arhive + '\' + $curDate
@@ -255,9 +255,13 @@ function 440_in {
 
 	$vrbFiles = Get-ChildItem "$work\*.vrb"
 	if (($vrbFiles | Measure-Object).count -gt 0) {
-		#расшифровываем файлы
 		Write-Log -EntryType Information -Message "Расшифровываем vrb-файлы"
 		SKAD_Decrypt -decrypt $true -maskFiles "*.vrb"
+
+		Write-Log -EntryType Information -Message "Распаковываем vrb-файлы"
+		$msg = Get-ChildItem '*.vrb' | Rename-Item -NewName { $_.Name -replace '.vrb$', '.vrb.gz' } -Verbose -Force *>&1
+		Write-Log -EntryType Information -Message ($msg | Out-String)
+		SKAD_Decompress -maskFiles "*.gz"
 
 		Write-Log -EntryType Information -Message "Переименовываем файлы в xml"
 		$msg = Get-ChildItem '*.vrb' | Rename-Item -NewName { $_.Name -replace '.vrb$', '.xml' } -Verbose -Force *>&1
@@ -624,10 +628,10 @@ function SKAD_Decrypt {
 
 		$arguments = ''
 		if ($decrypt) {
-			$arguments = "-decrypt -verify -delete -1 -profile $profile -registry -in $($file.FullName) -out $tmpFile -silent $logSpki"
+			$arguments = "-decrypt -profile $profile -registry -in ""$($file.FullName)"" -out ""$tmpFile"" -silent $logSpki"
 		}
 		else {
-			$arguments = "-verify -delete -1 -profile $profile -registry -in $($file.FullName) -out $tmpFile -silent $logSpki"
+			$arguments = "-verify -delete -1 -profile $profile -registry -in ""$($file.FullName)"" -out ""$tmpFile"" -silent $logSpki"
 		}
 
 		Write-Log -EntryType Information -Message "Обрабатываем файл $($file.Name)"
@@ -636,11 +640,7 @@ function SKAD_Decrypt {
 
 	$testFiles = Get-ChildItem "$work\*.test"
 	if (($testFiles | Measure-Object).count -gt 0) {
-		<#ForEach ($file in $testFiles) {
-			$msg = $file.FullName -replace '.test$', '' | Remove-Item -Verbose -Force *>&1
-			Write-Log -EntryType Information -Message ($msg | Out-String)
-		}#>
-		$msg = $testFiles | ForEach-Object { $_.Name -replace '.test$', '' } | Remove-Item -Verbose -Force *>&1
+		$msg = $testFiles | ForEach-Object { $_.FullName -replace '.test$', '' } | Remove-Item -Verbose -Force *>&1
 		Write-Log -EntryType Information -Message ($msg | Out-String)
 		$msg = Get-ChildItem -path $work '*.test' | Rename-Item -NewName { $_.Name -replace '.test$', '' } -Verbose *>&1
 		Write-Log -EntryType Information -Message ($msg | Out-String)
@@ -704,4 +704,11 @@ function SKAD_archive {
 		Write-Log -EntryType Error -Message "Ошибка при работе программы $archiver"
 		exit
 	}
+}
+
+function SKAD_Decompress {
+	Param([string]$maskFiles = "*.*")
+
+	$arguments = "-d $work\$maskFiles"
+	Start-Process $archiver $arguments -NoNewWindow -Wait
 }
