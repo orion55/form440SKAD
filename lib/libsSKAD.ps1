@@ -239,7 +239,7 @@ function 440_in {
 		exit
 	}
 	#Проверяем блокировку файлов
-	Check-FilesLock -in_files $arj_files
+	#Check-FilesLock -in_files $arj_files
 
 	#переносим файлы в архив
 	Write-Log -EntryType Information -Message "Копирование файлов в архив $arhivePath"
@@ -253,22 +253,22 @@ function 440_in {
 
 	Set-Location $work
 
-	#снимаем подпись с xml-файлов
-	$xmlFiles = Get-ChildItem "$work\*.xml"
-	if (($xmlFiles | Measure-Object).count -gt 0) {
-		Write-Log -EntryType Information -Message "Снимаем подпись с xml-файлов"
-		SKAD_Decrypt -decrypt $false -maskFiles "*.xml"
-	}
-
 	$vrbFiles = Get-ChildItem "$work\*.vrb"
 	if (($vrbFiles | Measure-Object).count -gt 0) {
 		#расшифровываем файлы
 		Write-Log -EntryType Information -Message "Расшифровываем vrb-файлы"
-		SKAD_Decrypt -decrypt $true -maskFiles "*.VRB"
+		SKAD_Decrypt -decrypt $true -maskFiles "*.vrb"
 
 		Write-Log -EntryType Information -Message "Переименовываем файлы в xml"
 		$msg = Get-ChildItem '*.vrb' | Rename-Item -NewName { $_.Name -replace '.vrb$', '.xml' } -Verbose -Force *>&1
 		Write-Log -EntryType Information -Message ($msg | Out-String)
+	}
+
+	#снимаем подпись со всех файлов
+	$xmlFiles = Get-ChildItem "$work\*.*"
+	if (($xmlFiles | Measure-Object).count -gt 0) {
+		Write-Log -EntryType Information -Message "Снимаем подпись со всех файлов"
+		SKAD_Decrypt -decrypt $false -maskFiles "*.*"
 	}
 
 	Write-Log -EntryType Information -Message "Форматируем xml-файлы"
@@ -290,19 +290,15 @@ function arj_unpack {
 	$err_files = @()
 	foreach ($arj_file in $arj_files) {
 		Write-Log -EntryType Information -Message "Разархивация файла $arj_file"
+		$arg_list = "e -y $arj_file"
+		Start-Process -FilePath $arj32 -ArgumentList $arg_list -Wait -NoNewWindow
 
-		if ($extArchiver -eq 'arj') {
-			$arg_list = "e -y $arj_file"
-		}
-		if ($extArchiver -eq 'zip') {
-			$arg_list = "e $arj_file -o""$tmp_arj"""
-		}
-
-		$arjProc = Start-Process -FilePath $archiver -ArgumentList $arg_list -Wait -NoNewWindow
-
-		if ($arjProc -eq $null) {
-			Copy-Item "$tmp_arj\*.*" -Destination $work -Force -Exclude "*.$extArchiver"
-			Remove-Item "$tmp_arj\*.*"
+		$miscFiles = Get-ChildItem "$tmp_arj\*.*"
+		if (($miscFiles | Measure-Object).count -gt 0) {
+			$msg = Copy-Item "$tmp_arj\*.*" -Destination $work -Force -Exclude "*.$extArchiver" -Verbose *>&1
+			Write-Log -EntryType Information -Message ($msg | Out-String)
+			$msg = Remove-Item "$tmp_arj\*.*" -Verbose *>&1
+			Write-Log -EntryType Information -Message ($msg | Out-String)
 		}
 		else {
 			$err_files += $arj_file.FullName;
@@ -324,9 +320,8 @@ function arj_unpack {
 		exit
 	}
 
-	Remove-Item $tmp_arj -Force -ErrorAction SilentlyContinue -Recurse
-
-	Remove-Item -Path "$work\*.$extArchiver"
+	$msg = Remove-Item -Path "$work\*.$extArchiver"  -Verbose *>&1
+	Write-Log -EntryType Information -Message ($msg | Out-String)
 
 	Set-Location $curDir
 }
@@ -434,7 +429,7 @@ Function 440_out {
 		Write-Log -EntryType Information -Message "Архивируем vrb-файлы"
 		SKAD_archive -maskFiles "*.vrb"
 
-		#зашифровываем и подписываем файлы
+		#зашифровываем файлы
 		Write-Log -EntryType Information -Message "Зашифровываем vrb-файлы"
 		SKAD_Encrypt -encrypt $true -maskFiles "*.vrb"
 	}
@@ -450,24 +445,8 @@ Function 440_out {
 	$afnFileName = "AFN_7102803_MIFNS00_" + $curDateAfn + "_" + $afnCountStr + "." + $extArchiver
 
 	Write-Log -EntryType Information -Message "Начинаем архивацию..."
-	if ($debug) {
-		if ($extArchiver -eq 'arj') {
-			$AllArgs = @('a', '-e', "$work\$afnFileName", "$work\*.xml.tst", "$work\*.vrb.tst")
-		}
-		if ($extArchiver -eq 'zip') {
-			$AllArgs = @('a', '-tzip', '-ssw', "$work\$afnFileName", "$work\*.xml.tst", "$work\*.vrb.tst")
-		}
-
-	}
-	else {
-		if ($extArchiver -eq 'arj') {
-			$AllArgs = @('a', '-e', "$work\$afnFileName", "$work\*.xml", "$work\*.vrb")
-		}
-		if ($extArchiver -eq 'zip') {
-			$AllArgs = @('a', '-tzip', '-ssw', "$work\$afnFileName", "$work\*.xml", "$work\*.vrb")
-		}
-	}
-	&$archiver	$AllArgs
+	$AllArgs = @('a', '-e', "$work\$afnFileName", "$work\*.xml", "$work\*.vrb")
+	&$arj32	$AllArgs
 
 	$msg = Remove-Item "$work\*.*" -Exclude "AFN_7102803_MIFNS00_*.$extArchiver" -Verbose *>&1
 	Write-Log -EntryType Information -Message ($msg | Out-String)
@@ -475,10 +454,6 @@ Function 440_out {
 	#подписываем все файлы
 	Write-Log -EntryType Information -Message "Подписываем файл архива $work\$afnFileName"
 	SKAD_Encrypt -encrypt $false -maskFiles "*.$extArchiver"
-
-	if ($debug) {
-		$afnFileName = $afnFileName + ".tst"
-	}
 
 	Write-Log -EntryType Information -Message "Копируем файл архива $afnFileName в $arhivePath"
 	Copy-Item "$work\$afnFileName" -Destination $arhivePath -Force
@@ -661,7 +636,11 @@ function SKAD_Decrypt {
 
 	$testFiles = Get-ChildItem "$work\*.test"
 	if (($testFiles | Measure-Object).count -gt 0) {
-		$msg = $mask | Remove-Item -Verbose -Force *>&1
+		<#ForEach ($file in $testFiles) {
+			$msg = $file.FullName -replace '.test$', '' | Remove-Item -Verbose -Force *>&1
+			Write-Log -EntryType Information -Message ($msg | Out-String)
+		}#>
+		$msg = $testFiles | ForEach-Object { $_.Name -replace '.test$', '' } | Remove-Item -Verbose -Force *>&1
 		Write-Log -EntryType Information -Message ($msg | Out-String)
 		$msg = Get-ChildItem -path $work '*.test' | Rename-Item -NewName { $_.Name -replace '.test$', '' } -Verbose *>&1
 		Write-Log -EntryType Information -Message ($msg | Out-String)

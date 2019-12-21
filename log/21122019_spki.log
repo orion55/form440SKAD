@@ -1,0 +1,1175 @@
+Текущее время: Sat Dec 21 12:23:31 2019
+"C:\Program Files\MDPREI\spki\spki1utl.exe" -sign -profile r2880_2 -registry -algorithm 1.2.643.7.1.1.2.2 -data "D:\SKAD\form440SKAD\temp\work\BOS1_RPO17102803_890120191218_606125_20191219_0002.vrb" -out "D:\SKAD\form440SKAD\temp\work\BOS1_RPO17102803_890120191218_606125_20191219_0002.vrb.test" -reclist D:\SKAD\form440SKAD\util\Reclist.conf -silent D:\SKAD\form440SKAD\log\21122019_spki.log 
+Инициализация
+Установка ЭП файла
+Результат: OK (00000000)
+Текущее время: Sat Dec 21 12:23:35 2019
+"C:\Program Files\MDPREI\spki\spki1utl.exe" -sign -profile r2880_2 -registry -algorithm 1.2.643.7.1.1.2.2 -data "D:\SKAD\form440SKAD\temp\work\BVD1_ZSV17102803_860220191219_102912_20191219_0002_000001_000001.vrb" -out "D:\SKAD\form440SKAD\temp\work\BVD1_ZSV17102803_860220191219_102912_20191219_0002_000001_000001.vrb.test" -reclist D:\SKAD\form440SKAD\util\Reclist.conf -silent D:\SKAD\form440SKAD\log\21122019_spki.log 
+Инициализация
+Установка ЭП файла
+Результат: OK (00000000)
+Текущее время: Sat Dec 21 12:23:36 2019
+"C:\Program Files\MDPREI\spki\spki1utl.exe" -sign -profile r2880_2 -registry -algorithm 1.2.643.7.1.1.2.2 -data "D:\SKAD\form440SKAD\temp\work\BVS1_ZSV17102803_860220191219_102912_20191219_0002.vrb" -out "D:\SKAD\form440SKAD\temp\work\BVS1_ZSV17102803_860220191219_102912_20191219_0002.vrb.test" -reclist D:\SKAD\form440SKAD\util\Reclist.conf -silent D:\SKAD\form440SKAD\log\21122019_spki.log 
+Инициализация
+Установка ЭП файла
+Результат: OK (00000000)
+Текущее время: Sat Dec 21 12:23:37 2019
+"C:\Program Files\MDPREI\spki\spki1utl.exe" -sign -profile r2880_2 -registry -algorithm 1.2.643.7.1.1.2.2 -data "D:\SKAD\form440SKAD\temp\work\PB1_RPO17102803_860320191218_590125.xml" -out "D:\SKAD\form440SKAD\temp\work\PB1_RPO17102803_860320191218_590125.xml.test" -reclist D:\SKAD\form440SKAD\util\Reclist.conf -silent D:\SKAD\form440SKAD\log\21122019_spki.log 
+Инициализация
+Установка ЭП файла
+Результат: OK (00000000)
+Текущее время: Sat Dec 21 12:23:38 2019
+"C:\Program Files\MDPREI\spki\spki1utl.exe" -sign -profile r2880_2 -registry -algorithm 1.2.643.7.1.1.2.2 -data "D:\SKAD\form440SKAD\temp\work\PB1_RPO17102803_860320191218_595139.xml" -out "D:\SKAD\form440SKAD\temp\work\PB1_RPO17102803_860320191218_595139.xml.test" -reclist D:\SKAD\form440SKAD\util\Reclist.conf -silent D:\SKAD\form440SKAD\log\21122019_spki.log 
+Инициализация
+Установка ЭП файла
+Результат: OK (00000000)
+Текущее время: Sat Dec 21 12:23:39 2019
+"C:\Program Files\MDPREI\spki\spki1utl.exe" -sign -profile r2880_2 -registry -algorithm 1.2.643.7.1.1.2.2 -data "D:\SKAD\form440SKAD\temp\work\PB1_ZSV17102803_860220191219_102912.xml" -out "D:\SKAD\form440SKAD\temp\work\PB1_ZSV17102803_860220191219_102912.xml.test" -reclist D:\SKAD\form440SKAD\util\Reclist.conf -silent D:\SKAD\form440SKAD\log\21122019_spki.log 
+Инициализация
+Установка ЭП файла
+Результат: OK (00000000)
+Текущее время: Sat Dec 21 12:23:40 2019
+"C:\Program Files\MDPREI\spki\spki1utl.exe" -sign -profile r2880_2 -registry -algorithm 1.2.643.7.1.1.2.2 -data "D:\SKAD\form440SKAD\temp\work\PB2_APZ17102803_723020191219_504225_0002.xml" -out "D:\SKAD\form440SKAD\temp\work\PB2_APZ17102803_723020191219_504225_0002.xml.test" -reclist D:\SKAD\form440SKAD\util\Reclist.conf -silent D:\SKAD\form440SKAD\log\21122019_spki.log 
+Инициализация
+Установка ЭП файла
+Результат: OK (00000000)
+Текущее время: Sat Dec 21 12:24:10 2019
+"C:\Program Files\MDPREI\spki\spki1utl.exe" -sign -encrypt -profile r2880_2 -registry -algorithm 1.2.643.7.1.1.2.2 -in "D:\SKAD\form440SKAD\temp\work\BOS1_RPO17102803_890120191218_606125_20191219_0002.vrb" -out "D:\SKAD\form440SKAD\temp\work\BOS1_RPO17102803_890120191218_606125_20191219_0002.vrb.test" -reclist D:\SKAD\form440SKAD\util\Reclist.conf -silent D:\SKAD\form440SKAD\log\21122019_spki.log 
+Инициализация
+Установка ЭП и шифрование файла
+Результат: OK (00000000)
+Текущее время: Sat Dec 21 12:24:11 2019
+"C:\Program Files\MDPREI\spki\spki1utl.exe" -sign -encrypt -profile r2880_2 -registry -algorithm 1.2.643.7.1.1.2.2 -in "D:\SKAD\form440SKAD\temp\work\BVD1_ZSV17102803_860220191219_102912_20191219_0002_000001_000001.vrb" -out "D:\SKAD\form440SKAD\temp\work\BVD1_ZSV17102803_860220191219_102912_20191219_0002_000001_000001.vrb.test" -reclist D:\SKAD\form440SKAD\util\Reclist.conf -silent D:\SKAD\form440SKAD\log\21122019_spki.log 
+Инициализация
+Установка ЭП и шифрование файла
+Результат: OK (00000000)
+Текущее время: Sat Dec 21 12:24:12 2019
+"C:\Program Files\MDPREI\spki\spki1utl.exe" -sign -encrypt -profile r2880_2 -registry -algorithm 1.2.643.7.1.1.2.2 -in "D:\SKAD\form440SKAD\temp\work\BVS1_ZSV17102803_860220191219_102912_20191219_0002.vrb" -out "D:\SKAD\form440SKAD\temp\work\BVS1_ZSV17102803_860220191219_102912_20191219_0002.vrb.test" -reclist D:\SKAD\form440SKAD\util\Reclist.conf -silent D:\SKAD\form440SKAD\log\21122019_spki.log 
+Инициализация
+Установка ЭП и шифрование файла
+Результат: OK (00000000)
+Текущее время: Sat Dec 21 12:36:16 2019
+"C:\Program Files\MDPREI\spki\spki1utl.exe" -sign -profile r2880_2 -registry -algorithm 1.2.643.7.1.1.2.2 -data "D:\SKAD\form440SKAD\temp\work\BOS1_RPO17102803_890120191218_606125_20191219_0002.vrb" -out "D:\SKAD\form440SKAD\temp\work\BOS1_RPO17102803_890120191218_606125_20191219_0002.vrb.test" -reclist D:\SKAD\form440SKAD\util\Reclist.conf -silent D:\SKAD\form440SKAD\log\21122019_spki.log 
+Инициализация
+Установка ЭП файла
+Результат: OK (00000000)
+Текущее время: Sat Dec 21 12:36:17 2019
+"C:\Program Files\MDPREI\spki\spki1utl.exe" -sign -profile r2880_2 -registry -algorithm 1.2.643.7.1.1.2.2 -data "D:\SKAD\form440SKAD\temp\work\BVD1_ZSV17102803_860220191219_102912_20191219_0002_000001_000001.vrb" -out "D:\SKAD\form440SKAD\temp\work\BVD1_ZSV17102803_860220191219_102912_20191219_0002_000001_000001.vrb.test" -reclist D:\SKAD\form440SKAD\util\Reclist.conf -silent D:\SKAD\form440SKAD\log\21122019_spki.log 
+Инициализация
+Установка ЭП файла
+Результат: OK (00000000)
+Текущее время: Sat Dec 21 12:36:18 2019
+"C:\Program Files\MDPREI\spki\spki1utl.exe" -sign -profile r2880_2 -registry -algorithm 1.2.643.7.1.1.2.2 -data "D:\SKAD\form440SKAD\temp\work\BVS1_ZSV17102803_860220191219_102912_20191219_0002.vrb" -out "D:\SKAD\form440SKAD\temp\work\BVS1_ZSV17102803_860220191219_102912_20191219_0002.vrb.test" -reclist D:\SKAD\form440SKAD\util\Reclist.conf -silent D:\SKAD\form440SKAD\log\21122019_spki.log 
+Инициализация
+Установка ЭП файла
+Результат: OK (00000000)
+Текущее время: Sat Dec 21 12:36:19 2019
+"C:\Program Files\MDPREI\spki\spki1utl.exe" -sign -profile r2880_2 -registry -algorithm 1.2.643.7.1.1.2.2 -data "D:\SKAD\form440SKAD\temp\work\PB1_RPO17102803_860320191218_590125.xml" -out "D:\SKAD\form440SKAD\temp\work\PB1_RPO17102803_860320191218_590125.xml.test" -reclist D:\SKAD\form440SKAD\util\Reclist.conf -silent D:\SKAD\form440SKAD\log\21122019_spki.log 
+Инициализация
+Установка ЭП файла
+Результат: OK (00000000)
+Текущее время: Sat Dec 21 12:36:20 2019
+"C:\Program Files\MDPREI\spki\spki1utl.exe" -sign -profile r2880_2 -registry -algorithm 1.2.643.7.1.1.2.2 -data "D:\SKAD\form440SKAD\temp\work\PB1_RPO17102803_860320191218_595139.xml" -out "D:\SKAD\form440SKAD\temp\work\PB1_RPO17102803_860320191218_595139.xml.test" -reclist D:\SKAD\form440SKAD\util\Reclist.conf -silent D:\SKAD\form440SKAD\log\21122019_spki.log 
+Инициализация
+Установка ЭП файла
+Результат: OK (00000000)
+Текущее время: Sat Dec 21 12:36:21 2019
+"C:\Program Files\MDPREI\spki\spki1utl.exe" -sign -profile r2880_2 -registry -algorithm 1.2.643.7.1.1.2.2 -data "D:\SKAD\form440SKAD\temp\work\PB1_ZSV17102803_860220191219_102912.xml" -out "D:\SKAD\form440SKAD\temp\work\PB1_ZSV17102803_860220191219_102912.xml.test" -reclist D:\SKAD\form440SKAD\util\Reclist.conf -silent D:\SKAD\form440SKAD\log\21122019_spki.log 
+Инициализация
+Установка ЭП файла
+Результат: OK (00000000)
+Текущее время: Sat Dec 21 12:36:22 2019
+"C:\Program Files\MDPREI\spki\spki1utl.exe" -sign -profile r2880_2 -registry -algorithm 1.2.643.7.1.1.2.2 -data "D:\SKAD\form440SKAD\temp\work\PB2_APZ17102803_723020191219_504225_0002.xml" -out "D:\SKAD\form440SKAD\temp\work\PB2_APZ17102803_723020191219_504225_0002.xml.test" -reclist D:\SKAD\form440SKAD\util\Reclist.conf -silent D:\SKAD\form440SKAD\log\21122019_spki.log 
+Инициализация
+Установка ЭП файла
+Результат: OK (00000000)
+Текущее время: Sat Dec 21 12:36:25 2019
+"C:\Program Files\MDPREI\spki\spki1utl.exe" -sign -encrypt -profile r2880_2 -registry -algorithm 1.2.643.7.1.1.2.2 -in "D:\SKAD\form440SKAD\temp\work\BOS1_RPO17102803_890120191218_606125_20191219_0002.vrb" -out "D:\SKAD\form440SKAD\temp\work\BOS1_RPO17102803_890120191218_606125_20191219_0002.vrb.test" -reclist D:\SKAD\form440SKAD\util\Reclist.conf -silent D:\SKAD\form440SKAD\log\21122019_spki.log 
+Инициализация
+Установка ЭП и шифрование файла
+Результат: OK (00000000)
+Текущее время: Sat Dec 21 12:36:26 2019
+"C:\Program Files\MDPREI\spki\spki1utl.exe" -sign -encrypt -profile r2880_2 -registry -algorithm 1.2.643.7.1.1.2.2 -in "D:\SKAD\form440SKAD\temp\work\BVD1_ZSV17102803_860220191219_102912_20191219_0002_000001_000001.vrb" -out "D:\SKAD\form440SKAD\temp\work\BVD1_ZSV17102803_860220191219_102912_20191219_0002_000001_000001.vrb.test" -reclist D:\SKAD\form440SKAD\util\Reclist.conf -silent D:\SKAD\form440SKAD\log\21122019_spki.log 
+Инициализация
+Установка ЭП и шифрование файла
+Результат: OK (00000000)
+Текущее время: Sat Dec 21 12:36:27 2019
+"C:\Program Files\MDPREI\spki\spki1utl.exe" -sign -encrypt -profile r2880_2 -registry -algorithm 1.2.643.7.1.1.2.2 -in "D:\SKAD\form440SKAD\temp\work\BVS1_ZSV17102803_860220191219_102912_20191219_0002.vrb" -out "D:\SKAD\form440SKAD\temp\work\BVS1_ZSV17102803_860220191219_102912_20191219_0002.vrb.test" -reclist D:\SKAD\form440SKAD\util\Reclist.conf -silent D:\SKAD\form440SKAD\log\21122019_spki.log 
+Инициализация
+Установка ЭП и шифрование файла
+Результат: OK (00000000)
+Текущее время: Sat Dec 21 12:36:29 2019
+"C:\Program Files\MDPREI\spki\spki1utl.exe" -sign -profile r2880_2 -registry -algorithm 1.2.643.7.1.1.2.2 -data "D:\SKAD\form440SKAD\temp\work\AFN_7102803_MIFNS00_20191221_00001.arj" -out "D:\SKAD\form440SKAD\temp\work\AFN_7102803_MIFNS00_20191221_00001.arj.test" -reclist D:\SKAD\form440SKAD\util\Reclist.conf -silent D:\SKAD\form440SKAD\log\21122019_spki.log 
+Инициализация
+Установка ЭП файла
+Результат: OK (00000000)
+Текущее время: Sat Dec 21 13:45:23 2019
+"C:\Program Files\MDPREI\spki\spki1utl.exe" -verify -delete -1 -profile r2880_2 -registry -in D:\SKAD\form440SKAD\temp\work\AFN_MIFNS00_7102803_20191218_00001.arj -out D:\SKAD\form440SKAD\temp\work\AFN_MIFNS00_7102803_20191218_00001.arj.test -silent D:\SKAD\form440SKAD\log\21122019_spki.log 
+Инициализация
+Проверка ЭП файла
+Результат: OK (00000000)
+ЭП 1: OK (00000000)
+Wed Dec 18 06:54:59 2019
+Владелец: CN=FNS,O=FNS,ST=00
+Хэш: EA:8E:16:6E:68:26:01:0E:D2:3E:1B:6F:97:6C:BE:76:57:53:78:D9:DA:00:E0:6F:AC:90:75:F8:62:93:29:F4
+
+Текущее время: Sat Dec 21 13:45:24 2019
+"C:\Program Files\MDPREI\spki\spki1utl.exe" -verify -delete -1 -profile r2880_2 -registry -in D:\SKAD\form440SKAD\temp\work\AFN_MIFNS00_7102803_20191218_00002.arj -out D:\SKAD\form440SKAD\temp\work\AFN_MIFNS00_7102803_20191218_00002.arj.test -silent D:\SKAD\form440SKAD\log\21122019_spki.log 
+Инициализация
+Проверка ЭП файла
+Результат: OK (00000000)
+ЭП 1: OK (00000000)
+Wed Dec 18 09:38:59 2019
+Владелец: CN=FNS,O=FNS,ST=00
+Хэш: EA:8E:16:6E:68:26:01:0E:D2:3E:1B:6F:97:6C:BE:76:57:53:78:D9:DA:00:E0:6F:AC:90:75:F8:62:93:29:F4
+
+Текущее время: Sat Dec 21 13:45:25 2019
+"C:\Program Files\MDPREI\spki\spki1utl.exe" -verify -delete -1 -profile r2880_2 -registry -in D:\SKAD\form440SKAD\temp\work\AFN_MIFNS00_7102803_20191218_00003.arj -out D:\SKAD\form440SKAD\temp\work\AFN_MIFNS00_7102803_20191218_00003.arj.test -silent D:\SKAD\form440SKAD\log\21122019_spki.log 
+Инициализация
+Проверка ЭП файла
+Результат: OK (00000000)
+ЭП 1: OK (00000000)
+Wed Dec 18 10:34:24 2019
+Владелец: CN=FNS,O=FNS,ST=00
+Хэш: EA:8E:16:6E:68:26:01:0E:D2:3E:1B:6F:97:6C:BE:76:57:53:78:D9:DA:00:E0:6F:AC:90:75:F8:62:93:29:F4
+
+Текущее время: Sat Dec 21 13:53:24 2019
+"C:\Program Files\MDPREI\spki\spki1utl.exe" -verify -delete -1 -profile r2880_2 -registry -in D:\SKAD\form440SKAD\temp\work\AFN_MIFNS00_7102803_20191216_00002.arj -out D:\SKAD\form440SKAD\temp\work\AFN_MIFNS00_7102803_20191216_00002.arj.test -silent D:\SKAD\form440SKAD\log\21122019_spki.log 
+Инициализация
+Проверка ЭП файла
+Результат: OK (00000000)
+ЭП 1: OK (00000000)
+Mon Dec 16 21:40:50 2019
+Владелец: CN=FNS,O=FNS,ST=00
+Хэш: EA:8E:16:6E:68:26:01:0E:D2:3E:1B:6F:97:6C:BE:76:57:53:78:D9:DA:00:E0:6F:AC:90:75:F8:62:93:29:F4
+
+Текущее время: Sat Dec 21 13:53:26 2019
+"C:\Program Files\MDPREI\spki\spki1utl.exe" -verify -delete -1 -profile r2880_2 -registry -in D:\SKAD\form440SKAD\temp\work\AFN_MIFNS00_7102803_20191216_00004.arj -out D:\SKAD\form440SKAD\temp\work\AFN_MIFNS00_7102803_20191216_00004.arj.test -silent D:\SKAD\form440SKAD\log\21122019_spki.log 
+Инициализация
+Проверка ЭП файла
+Результат: OK (00000000)
+ЭП 1: OK (00000000)
+Mon Dec 16 22:21:47 2019
+Владелец: CN=FNS,O=FNS,ST=00
+Хэш: EA:8E:16:6E:68:26:01:0E:D2:3E:1B:6F:97:6C:BE:76:57:53:78:D9:DA:00:E0:6F:AC:90:75:F8:62:93:29:F4
+
+Текущее время: Sat Dec 21 13:53:27 2019
+"C:\Program Files\MDPREI\spki\spki1utl.exe" -verify -delete -1 -profile r2880_2 -registry -in D:\SKAD\form440SKAD\temp\work\AFN_MIFNS00_7102803_20191216_00005.arj -out D:\SKAD\form440SKAD\temp\work\AFN_MIFNS00_7102803_20191216_00005.arj.test -silent D:\SKAD\form440SKAD\log\21122019_spki.log 
+Инициализация
+Проверка ЭП файла
+Результат: OK (00000000)
+ЭП 1: OK (00000000)
+Mon Dec 16 22:21:48 2019
+Владелец: CN=FNS,O=FNS,ST=00
+Хэш: EA:8E:16:6E:68:26:01:0E:D2:3E:1B:6F:97:6C:BE:76:57:53:78:D9:DA:00:E0:6F:AC:90:75:F8:62:93:29:F4
+
+Текущее время: Sat Dec 21 13:53:28 2019
+"C:\Program Files\MDPREI\spki\spki1utl.exe" -verify -delete -1 -profile r2880_2 -registry -in D:\SKAD\form440SKAD\temp\work\AFN_MIFNS00_7102803_20191216_00006.arj -out D:\SKAD\form440SKAD\temp\work\AFN_MIFNS00_7102803_20191216_00006.arj.test -silent D:\SKAD\form440SKAD\log\21122019_spki.log 
+Инициализация
+Проверка ЭП файла
+Результат: OK (00000000)
+ЭП 1: OK (00000000)
+Mon Dec 16 23:30:13 2019
+Владелец: CN=FNS,O=FNS,ST=00
+Хэш: EA:8E:16:6E:68:26:01:0E:D2:3E:1B:6F:97:6C:BE:76:57:53:78:D9:DA:00:E0:6F:AC:90:75:F8:62:93:29:F4
+
+Текущее время: Sat Dec 21 13:53:29 2019
+"C:\Program Files\MDPREI\spki\spki1utl.exe" -verify -delete -1 -profile r2880_2 -registry -in D:\SKAD\form440SKAD\temp\work\AFN_MIFNS00_7102803_20191217_00004.arj -out D:\SKAD\form440SKAD\temp\work\AFN_MIFNS00_7102803_20191217_00004.arj.test -silent D:\SKAD\form440SKAD\log\21122019_spki.log 
+Инициализация
+Проверка ЭП файла
+Результат: OK (00000000)
+ЭП 1: OK (00000000)
+Tue Dec 17 03:23:20 2019
+Владелец: CN=FNS,O=FNS,ST=00
+Хэш: EA:8E:16:6E:68:26:01:0E:D2:3E:1B:6F:97:6C:BE:76:57:53:78:D9:DA:00:E0:6F:AC:90:75:F8:62:93:29:F4
+
+Текущее время: Sat Dec 21 13:53:30 2019
+"C:\Program Files\MDPREI\spki\spki1utl.exe" -verify -delete -1 -profile r2880_2 -registry -in D:\SKAD\form440SKAD\temp\work\AFN_MIFNS00_7102803_20191218_00001.arj -out D:\SKAD\form440SKAD\temp\work\AFN_MIFNS00_7102803_20191218_00001.arj.test -silent D:\SKAD\form440SKAD\log\21122019_spki.log 
+Инициализация
+Проверка ЭП файла
+Результат: OK (00000000)
+ЭП 1: OK (00000000)
+Wed Dec 18 06:54:59 2019
+Владелец: CN=FNS,O=FNS,ST=00
+Хэш: EA:8E:16:6E:68:26:01:0E:D2:3E:1B:6F:97:6C:BE:76:57:53:78:D9:DA:00:E0:6F:AC:90:75:F8:62:93:29:F4
+
+Текущее время: Sat Dec 21 13:53:31 2019
+"C:\Program Files\MDPREI\spki\spki1utl.exe" -verify -delete -1 -profile r2880_2 -registry -in D:\SKAD\form440SKAD\temp\work\AFN_MIFNS00_7102803_20191218_00002.arj -out D:\SKAD\form440SKAD\temp\work\AFN_MIFNS00_7102803_20191218_00002.arj.test -silent D:\SKAD\form440SKAD\log\21122019_spki.log 
+Инициализация
+Проверка ЭП файла
+Результат: OK (00000000)
+ЭП 1: OK (00000000)
+Wed Dec 18 09:38:59 2019
+Владелец: CN=FNS,O=FNS,ST=00
+Хэш: EA:8E:16:6E:68:26:01:0E:D2:3E:1B:6F:97:6C:BE:76:57:53:78:D9:DA:00:E0:6F:AC:90:75:F8:62:93:29:F4
+
+Текущее время: Sat Dec 21 13:53:32 2019
+"C:\Program Files\MDPREI\spki\spki1utl.exe" -verify -delete -1 -profile r2880_2 -registry -in D:\SKAD\form440SKAD\temp\work\AFN_MIFNS00_7102803_20191218_00003.arj -out D:\SKAD\form440SKAD\temp\work\AFN_MIFNS00_7102803_20191218_00003.arj.test -silent D:\SKAD\form440SKAD\log\21122019_spki.log 
+Инициализация
+Проверка ЭП файла
+Результат: OK (00000000)
+ЭП 1: OK (00000000)
+Wed Dec 18 10:34:24 2019
+Владелец: CN=FNS,O=FNS,ST=00
+Хэш: EA:8E:16:6E:68:26:01:0E:D2:3E:1B:6F:97:6C:BE:76:57:53:78:D9:DA:00:E0:6F:AC:90:75:F8:62:93:29:F4
+
+Текущее время: Sat Dec 21 13:53:33 2019
+"C:\Program Files\MDPREI\spki\spki1utl.exe" -verify -delete -1 -profile r2880_2 -registry -in D:\SKAD\form440SKAD\temp\work\AFN_MIFNS00_7102803_20191218_00004.arj -out D:\SKAD\form440SKAD\temp\work\AFN_MIFNS00_7102803_20191218_00004.arj.test -silent D:\SKAD\form440SKAD\log\21122019_spki.log 
+Инициализация
+Проверка ЭП файла
+Результат: OK (00000000)
+ЭП 1: OK (00000000)
+Wed Dec 18 11:50:32 2019
+Владелец: CN=FNS,O=FNS,ST=00
+Хэш: EA:8E:16:6E:68:26:01:0E:D2:3E:1B:6F:97:6C:BE:76:57:53:78:D9:DA:00:E0:6F:AC:90:75:F8:62:93:29:F4
+
+Текущее время: Sat Dec 21 13:53:34 2019
+"C:\Program Files\MDPREI\spki\spki1utl.exe" -verify -delete -1 -profile r2880_2 -registry -in D:\SKAD\form440SKAD\temp\work\AFN_MIFNS00_7102803_20191218_00005.arj -out D:\SKAD\form440SKAD\temp\work\AFN_MIFNS00_7102803_20191218_00005.arj.test -silent D:\SKAD\form440SKAD\log\21122019_spki.log 
+Инициализация
+Проверка ЭП файла
+Результат: OK (00000000)
+ЭП 1: OK (00000000)
+Wed Dec 18 15:46:42 2019
+Владелец: CN=FNS,O=FNS,ST=00
+Хэш: EA:8E:16:6E:68:26:01:0E:D2:3E:1B:6F:97:6C:BE:76:57:53:78:D9:DA:00:E0:6F:AC:90:75:F8:62:93:29:F4
+
+Текущее время: Sat Dec 21 13:53:35 2019
+"C:\Program Files\MDPREI\spki\spki1utl.exe" -verify -delete -1 -profile r2880_2 -registry -in D:\SKAD\form440SKAD\temp\work\AFN_MIFNS00_7102803_20191218_00006.arj -out D:\SKAD\form440SKAD\temp\work\AFN_MIFNS00_7102803_20191218_00006.arj.test -silent D:\SKAD\form440SKAD\log\21122019_spki.log 
+Инициализация
+Проверка ЭП файла
+Результат: OK (00000000)
+ЭП 1: OK (00000000)
+Wed Dec 18 20:24:11 2019
+Владелец: CN=FNS,O=FNS,ST=00
+Хэш: EA:8E:16:6E:68:26:01:0E:D2:3E:1B:6F:97:6C:BE:76:57:53:78:D9:DA:00:E0:6F:AC:90:75:F8:62:93:29:F4
+
+Текущее время: Sat Dec 21 13:53:36 2019
+"C:\Program Files\MDPREI\spki\spki1utl.exe" -verify -delete -1 -profile r2880_2 -registry -in D:\SKAD\form440SKAD\temp\work\AFN_MIFNS00_7102803_20191218_00007.arj -out D:\SKAD\form440SKAD\temp\work\AFN_MIFNS00_7102803_20191218_00007.arj.test -silent D:\SKAD\form440SKAD\log\21122019_spki.log 
+Инициализация
+Проверка ЭП файла
+Результат: OK (00000000)
+ЭП 1: OK (00000000)
+Wed Dec 18 22:40:12 2019
+Владелец: CN=FNS,O=FNS,ST=00
+Хэш: EA:8E:16:6E:68:26:01:0E:D2:3E:1B:6F:97:6C:BE:76:57:53:78:D9:DA:00:E0:6F:AC:90:75:F8:62:93:29:F4
+
+Текущее время: Sat Dec 21 13:53:38 2019
+"C:\Program Files\MDPREI\spki\spki1utl.exe" -verify -delete -1 -profile r2880_2 -registry -in D:\SKAD\form440SKAD\temp\work\AFN_MIFNS00_7102803_20191219_00001.arj -out D:\SKAD\form440SKAD\temp\work\AFN_MIFNS00_7102803_20191219_00001.arj.test -silent D:\SKAD\form440SKAD\log\21122019_spki.log 
+Инициализация
+Проверка ЭП файла
+Результат: OK (00000000)
+ЭП 1: OK (00000000)
+Thu Dec 19 10:16:03 2019
+Владелец: CN=FNS,O=FNS,ST=00
+Хэш: EA:8E:16:6E:68:26:01:0E:D2:3E:1B:6F:97:6C:BE:76:57:53:78:D9:DA:00:E0:6F:AC:90:75:F8:62:93:29:F4
+
+Текущее время: Sat Dec 21 13:53:39 2019
+"C:\Program Files\MDPREI\spki\spki1utl.exe" -verify -delete -1 -profile r2880_2 -registry -in D:\SKAD\form440SKAD\temp\work\AFN_MIFNS00_7102803_20191219_00004.arj -out D:\SKAD\form440SKAD\temp\work\AFN_MIFNS00_7102803_20191219_00004.arj.test -silent D:\SKAD\form440SKAD\log\21122019_spki.log 
+Инициализация
+Проверка ЭП файла
+Результат: OK (00000000)
+ЭП 1: OK (00000000)
+Thu Dec 19 17:32:55 2019
+Владелец: CN=FNS,O=FNS,ST=00
+Хэш: EA:8E:16:6E:68:26:01:0E:D2:3E:1B:6F:97:6C:BE:76:57:53:78:D9:DA:00:E0:6F:AC:90:75:F8:62:93:29:F4
+
+Текущее время: Sat Dec 21 13:53:40 2019
+"C:\Program Files\MDPREI\spki\spki1utl.exe" -verify -delete -1 -profile r2880_2 -registry -in D:\SKAD\form440SKAD\temp\work\AFN_MIFNS00_7102803_20191219_00005.arj -out D:\SKAD\form440SKAD\temp\work\AFN_MIFNS00_7102803_20191219_00005.arj.test -silent D:\SKAD\form440SKAD\log\21122019_spki.log 
+Инициализация
+Проверка ЭП файла
+Результат: OK (00000000)
+ЭП 1: OK (00000000)
+Thu Dec 19 19:27:52 2019
+Владелец: CN=FNS,O=FNS,ST=00
+Хэш: EA:8E:16:6E:68:26:01:0E:D2:3E:1B:6F:97:6C:BE:76:57:53:78:D9:DA:00:E0:6F:AC:90:75:F8:62:93:29:F4
+
+Текущее время: Sat Dec 21 13:53:41 2019
+"C:\Program Files\MDPREI\spki\spki1utl.exe" -verify -delete -1 -profile r2880_2 -registry -in D:\SKAD\form440SKAD\temp\work\AFN_MIFNS00_7102803_20191220_00001.arj -out D:\SKAD\form440SKAD\temp\work\AFN_MIFNS00_7102803_20191220_00001.arj.test -silent D:\SKAD\form440SKAD\log\21122019_spki.log 
+Инициализация
+Проверка ЭП файла
+Результат: OK (00000000)
+ЭП 1: OK (00000000)
+Fri Dec 20 05:19:57 2019
+Владелец: CN=FNS,O=FNS,ST=00
+Хэш: EA:8E:16:6E:68:26:01:0E:D2:3E:1B:6F:97:6C:BE:76:57:53:78:D9:DA:00:E0:6F:AC:90:75:F8:62:93:29:F4
+
+Текущее время: Sat Dec 21 13:53:42 2019
+"C:\Program Files\MDPREI\spki\spki1utl.exe" -verify -delete -1 -profile r2880_2 -registry -in D:\SKAD\form440SKAD\temp\work\AFN_MIFNS00_7102803_20191220_00002.arj -out D:\SKAD\form440SKAD\temp\work\AFN_MIFNS00_7102803_20191220_00002.arj.test -silent D:\SKAD\form440SKAD\log\21122019_spki.log 
+Инициализация
+Проверка ЭП файла
+Результат: OK (00000000)
+ЭП 1: OK (00000000)
+Fri Dec 20 09:26:50 2019
+Владелец: CN=FNS,O=FNS,ST=00
+Хэш: EA:8E:16:6E:68:26:01:0E:D2:3E:1B:6F:97:6C:BE:76:57:53:78:D9:DA:00:E0:6F:AC:90:75:F8:62:93:29:F4
+
+Текущее время: Sat Dec 21 13:53:43 2019
+"C:\Program Files\MDPREI\spki\spki1utl.exe" -verify -delete -1 -profile r2880_2 -registry -in D:\SKAD\form440SKAD\temp\work\AFN_MIFNS00_7102803_20191220_00003.arj -out D:\SKAD\form440SKAD\temp\work\AFN_MIFNS00_7102803_20191220_00003.arj.test -silent D:\SKAD\form440SKAD\log\21122019_spki.log 
+Инициализация
+Проверка ЭП файла
+Результат: OK (00000000)
+ЭП 1: OK (00000000)
+Fri Dec 20 11:27:00 2019
+Владелец: CN=FNS,O=FNS,ST=00
+Хэш: EA:8E:16:6E:68:26:01:0E:D2:3E:1B:6F:97:6C:BE:76:57:53:78:D9:DA:00:E0:6F:AC:90:75:F8:62:93:29:F4
+
+Текущее время: Sat Dec 21 13:53:44 2019
+"C:\Program Files\MDPREI\spki\spki1utl.exe" -verify -delete -1 -profile r2880_2 -registry -in D:\SKAD\form440SKAD\temp\work\AFN_MIFNS00_7102803_20191220_00004.arj -out D:\SKAD\form440SKAD\temp\work\AFN_MIFNS00_7102803_20191220_00004.arj.test -silent D:\SKAD\form440SKAD\log\21122019_spki.log 
+Инициализация
+Проверка ЭП файла
+Результат: OK (00000000)
+ЭП 1: OK (00000000)
+Fri Dec 20 12:24:06 2019
+Владелец: CN=FNS,O=FNS,ST=00
+Хэш: EA:8E:16:6E:68:26:01:0E:D2:3E:1B:6F:97:6C:BE:76:57:53:78:D9:DA:00:E0:6F:AC:90:75:F8:62:93:29:F4
+
+Текущее время: Sat Dec 21 13:53:45 2019
+"C:\Program Files\MDPREI\spki\spki1utl.exe" -verify -delete -1 -profile r2880_2 -registry -in D:\SKAD\form440SKAD\temp\work\AFN_MIFNS00_7102803_20191220_00005.arj -out D:\SKAD\form440SKAD\temp\work\AFN_MIFNS00_7102803_20191220_00005.arj.test -silent D:\SKAD\form440SKAD\log\21122019_spki.log 
+Инициализация
+Проверка ЭП файла
+Результат: OK (00000000)
+ЭП 1: OK (00000000)
+Fri Dec 20 13:58:17 2019
+Владелец: CN=FNS,O=FNS,ST=00
+Хэш: EA:8E:16:6E:68:26:01:0E:D2:3E:1B:6F:97:6C:BE:76:57:53:78:D9:DA:00:E0:6F:AC:90:75:F8:62:93:29:F4
+
+Текущее время: Sat Dec 21 13:57:15 2019
+"C:\Program Files\MDPREI\spki\spki1utl.exe" -verify -delete -1 -profile r2880_2 -registry -in D:\SKAD\form440SKAD\temp\work\AFN_MIFNS00_7102803_20191216_00002.arj -out D:\SKAD\form440SKAD\temp\work\AFN_MIFNS00_7102803_20191216_00002.arj.test -silent D:\SKAD\form440SKAD\log\21122019_spki.log 
+Инициализация
+Проверка ЭП файла
+Результат: OK (00000000)
+ЭП 1: OK (00000000)
+Mon Dec 16 21:40:50 2019
+Владелец: CN=FNS,O=FNS,ST=00
+Хэш: EA:8E:16:6E:68:26:01:0E:D2:3E:1B:6F:97:6C:BE:76:57:53:78:D9:DA:00:E0:6F:AC:90:75:F8:62:93:29:F4
+
+Текущее время: Sat Dec 21 13:57:16 2019
+"C:\Program Files\MDPREI\spki\spki1utl.exe" -verify -delete -1 -profile r2880_2 -registry -in D:\SKAD\form440SKAD\temp\work\AFN_MIFNS00_7102803_20191216_00004.arj -out D:\SKAD\form440SKAD\temp\work\AFN_MIFNS00_7102803_20191216_00004.arj.test -silent D:\SKAD\form440SKAD\log\21122019_spki.log 
+Инициализация
+Проверка ЭП файла
+Результат: OK (00000000)
+ЭП 1: OK (00000000)
+Mon Dec 16 22:21:47 2019
+Владелец: CN=FNS,O=FNS,ST=00
+Хэш: EA:8E:16:6E:68:26:01:0E:D2:3E:1B:6F:97:6C:BE:76:57:53:78:D9:DA:00:E0:6F:AC:90:75:F8:62:93:29:F4
+
+Текущее время: Sat Dec 21 13:57:17 2019
+"C:\Program Files\MDPREI\spki\spki1utl.exe" -verify -delete -1 -profile r2880_2 -registry -in D:\SKAD\form440SKAD\temp\work\AFN_MIFNS00_7102803_20191216_00005.arj -out D:\SKAD\form440SKAD\temp\work\AFN_MIFNS00_7102803_20191216_00005.arj.test -silent D:\SKAD\form440SKAD\log\21122019_spki.log 
+Инициализация
+Проверка ЭП файла
+Результат: OK (00000000)
+ЭП 1: OK (00000000)
+Mon Dec 16 22:21:48 2019
+Владелец: CN=FNS,O=FNS,ST=00
+Хэш: EA:8E:16:6E:68:26:01:0E:D2:3E:1B:6F:97:6C:BE:76:57:53:78:D9:DA:00:E0:6F:AC:90:75:F8:62:93:29:F4
+
+Текущее время: Sat Dec 21 13:57:18 2019
+"C:\Program Files\MDPREI\spki\spki1utl.exe" -verify -delete -1 -profile r2880_2 -registry -in D:\SKAD\form440SKAD\temp\work\AFN_MIFNS00_7102803_20191216_00006.arj -out D:\SKAD\form440SKAD\temp\work\AFN_MIFNS00_7102803_20191216_00006.arj.test -silent D:\SKAD\form440SKAD\log\21122019_spki.log 
+Инициализация
+Проверка ЭП файла
+Результат: OK (00000000)
+ЭП 1: OK (00000000)
+Mon Dec 16 23:30:13 2019
+Владелец: CN=FNS,O=FNS,ST=00
+Хэш: EA:8E:16:6E:68:26:01:0E:D2:3E:1B:6F:97:6C:BE:76:57:53:78:D9:DA:00:E0:6F:AC:90:75:F8:62:93:29:F4
+
+Текущее время: Sat Dec 21 13:57:19 2019
+"C:\Program Files\MDPREI\spki\spki1utl.exe" -verify -delete -1 -profile r2880_2 -registry -in D:\SKAD\form440SKAD\temp\work\AFN_MIFNS00_7102803_20191217_00004.arj -out D:\SKAD\form440SKAD\temp\work\AFN_MIFNS00_7102803_20191217_00004.arj.test -silent D:\SKAD\form440SKAD\log\21122019_spki.log 
+Инициализация
+Проверка ЭП файла
+Результат: OK (00000000)
+ЭП 1: OK (00000000)
+Tue Dec 17 03:23:20 2019
+Владелец: CN=FNS,O=FNS,ST=00
+Хэш: EA:8E:16:6E:68:26:01:0E:D2:3E:1B:6F:97:6C:BE:76:57:53:78:D9:DA:00:E0:6F:AC:90:75:F8:62:93:29:F4
+
+Текущее время: Sat Dec 21 13:57:20 2019
+"C:\Program Files\MDPREI\spki\spki1utl.exe" -verify -delete -1 -profile r2880_2 -registry -in D:\SKAD\form440SKAD\temp\work\AFN_MIFNS00_7102803_20191218_00001.arj -out D:\SKAD\form440SKAD\temp\work\AFN_MIFNS00_7102803_20191218_00001.arj.test -silent D:\SKAD\form440SKAD\log\21122019_spki.log 
+Инициализация
+Проверка ЭП файла
+Результат: OK (00000000)
+ЭП 1: OK (00000000)
+Wed Dec 18 06:54:59 2019
+Владелец: CN=FNS,O=FNS,ST=00
+Хэш: EA:8E:16:6E:68:26:01:0E:D2:3E:1B:6F:97:6C:BE:76:57:53:78:D9:DA:00:E0:6F:AC:90:75:F8:62:93:29:F4
+
+Текущее время: Sat Dec 21 13:57:21 2019
+"C:\Program Files\MDPREI\spki\spki1utl.exe" -verify -delete -1 -profile r2880_2 -registry -in D:\SKAD\form440SKAD\temp\work\AFN_MIFNS00_7102803_20191218_00002.arj -out D:\SKAD\form440SKAD\temp\work\AFN_MIFNS00_7102803_20191218_00002.arj.test -silent D:\SKAD\form440SKAD\log\21122019_spki.log 
+Инициализация
+Проверка ЭП файла
+Результат: OK (00000000)
+ЭП 1: OK (00000000)
+Wed Dec 18 09:38:59 2019
+Владелец: CN=FNS,O=FNS,ST=00
+Хэш: EA:8E:16:6E:68:26:01:0E:D2:3E:1B:6F:97:6C:BE:76:57:53:78:D9:DA:00:E0:6F:AC:90:75:F8:62:93:29:F4
+
+Текущее время: Sat Dec 21 13:57:22 2019
+"C:\Program Files\MDPREI\spki\spki1utl.exe" -verify -delete -1 -profile r2880_2 -registry -in D:\SKAD\form440SKAD\temp\work\AFN_MIFNS00_7102803_20191218_00003.arj -out D:\SKAD\form440SKAD\temp\work\AFN_MIFNS00_7102803_20191218_00003.arj.test -silent D:\SKAD\form440SKAD\log\21122019_spki.log 
+Инициализация
+Проверка ЭП файла
+Результат: OK (00000000)
+ЭП 1: OK (00000000)
+Wed Dec 18 10:34:24 2019
+Владелец: CN=FNS,O=FNS,ST=00
+Хэш: EA:8E:16:6E:68:26:01:0E:D2:3E:1B:6F:97:6C:BE:76:57:53:78:D9:DA:00:E0:6F:AC:90:75:F8:62:93:29:F4
+
+Текущее время: Sat Dec 21 13:57:23 2019
+"C:\Program Files\MDPREI\spki\spki1utl.exe" -verify -delete -1 -profile r2880_2 -registry -in D:\SKAD\form440SKAD\temp\work\AFN_MIFNS00_7102803_20191218_00004.arj -out D:\SKAD\form440SKAD\temp\work\AFN_MIFNS00_7102803_20191218_00004.arj.test -silent D:\SKAD\form440SKAD\log\21122019_spki.log 
+Инициализация
+Проверка ЭП файла
+Результат: OK (00000000)
+ЭП 1: OK (00000000)
+Wed Dec 18 11:50:32 2019
+Владелец: CN=FNS,O=FNS,ST=00
+Хэш: EA:8E:16:6E:68:26:01:0E:D2:3E:1B:6F:97:6C:BE:76:57:53:78:D9:DA:00:E0:6F:AC:90:75:F8:62:93:29:F4
+
+Текущее время: Sat Dec 21 13:57:25 2019
+"C:\Program Files\MDPREI\spki\spki1utl.exe" -verify -delete -1 -profile r2880_2 -registry -in D:\SKAD\form440SKAD\temp\work\AFN_MIFNS00_7102803_20191218_00005.arj -out D:\SKAD\form440SKAD\temp\work\AFN_MIFNS00_7102803_20191218_00005.arj.test -silent D:\SKAD\form440SKAD\log\21122019_spki.log 
+Инициализация
+Проверка ЭП файла
+Результат: OK (00000000)
+ЭП 1: OK (00000000)
+Wed Dec 18 15:46:42 2019
+Владелец: CN=FNS,O=FNS,ST=00
+Хэш: EA:8E:16:6E:68:26:01:0E:D2:3E:1B:6F:97:6C:BE:76:57:53:78:D9:DA:00:E0:6F:AC:90:75:F8:62:93:29:F4
+
+Текущее время: Sat Dec 21 13:57:26 2019
+"C:\Program Files\MDPREI\spki\spki1utl.exe" -verify -delete -1 -profile r2880_2 -registry -in D:\SKAD\form440SKAD\temp\work\AFN_MIFNS00_7102803_20191218_00006.arj -out D:\SKAD\form440SKAD\temp\work\AFN_MIFNS00_7102803_20191218_00006.arj.test -silent D:\SKAD\form440SKAD\log\21122019_spki.log 
+Инициализация
+Проверка ЭП файла
+Результат: OK (00000000)
+ЭП 1: OK (00000000)
+Wed Dec 18 20:24:11 2019
+Владелец: CN=FNS,O=FNS,ST=00
+Хэш: EA:8E:16:6E:68:26:01:0E:D2:3E:1B:6F:97:6C:BE:76:57:53:78:D9:DA:00:E0:6F:AC:90:75:F8:62:93:29:F4
+
+Текущее время: Sat Dec 21 13:57:27 2019
+"C:\Program Files\MDPREI\spki\spki1utl.exe" -verify -delete -1 -profile r2880_2 -registry -in D:\SKAD\form440SKAD\temp\work\AFN_MIFNS00_7102803_20191218_00007.arj -out D:\SKAD\form440SKAD\temp\work\AFN_MIFNS00_7102803_20191218_00007.arj.test -silent D:\SKAD\form440SKAD\log\21122019_spki.log 
+Инициализация
+Проверка ЭП файла
+Результат: OK (00000000)
+ЭП 1: OK (00000000)
+Wed Dec 18 22:40:12 2019
+Владелец: CN=FNS,O=FNS,ST=00
+Хэш: EA:8E:16:6E:68:26:01:0E:D2:3E:1B:6F:97:6C:BE:76:57:53:78:D9:DA:00:E0:6F:AC:90:75:F8:62:93:29:F4
+
+Текущее время: Sat Dec 21 13:57:28 2019
+"C:\Program Files\MDPREI\spki\spki1utl.exe" -verify -delete -1 -profile r2880_2 -registry -in D:\SKAD\form440SKAD\temp\work\AFN_MIFNS00_7102803_20191219_00001.arj -out D:\SKAD\form440SKAD\temp\work\AFN_MIFNS00_7102803_20191219_00001.arj.test -silent D:\SKAD\form440SKAD\log\21122019_spki.log 
+Инициализация
+Проверка ЭП файла
+Результат: OK (00000000)
+ЭП 1: OK (00000000)
+Thu Dec 19 10:16:03 2019
+Владелец: CN=FNS,O=FNS,ST=00
+Хэш: EA:8E:16:6E:68:26:01:0E:D2:3E:1B:6F:97:6C:BE:76:57:53:78:D9:DA:00:E0:6F:AC:90:75:F8:62:93:29:F4
+
+Текущее время: Sat Dec 21 13:57:29 2019
+"C:\Program Files\MDPREI\spki\spki1utl.exe" -verify -delete -1 -profile r2880_2 -registry -in D:\SKAD\form440SKAD\temp\work\AFN_MIFNS00_7102803_20191219_00004.arj -out D:\SKAD\form440SKAD\temp\work\AFN_MIFNS00_7102803_20191219_00004.arj.test -silent D:\SKAD\form440SKAD\log\21122019_spki.log 
+Инициализация
+Проверка ЭП файла
+Результат: OK (00000000)
+ЭП 1: OK (00000000)
+Thu Dec 19 17:32:55 2019
+Владелец: CN=FNS,O=FNS,ST=00
+Хэш: EA:8E:16:6E:68:26:01:0E:D2:3E:1B:6F:97:6C:BE:76:57:53:78:D9:DA:00:E0:6F:AC:90:75:F8:62:93:29:F4
+
+Текущее время: Sat Dec 21 13:57:30 2019
+"C:\Program Files\MDPREI\spki\spki1utl.exe" -verify -delete -1 -profile r2880_2 -registry -in D:\SKAD\form440SKAD\temp\work\AFN_MIFNS00_7102803_20191219_00005.arj -out D:\SKAD\form440SKAD\temp\work\AFN_MIFNS00_7102803_20191219_00005.arj.test -silent D:\SKAD\form440SKAD\log\21122019_spki.log 
+Инициализация
+Проверка ЭП файла
+Результат: OK (00000000)
+ЭП 1: OK (00000000)
+Thu Dec 19 19:27:52 2019
+Владелец: CN=FNS,O=FNS,ST=00
+Хэш: EA:8E:16:6E:68:26:01:0E:D2:3E:1B:6F:97:6C:BE:76:57:53:78:D9:DA:00:E0:6F:AC:90:75:F8:62:93:29:F4
+
+Текущее время: Sat Dec 21 13:57:31 2019
+"C:\Program Files\MDPREI\spki\spki1utl.exe" -verify -delete -1 -profile r2880_2 -registry -in D:\SKAD\form440SKAD\temp\work\AFN_MIFNS00_7102803_20191220_00001.arj -out D:\SKAD\form440SKAD\temp\work\AFN_MIFNS00_7102803_20191220_00001.arj.test -silent D:\SKAD\form440SKAD\log\21122019_spki.log 
+Инициализация
+Проверка ЭП файла
+Результат: OK (00000000)
+ЭП 1: OK (00000000)
+Fri Dec 20 05:19:57 2019
+Владелец: CN=FNS,O=FNS,ST=00
+Хэш: EA:8E:16:6E:68:26:01:0E:D2:3E:1B:6F:97:6C:BE:76:57:53:78:D9:DA:00:E0:6F:AC:90:75:F8:62:93:29:F4
+
+Текущее время: Sat Dec 21 13:57:32 2019
+"C:\Program Files\MDPREI\spki\spki1utl.exe" -verify -delete -1 -profile r2880_2 -registry -in D:\SKAD\form440SKAD\temp\work\AFN_MIFNS00_7102803_20191220_00002.arj -out D:\SKAD\form440SKAD\temp\work\AFN_MIFNS00_7102803_20191220_00002.arj.test -silent D:\SKAD\form440SKAD\log\21122019_spki.log 
+Инициализация
+Проверка ЭП файла
+Результат: OK (00000000)
+ЭП 1: OK (00000000)
+Fri Dec 20 09:26:50 2019
+Владелец: CN=FNS,O=FNS,ST=00
+Хэш: EA:8E:16:6E:68:26:01:0E:D2:3E:1B:6F:97:6C:BE:76:57:53:78:D9:DA:00:E0:6F:AC:90:75:F8:62:93:29:F4
+
+Текущее время: Sat Dec 21 13:57:33 2019
+"C:\Program Files\MDPREI\spki\spki1utl.exe" -verify -delete -1 -profile r2880_2 -registry -in D:\SKAD\form440SKAD\temp\work\AFN_MIFNS00_7102803_20191220_00003.arj -out D:\SKAD\form440SKAD\temp\work\AFN_MIFNS00_7102803_20191220_00003.arj.test -silent D:\SKAD\form440SKAD\log\21122019_spki.log 
+Инициализация
+Проверка ЭП файла
+Результат: OK (00000000)
+ЭП 1: OK (00000000)
+Fri Dec 20 11:27:00 2019
+Владелец: CN=FNS,O=FNS,ST=00
+Хэш: EA:8E:16:6E:68:26:01:0E:D2:3E:1B:6F:97:6C:BE:76:57:53:78:D9:DA:00:E0:6F:AC:90:75:F8:62:93:29:F4
+
+Текущее время: Sat Dec 21 13:57:35 2019
+"C:\Program Files\MDPREI\spki\spki1utl.exe" -verify -delete -1 -profile r2880_2 -registry -in D:\SKAD\form440SKAD\temp\work\AFN_MIFNS00_7102803_20191220_00004.arj -out D:\SKAD\form440SKAD\temp\work\AFN_MIFNS00_7102803_20191220_00004.arj.test -silent D:\SKAD\form440SKAD\log\21122019_spki.log 
+Инициализация
+Проверка ЭП файла
+Результат: OK (00000000)
+ЭП 1: OK (00000000)
+Fri Dec 20 12:24:06 2019
+Владелец: CN=FNS,O=FNS,ST=00
+Хэш: EA:8E:16:6E:68:26:01:0E:D2:3E:1B:6F:97:6C:BE:76:57:53:78:D9:DA:00:E0:6F:AC:90:75:F8:62:93:29:F4
+
+Текущее время: Sat Dec 21 13:57:36 2019
+"C:\Program Files\MDPREI\spki\spki1utl.exe" -verify -delete -1 -profile r2880_2 -registry -in D:\SKAD\form440SKAD\temp\work\AFN_MIFNS00_7102803_20191220_00005.arj -out D:\SKAD\form440SKAD\temp\work\AFN_MIFNS00_7102803_20191220_00005.arj.test -silent D:\SKAD\form440SKAD\log\21122019_spki.log 
+Инициализация
+Проверка ЭП файла
+Результат: OK (00000000)
+ЭП 1: OK (00000000)
+Fri Dec 20 13:58:17 2019
+Владелец: CN=FNS,O=FNS,ST=00
+Хэш: EA:8E:16:6E:68:26:01:0E:D2:3E:1B:6F:97:6C:BE:76:57:53:78:D9:DA:00:E0:6F:AC:90:75:F8:62:93:29:F4
+
+Текущее время: Sat Dec 21 13:58:30 2019
+"C:\Program Files\MDPREI\spki\spki1utl.exe" -verify -delete -1 -profile r2880_2 -registry -in D:\SKAD\form440SKAD\temp\work\AFN_MIFNS00_7102803_20191220_00002.arj -out D:\SKAD\form440SKAD\temp\work\AFN_MIFNS00_7102803_20191220_00002.arj.test -silent D:\SKAD\form440SKAD\log\21122019_spki.log 
+Инициализация
+Проверка ЭП файла
+Результат: OK (00000000)
+ЭП 1: OK (00000000)
+Fri Dec 20 09:26:50 2019
+Владелец: CN=FNS,O=FNS,ST=00
+Хэш: EA:8E:16:6E:68:26:01:0E:D2:3E:1B:6F:97:6C:BE:76:57:53:78:D9:DA:00:E0:6F:AC:90:75:F8:62:93:29:F4
+
+Текущее время: Sat Dec 21 13:58:31 2019
+"C:\Program Files\MDPREI\spki\spki1utl.exe" -verify -delete -1 -profile r2880_2 -registry -in D:\SKAD\form440SKAD\temp\work\AFN_MIFNS00_7102803_20191220_00005.arj -out D:\SKAD\form440SKAD\temp\work\AFN_MIFNS00_7102803_20191220_00005.arj.test -silent D:\SKAD\form440SKAD\log\21122019_spki.log 
+Инициализация
+Проверка ЭП файла
+Результат: OK (00000000)
+ЭП 1: OK (00000000)
+Fri Dec 20 13:58:17 2019
+Владелец: CN=FNS,O=FNS,ST=00
+Хэш: EA:8E:16:6E:68:26:01:0E:D2:3E:1B:6F:97:6C:BE:76:57:53:78:D9:DA:00:E0:6F:AC:90:75:F8:62:93:29:F4
+
+Текущее время: Sat Dec 21 14:01:58 2019
+"C:\Program Files\MDPREI\spki\spki1utl.exe" -verify -delete -1 -profile r2880_2 -registry -in D:\SKAD\form440SKAD\temp\work\AFN_MIFNS00_7102803_20191220_00002.arj -out D:\SKAD\form440SKAD\temp\work\AFN_MIFNS00_7102803_20191220_00002.arj.test -silent D:\SKAD\form440SKAD\log\21122019_spki.log 
+Инициализация
+Проверка ЭП файла
+Результат: OK (00000000)
+ЭП 1: OK (00000000)
+Fri Dec 20 09:26:50 2019
+Владелец: CN=FNS,O=FNS,ST=00
+Хэш: EA:8E:16:6E:68:26:01:0E:D2:3E:1B:6F:97:6C:BE:76:57:53:78:D9:DA:00:E0:6F:AC:90:75:F8:62:93:29:F4
+
+Текущее время: Sat Dec 21 14:01:59 2019
+"C:\Program Files\MDPREI\spki\spki1utl.exe" -verify -delete -1 -profile r2880_2 -registry -in D:\SKAD\form440SKAD\temp\work\AFN_MIFNS00_7102803_20191220_00005.arj -out D:\SKAD\form440SKAD\temp\work\AFN_MIFNS00_7102803_20191220_00005.arj.test -silent D:\SKAD\form440SKAD\log\21122019_spki.log 
+Инициализация
+Проверка ЭП файла
+Результат: OK (00000000)
+ЭП 1: OK (00000000)
+Fri Dec 20 13:58:17 2019
+Владелец: CN=FNS,O=FNS,ST=00
+Хэш: EA:8E:16:6E:68:26:01:0E:D2:3E:1B:6F:97:6C:BE:76:57:53:78:D9:DA:00:E0:6F:AC:90:75:F8:62:93:29:F4
+
+Текущее время: Sat Dec 21 14:04:04 2019
+"C:\Program Files\MDPREI\spki\spki1utl.exe" -verify -delete -1 -profile r2880_2 -registry -in D:\SKAD\form440SKAD\temp\work\AFN_MIFNS00_7102803_20191220_00002.arj -out D:\SKAD\form440SKAD\temp\work\AFN_MIFNS00_7102803_20191220_00002.arj.test -silent D:\SKAD\form440SKAD\log\21122019_spki.log 
+Инициализация
+Проверка ЭП файла
+Результат: OK (00000000)
+ЭП 1: OK (00000000)
+Fri Dec 20 09:26:50 2019
+Владелец: CN=FNS,O=FNS,ST=00
+Хэш: EA:8E:16:6E:68:26:01:0E:D2:3E:1B:6F:97:6C:BE:76:57:53:78:D9:DA:00:E0:6F:AC:90:75:F8:62:93:29:F4
+
+Текущее время: Sat Dec 21 14:04:05 2019
+"C:\Program Files\MDPREI\spki\spki1utl.exe" -verify -delete -1 -profile r2880_2 -registry -in D:\SKAD\form440SKAD\temp\work\AFN_MIFNS00_7102803_20191220_00005.arj -out D:\SKAD\form440SKAD\temp\work\AFN_MIFNS00_7102803_20191220_00005.arj.test -silent D:\SKAD\form440SKAD\log\21122019_spki.log 
+Инициализация
+Проверка ЭП файла
+Результат: OK (00000000)
+ЭП 1: OK (00000000)
+Fri Dec 20 13:58:17 2019
+Владелец: CN=FNS,O=FNS,ST=00
+Хэш: EA:8E:16:6E:68:26:01:0E:D2:3E:1B:6F:97:6C:BE:76:57:53:78:D9:DA:00:E0:6F:AC:90:75:F8:62:93:29:F4
+
+Текущее время: Sat Dec 21 14:04:42 2019
+"C:\Program Files\MDPREI\spki\spki1utl.exe" -verify -delete -1 -profile r2880_2 -registry -in D:\SKAD\form440SKAD\temp\work\AFN_MIFNS00_7102803_20191220_00002.arj -out D:\SKAD\form440SKAD\temp\work\AFN_MIFNS00_7102803_20191220_00002.arj.test -silent D:\SKAD\form440SKAD\log\21122019_spki.log 
+Инициализация
+Проверка ЭП файла
+Результат: OK (00000000)
+ЭП 1: OK (00000000)
+Fri Dec 20 09:26:50 2019
+Владелец: CN=FNS,O=FNS,ST=00
+Хэш: EA:8E:16:6E:68:26:01:0E:D2:3E:1B:6F:97:6C:BE:76:57:53:78:D9:DA:00:E0:6F:AC:90:75:F8:62:93:29:F4
+
+Текущее время: Sat Dec 21 14:04:43 2019
+"C:\Program Files\MDPREI\spki\spki1utl.exe" -verify -delete -1 -profile r2880_2 -registry -in D:\SKAD\form440SKAD\temp\work\AFN_MIFNS00_7102803_20191220_00005.arj -out D:\SKAD\form440SKAD\temp\work\AFN_MIFNS00_7102803_20191220_00005.arj.test -silent D:\SKAD\form440SKAD\log\21122019_spki.log 
+Инициализация
+Проверка ЭП файла
+Результат: OK (00000000)
+ЭП 1: OK (00000000)
+Fri Dec 20 13:58:17 2019
+Владелец: CN=FNS,O=FNS,ST=00
+Хэш: EA:8E:16:6E:68:26:01:0E:D2:3E:1B:6F:97:6C:BE:76:57:53:78:D9:DA:00:E0:6F:AC:90:75:F8:62:93:29:F4
+
+Текущее время: Sat Dec 21 14:06:45 2019
+"C:\Program Files\MDPREI\spki\spki1utl.exe" -verify -delete -1 -profile r2880_2 -registry -in D:\SKAD\form440SKAD\temp\work\AFN_MIFNS00_7102803_20191220_00002.arj -out D:\SKAD\form440SKAD\temp\work\AFN_MIFNS00_7102803_20191220_00002.arj.test -silent D:\SKAD\form440SKAD\log\21122019_spki.log 
+Инициализация
+Проверка ЭП файла
+Результат: OK (00000000)
+ЭП 1: OK (00000000)
+Fri Dec 20 09:26:50 2019
+Владелец: CN=FNS,O=FNS,ST=00
+Хэш: EA:8E:16:6E:68:26:01:0E:D2:3E:1B:6F:97:6C:BE:76:57:53:78:D9:DA:00:E0:6F:AC:90:75:F8:62:93:29:F4
+
+Текущее время: Sat Dec 21 14:06:46 2019
+"C:\Program Files\MDPREI\spki\spki1utl.exe" -verify -delete -1 -profile r2880_2 -registry -in D:\SKAD\form440SKAD\temp\work\AFN_MIFNS00_7102803_20191220_00005.arj -out D:\SKAD\form440SKAD\temp\work\AFN_MIFNS00_7102803_20191220_00005.arj.test -silent D:\SKAD\form440SKAD\log\21122019_spki.log 
+Инициализация
+Проверка ЭП файла
+Результат: OK (00000000)
+ЭП 1: OK (00000000)
+Fri Dec 20 13:58:17 2019
+Владелец: CN=FNS,O=FNS,ST=00
+Хэш: EA:8E:16:6E:68:26:01:0E:D2:3E:1B:6F:97:6C:BE:76:57:53:78:D9:DA:00:E0:6F:AC:90:75:F8:62:93:29:F4
+
+Текущее время: Sat Dec 21 14:11:30 2019
+"C:\Program Files\MDPREI\spki\spki1utl.exe" -verify -delete -1 -profile r2880_2 -registry -in D:\SKAD\form440SKAD\temp\work\AFN_MIFNS00_7102803_20191220_00002.arj -out D:\SKAD\form440SKAD\temp\work\AFN_MIFNS00_7102803_20191220_00002.arj.test -silent D:\SKAD\form440SKAD\log\21122019_spki.log 
+Инициализация
+Проверка ЭП файла
+Результат: OK (00000000)
+ЭП 1: OK (00000000)
+Fri Dec 20 09:26:50 2019
+Владелец: CN=FNS,O=FNS,ST=00
+Хэш: EA:8E:16:6E:68:26:01:0E:D2:3E:1B:6F:97:6C:BE:76:57:53:78:D9:DA:00:E0:6F:AC:90:75:F8:62:93:29:F4
+
+Текущее время: Sat Dec 21 14:11:31 2019
+"C:\Program Files\MDPREI\spki\spki1utl.exe" -verify -delete -1 -profile r2880_2 -registry -in D:\SKAD\form440SKAD\temp\work\AFN_MIFNS00_7102803_20191220_00005.arj -out D:\SKAD\form440SKAD\temp\work\AFN_MIFNS00_7102803_20191220_00005.arj.test -silent D:\SKAD\form440SKAD\log\21122019_spki.log 
+Инициализация
+Проверка ЭП файла
+Результат: OK (00000000)
+ЭП 1: OK (00000000)
+Fri Dec 20 13:58:17 2019
+Владелец: CN=FNS,O=FNS,ST=00
+Хэш: EA:8E:16:6E:68:26:01:0E:D2:3E:1B:6F:97:6C:BE:76:57:53:78:D9:DA:00:E0:6F:AC:90:75:F8:62:93:29:F4
+
+Текущее время: Sat Dec 21 14:20:34 2019
+"C:\Program Files\MDPREI\spki\spki1utl.exe" -verify -delete -1 -profile r2880_2 -registry -in D:\SKAD\form440SKAD\temp\work\AFN_MIFNS00_7102803_20191220_00002.arj -out D:\SKAD\form440SKAD\temp\work\AFN_MIFNS00_7102803_20191220_00002.arj.test -silent D:\SKAD\form440SKAD\log\21122019_spki.log 
+Инициализация
+Проверка ЭП файла
+Результат: OK (00000000)
+ЭП 1: OK (00000000)
+Fri Dec 20 09:26:50 2019
+Владелец: CN=FNS,O=FNS,ST=00
+Хэш: EA:8E:16:6E:68:26:01:0E:D2:3E:1B:6F:97:6C:BE:76:57:53:78:D9:DA:00:E0:6F:AC:90:75:F8:62:93:29:F4
+
+Текущее время: Sat Dec 21 14:20:35 2019
+"C:\Program Files\MDPREI\spki\spki1utl.exe" -verify -delete -1 -profile r2880_2 -registry -in D:\SKAD\form440SKAD\temp\work\AFN_MIFNS00_7102803_20191220_00005.arj -out D:\SKAD\form440SKAD\temp\work\AFN_MIFNS00_7102803_20191220_00005.arj.test -silent D:\SKAD\form440SKAD\log\21122019_spki.log 
+Инициализация
+Проверка ЭП файла
+Результат: OK (00000000)
+ЭП 1: OK (00000000)
+Fri Dec 20 13:58:17 2019
+Владелец: CN=FNS,O=FNS,ST=00
+Хэш: EA:8E:16:6E:68:26:01:0E:D2:3E:1B:6F:97:6C:BE:76:57:53:78:D9:DA:00:E0:6F:AC:90:75:F8:62:93:29:F4
+
+Текущее время: Sat Dec 21 14:21:34 2019
+"C:\Program Files\MDPREI\spki\spki1utl.exe" -verify -delete -1 -profile r2880_2 -registry -in D:\SKAD\form440SKAD\temp\work\AFN_MIFNS00_7102803_20191220_00002.arj -out D:\SKAD\form440SKAD\temp\work\AFN_MIFNS00_7102803_20191220_00002.arj.test -silent D:\SKAD\form440SKAD\log\21122019_spki.log 
+Инициализация
+Проверка ЭП файла
+Результат: OK (00000000)
+ЭП 1: OK (00000000)
+Fri Dec 20 09:26:50 2019
+Владелец: CN=FNS,O=FNS,ST=00
+Хэш: EA:8E:16:6E:68:26:01:0E:D2:3E:1B:6F:97:6C:BE:76:57:53:78:D9:DA:00:E0:6F:AC:90:75:F8:62:93:29:F4
+
+Текущее время: Sat Dec 21 14:21:35 2019
+"C:\Program Files\MDPREI\spki\spki1utl.exe" -verify -delete -1 -profile r2880_2 -registry -in D:\SKAD\form440SKAD\temp\work\AFN_MIFNS00_7102803_20191220_00005.arj -out D:\SKAD\form440SKAD\temp\work\AFN_MIFNS00_7102803_20191220_00005.arj.test -silent D:\SKAD\form440SKAD\log\21122019_spki.log 
+Инициализация
+Проверка ЭП файла
+Результат: OK (00000000)
+ЭП 1: OK (00000000)
+Fri Dec 20 13:58:17 2019
+Владелец: CN=FNS,O=FNS,ST=00
+Хэш: EA:8E:16:6E:68:26:01:0E:D2:3E:1B:6F:97:6C:BE:76:57:53:78:D9:DA:00:E0:6F:AC:90:75:F8:62:93:29:F4
+
+Текущее время: Sat Dec 21 14:22:26 2019
+"C:\Program Files\MDPREI\spki\spki1utl.exe" -verify -delete -1 -profile r2880_2 -registry -in D:\SKAD\form440SKAD\temp\work\AFN_MIFNS00_7102803_20191220_00002.arj -out D:\SKAD\form440SKAD\temp\work\AFN_MIFNS00_7102803_20191220_00002.arj.test -silent D:\SKAD\form440SKAD\log\21122019_spki.log 
+Инициализация
+Проверка ЭП файла
+Результат: OK (00000000)
+ЭП 1: OK (00000000)
+Fri Dec 20 09:26:50 2019
+Владелец: CN=FNS,O=FNS,ST=00
+Хэш: EA:8E:16:6E:68:26:01:0E:D2:3E:1B:6F:97:6C:BE:76:57:53:78:D9:DA:00:E0:6F:AC:90:75:F8:62:93:29:F4
+
+Текущее время: Sat Dec 21 14:22:27 2019
+"C:\Program Files\MDPREI\spki\spki1utl.exe" -verify -delete -1 -profile r2880_2 -registry -in D:\SKAD\form440SKAD\temp\work\AFN_MIFNS00_7102803_20191220_00005.arj -out D:\SKAD\form440SKAD\temp\work\AFN_MIFNS00_7102803_20191220_00005.arj.test -silent D:\SKAD\form440SKAD\log\21122019_spki.log 
+Инициализация
+Проверка ЭП файла
+Результат: OK (00000000)
+ЭП 1: OK (00000000)
+Fri Dec 20 13:58:17 2019
+Владелец: CN=FNS,O=FNS,ST=00
+Хэш: EA:8E:16:6E:68:26:01:0E:D2:3E:1B:6F:97:6C:BE:76:57:53:78:D9:DA:00:E0:6F:AC:90:75:F8:62:93:29:F4
+
+Текущее время: Sat Dec 21 14:23:37 2019
+"C:\Program Files\MDPREI\spki\spki1utl.exe" -verify -delete -1 -profile r2880_2 -registry -in D:\SKAD\form440SKAD\temp\work\AFN_MIFNS00_7102803_20191220_00002.arj -out D:\SKAD\form440SKAD\temp\work\AFN_MIFNS00_7102803_20191220_00002.arj.test -silent D:\SKAD\form440SKAD\log\21122019_spki.log 
+Инициализация
+Проверка ЭП файла
+Результат: OK (00000000)
+ЭП 1: OK (00000000)
+Fri Dec 20 09:26:50 2019
+Владелец: CN=FNS,O=FNS,ST=00
+Хэш: EA:8E:16:6E:68:26:01:0E:D2:3E:1B:6F:97:6C:BE:76:57:53:78:D9:DA:00:E0:6F:AC:90:75:F8:62:93:29:F4
+
+Текущее время: Sat Dec 21 14:23:38 2019
+"C:\Program Files\MDPREI\spki\spki1utl.exe" -verify -delete -1 -profile r2880_2 -registry -in D:\SKAD\form440SKAD\temp\work\AFN_MIFNS00_7102803_20191220_00005.arj -out D:\SKAD\form440SKAD\temp\work\AFN_MIFNS00_7102803_20191220_00005.arj.test -silent D:\SKAD\form440SKAD\log\21122019_spki.log 
+Инициализация
+Проверка ЭП файла
+Результат: OK (00000000)
+ЭП 1: OK (00000000)
+Fri Dec 20 13:58:17 2019
+Владелец: CN=FNS,O=FNS,ST=00
+Хэш: EA:8E:16:6E:68:26:01:0E:D2:3E:1B:6F:97:6C:BE:76:57:53:78:D9:DA:00:E0:6F:AC:90:75:F8:62:93:29:F4
+
+Текущее время: Sat Dec 21 14:27:59 2019
+"C:\Program Files\MDPREI\spki\spki1utl.exe" -verify -delete -1 -profile r2880_2 -registry -in D:\SKAD\form440SKAD\temp\work\AFN_MIFNS00_7102803_20191220_00002.arj -out D:\SKAD\form440SKAD\temp\work\AFN_MIFNS00_7102803_20191220_00002.arj.test -silent D:\SKAD\form440SKAD\log\21122019_spki.log 
+Инициализация
+Проверка ЭП файла
+Результат: OK (00000000)
+ЭП 1: OK (00000000)
+Fri Dec 20 09:26:50 2019
+Владелец: CN=FNS,O=FNS,ST=00
+Хэш: EA:8E:16:6E:68:26:01:0E:D2:3E:1B:6F:97:6C:BE:76:57:53:78:D9:DA:00:E0:6F:AC:90:75:F8:62:93:29:F4
+
+Текущее время: Sat Dec 21 14:28:00 2019
+"C:\Program Files\MDPREI\spki\spki1utl.exe" -verify -delete -1 -profile r2880_2 -registry -in D:\SKAD\form440SKAD\temp\work\AFN_MIFNS00_7102803_20191220_00005.arj -out D:\SKAD\form440SKAD\temp\work\AFN_MIFNS00_7102803_20191220_00005.arj.test -silent D:\SKAD\form440SKAD\log\21122019_spki.log 
+Инициализация
+Проверка ЭП файла
+Результат: OK (00000000)
+ЭП 1: OK (00000000)
+Fri Dec 20 13:58:17 2019
+Владелец: CN=FNS,O=FNS,ST=00
+Хэш: EA:8E:16:6E:68:26:01:0E:D2:3E:1B:6F:97:6C:BE:76:57:53:78:D9:DA:00:E0:6F:AC:90:75:F8:62:93:29:F4
+
+Текущее время: Sat Dec 21 14:28:05 2019
+"C:\Program Files\MDPREI\spki\spki1utl.exe" -verify -delete -1 -profile r2880_2 -registry -in D:\SKAD\form440SKAD\temp\work\KWTFCB_BOS1_RPO17102803_860320191218_590125_20191219_0002.xml -out D:\SKAD\form440SKAD\temp\work\KWTFCB_BOS1_RPO17102803_860320191218_590125_20191219_0002.xml.test -silent D:\SKAD\form440SKAD\log\21122019_spki.log 
+Инициализация
+Проверка ЭП файла
+Результат: OK (00000000)
+ЭП 1: OK (00000000)
+Fri Dec 20 13:58:17 2019
+Владелец: CN=FNS,O=FNS,ST=00
+Хэш: EA:8E:16:6E:68:26:01:0E:D2:3E:1B:6F:97:6C:BE:76:57:53:78:D9:DA:00:E0:6F:AC:90:75:F8:62:93:29:F4
+
+Текущее время: Sat Dec 21 14:28:06 2019
+"C:\Program Files\MDPREI\spki\spki1utl.exe" -verify -delete -1 -profile r2880_2 -registry -in D:\SKAD\form440SKAD\temp\work\KWTFCB_BOS1_RPO17102803_860320191218_595139_20191219_0002.xml -out D:\SKAD\form440SKAD\temp\work\KWTFCB_BOS1_RPO17102803_860320191218_595139_20191219_0002.xml.test -silent D:\SKAD\form440SKAD\log\21122019_spki.log 
+Инициализация
+Проверка ЭП файла
+Результат: OK (00000000)
+ЭП 1: OK (00000000)
+Fri Dec 20 13:58:17 2019
+Владелец: CN=FNS,O=FNS,ST=00
+Хэш: EA:8E:16:6E:68:26:01:0E:D2:3E:1B:6F:97:6C:BE:76:57:53:78:D9:DA:00:E0:6F:AC:90:75:F8:62:93:29:F4
+
+Текущее время: Sat Dec 21 14:28:07 2019
+"C:\Program Files\MDPREI\spki\spki1utl.exe" -verify -delete -1 -profile r2880_2 -registry -in D:\SKAD\form440SKAD\temp\work\KWTFCB_BOS1_RPO17102803_890120191218_606125_20191219_0002.xml -out D:\SKAD\form440SKAD\temp\work\KWTFCB_BOS1_RPO17102803_890120191218_606125_20191219_0002.xml.test -silent D:\SKAD\form440SKAD\log\21122019_spki.log 
+Инициализация
+Проверка ЭП файла
+Результат: OK (00000000)
+ЭП 1: OK (00000000)
+Fri Dec 20 13:58:17 2019
+Владелец: CN=FNS,O=FNS,ST=00
+Хэш: EA:8E:16:6E:68:26:01:0E:D2:3E:1B:6F:97:6C:BE:76:57:53:78:D9:DA:00:E0:6F:AC:90:75:F8:62:93:29:F4
+
+Текущее время: Sat Dec 21 14:28:08 2019
+"C:\Program Files\MDPREI\spki\spki1utl.exe" -verify -delete -1 -profile r2880_2 -registry -in D:\SKAD\form440SKAD\temp\work\KWTFCB_BVD1_ZSV17102803_860220191219_102912_20191219_0002_000001_000001.xml -out D:\SKAD\form440SKAD\temp\work\KWTFCB_BVD1_ZSV17102803_860220191219_102912_20191219_0002_000001_000001.xml.test -silent D:\SKAD\form440SKAD\log\21122019_spki.log 
+Инициализация
+Проверка ЭП файла
+Результат: OK (00000000)
+ЭП 1: OK (00000000)
+Fri Dec 20 13:58:17 2019
+Владелец: CN=FNS,O=FNS,ST=00
+Хэш: EA:8E:16:6E:68:26:01:0E:D2:3E:1B:6F:97:6C:BE:76:57:53:78:D9:DA:00:E0:6F:AC:90:75:F8:62:93:29:F4
+
+Текущее время: Sat Dec 21 14:28:09 2019
+"C:\Program Files\MDPREI\spki\spki1utl.exe" -verify -delete -1 -profile r2880_2 -registry -in D:\SKAD\form440SKAD\temp\work\KWTFCB_BVD1_ZSV17102803_860220191219_102912_20191219_0002_000002_000001.xml -out D:\SKAD\form440SKAD\temp\work\KWTFCB_BVD1_ZSV17102803_860220191219_102912_20191219_0002_000002_000001.xml.test -silent D:\SKAD\form440SKAD\log\21122019_spki.log 
+Инициализация
+Проверка ЭП файла
+Результат: OK (00000000)
+ЭП 1: OK (00000000)
+Fri Dec 20 13:58:17 2019
+Владелец: CN=FNS,O=FNS,ST=00
+Хэш: EA:8E:16:6E:68:26:01:0E:D2:3E:1B:6F:97:6C:BE:76:57:53:78:D9:DA:00:E0:6F:AC:90:75:F8:62:93:29:F4
+
+Текущее время: Sat Dec 21 14:28:11 2019
+"C:\Program Files\MDPREI\spki\spki1utl.exe" -verify -delete -1 -profile r2880_2 -registry -in D:\SKAD\form440SKAD\temp\work\KWTFCB_BVS1_ZSV17102803_860220191219_102912_20191219_0002.xml -out D:\SKAD\form440SKAD\temp\work\KWTFCB_BVS1_ZSV17102803_860220191219_102912_20191219_0002.xml.test -silent D:\SKAD\form440SKAD\log\21122019_spki.log 
+Инициализация
+Проверка ЭП файла
+Результат: OK (00000000)
+ЭП 1: OK (00000000)
+Fri Dec 20 13:58:17 2019
+Владелец: CN=FNS,O=FNS,ST=00
+Хэш: EA:8E:16:6E:68:26:01:0E:D2:3E:1B:6F:97:6C:BE:76:57:53:78:D9:DA:00:E0:6F:AC:90:75:F8:62:93:29:F4
+
+Текущее время: Sat Dec 21 14:28:12 2019
+"C:\Program Files\MDPREI\spki\spki1utl.exe" -decrypt -verify -delete -1 -profile r2880_2 -registry -in D:\SKAD\form440SKAD\temp\work\ROO17102803_890520191220_538374.vrb -out D:\SKAD\form440SKAD\temp\work\ROO17102803_890520191220_538374.vrb.test -silent D:\SKAD\form440SKAD\log\21122019_spki.log 
+Инициализация
+Расшифрование и проверка ЭП файла
+Результат: Сообщение не подписано или формат искажен   (E070001A)
+Текущее время: Sat Dec 21 14:28:13 2019
+"C:\Program Files\MDPREI\spki\spki1utl.exe" -decrypt -verify -delete -1 -profile r2880_2 -registry -in D:\SKAD\form440SKAD\temp\work\RPO17102803_860220191220_531084.vrb -out D:\SKAD\form440SKAD\temp\work\RPO17102803_860220191220_531084.vrb.test -silent D:\SKAD\form440SKAD\log\21122019_spki.log 
+Инициализация
+Расшифрование и проверка ЭП файла
+Результат: Сообщение не подписано или формат искажен   (E070001A)
+Текущее время: Sat Dec 21 14:28:14 2019
+"C:\Program Files\MDPREI\spki\spki1utl.exe" -decrypt -verify -delete -1 -profile r2880_2 -registry -in D:\SKAD\form440SKAD\temp\work\RPO17102803_890520191220_531550.vrb -out D:\SKAD\form440SKAD\temp\work\RPO17102803_890520191220_531550.vrb.test -silent D:\SKAD\form440SKAD\log\21122019_spki.log 
+Инициализация
+Расшифрование и проверка ЭП файла
+Результат: Сообщение не подписано или формат искажен   (E070001A)
+Текущее время: Sat Dec 21 14:29:14 2019
+"C:\Program Files\MDPREI\spki\spki1utl.exe" -verify -delete -1 -profile r2880_2 -registry -in D:\SKAD\form440SKAD\temp\work\AFN_MIFNS00_7102803_20191220_00002.arj -out D:\SKAD\form440SKAD\temp\work\AFN_MIFNS00_7102803_20191220_00002.arj.test -silent D:\SKAD\form440SKAD\log\21122019_spki.log 
+Инициализация
+Проверка ЭП файла
+Результат: OK (00000000)
+ЭП 1: OK (00000000)
+Fri Dec 20 09:26:50 2019
+Владелец: CN=FNS,O=FNS,ST=00
+Хэш: EA:8E:16:6E:68:26:01:0E:D2:3E:1B:6F:97:6C:BE:76:57:53:78:D9:DA:00:E0:6F:AC:90:75:F8:62:93:29:F4
+
+Текущее время: Sat Dec 21 14:29:15 2019
+"C:\Program Files\MDPREI\spki\spki1utl.exe" -verify -delete -1 -profile r2880_2 -registry -in D:\SKAD\form440SKAD\temp\work\AFN_MIFNS00_7102803_20191220_00005.arj -out D:\SKAD\form440SKAD\temp\work\AFN_MIFNS00_7102803_20191220_00005.arj.test -silent D:\SKAD\form440SKAD\log\21122019_spki.log 
+Инициализация
+Проверка ЭП файла
+Результат: OK (00000000)
+ЭП 1: OK (00000000)
+Fri Dec 20 13:58:17 2019
+Владелец: CN=FNS,O=FNS,ST=00
+Хэш: EA:8E:16:6E:68:26:01:0E:D2:3E:1B:6F:97:6C:BE:76:57:53:78:D9:DA:00:E0:6F:AC:90:75:F8:62:93:29:F4
+
+Текущее время: Sat Dec 21 14:30:42 2019
+"C:\Program Files\MDPREI\spki\spki1utl.exe" -verify -delete -1 -profile r2880_2 -registry -in D:\SKAD\form440SKAD\temp\work\AFN_MIFNS00_7102803_20191220_00002.arj -out D:\SKAD\form440SKAD\temp\work\AFN_MIFNS00_7102803_20191220_00002.arj.test -silent D:\SKAD\form440SKAD\log\21122019_spki.log 
+Инициализация
+Проверка ЭП файла
+Результат: OK (00000000)
+ЭП 1: OK (00000000)
+Fri Dec 20 09:26:50 2019
+Владелец: CN=FNS,O=FNS,ST=00
+Хэш: EA:8E:16:6E:68:26:01:0E:D2:3E:1B:6F:97:6C:BE:76:57:53:78:D9:DA:00:E0:6F:AC:90:75:F8:62:93:29:F4
+
+Текущее время: Sat Dec 21 14:30:43 2019
+"C:\Program Files\MDPREI\spki\spki1utl.exe" -verify -delete -1 -profile r2880_2 -registry -in D:\SKAD\form440SKAD\temp\work\AFN_MIFNS00_7102803_20191220_00005.arj -out D:\SKAD\form440SKAD\temp\work\AFN_MIFNS00_7102803_20191220_00005.arj.test -silent D:\SKAD\form440SKAD\log\21122019_spki.log 
+Инициализация
+Проверка ЭП файла
+Результат: OK (00000000)
+ЭП 1: OK (00000000)
+Fri Dec 20 13:58:17 2019
+Владелец: CN=FNS,O=FNS,ST=00
+Хэш: EA:8E:16:6E:68:26:01:0E:D2:3E:1B:6F:97:6C:BE:76:57:53:78:D9:DA:00:E0:6F:AC:90:75:F8:62:93:29:F4
+
+Текущее время: Sat Dec 21 14:32:19 2019
+"C:\Program Files\MDPREI\spki\spki1utl.exe" -verify -delete -1 -profile r2880_2 -registry -in D:\SKAD\form440SKAD\temp\work\AFN_MIFNS00_7102803_20191220_00002.arj -out D:\SKAD\form440SKAD\temp\work\AFN_MIFNS00_7102803_20191220_00002.arj.test -silent D:\SKAD\form440SKAD\log\21122019_spki.log 
+Инициализация
+Проверка ЭП файла
+Результат: OK (00000000)
+ЭП 1: OK (00000000)
+Fri Dec 20 09:26:50 2019
+Владелец: CN=FNS,O=FNS,ST=00
+Хэш: EA:8E:16:6E:68:26:01:0E:D2:3E:1B:6F:97:6C:BE:76:57:53:78:D9:DA:00:E0:6F:AC:90:75:F8:62:93:29:F4
+
+Текущее время: Sat Dec 21 14:32:20 2019
+"C:\Program Files\MDPREI\spki\spki1utl.exe" -verify -delete -1 -profile r2880_2 -registry -in D:\SKAD\form440SKAD\temp\work\AFN_MIFNS00_7102803_20191220_00005.arj -out D:\SKAD\form440SKAD\temp\work\AFN_MIFNS00_7102803_20191220_00005.arj.test -silent D:\SKAD\form440SKAD\log\21122019_spki.log 
+Инициализация
+Проверка ЭП файла
+Результат: OK (00000000)
+ЭП 1: OK (00000000)
+Fri Dec 20 13:58:17 2019
+Владелец: CN=FNS,O=FNS,ST=00
+Хэш: EA:8E:16:6E:68:26:01:0E:D2:3E:1B:6F:97:6C:BE:76:57:53:78:D9:DA:00:E0:6F:AC:90:75:F8:62:93:29:F4
+
+Текущее время: Sat Dec 21 14:33:04 2019
+"C:\Program Files\MDPREI\spki\spki1utl.exe" -verify -delete -1 -profile r2880_2 -registry -in D:\SKAD\form440SKAD\temp\work\AFN_MIFNS00_7102803_20191220_00002.arj -out D:\SKAD\form440SKAD\temp\work\AFN_MIFNS00_7102803_20191220_00002.arj.test -silent D:\SKAD\form440SKAD\log\21122019_spki.log 
+Инициализация
+Проверка ЭП файла
+Результат: OK (00000000)
+ЭП 1: OK (00000000)
+Fri Dec 20 09:26:50 2019
+Владелец: CN=FNS,O=FNS,ST=00
+Хэш: EA:8E:16:6E:68:26:01:0E:D2:3E:1B:6F:97:6C:BE:76:57:53:78:D9:DA:00:E0:6F:AC:90:75:F8:62:93:29:F4
+
+Текущее время: Sat Dec 21 14:33:05 2019
+"C:\Program Files\MDPREI\spki\spki1utl.exe" -verify -delete -1 -profile r2880_2 -registry -in D:\SKAD\form440SKAD\temp\work\AFN_MIFNS00_7102803_20191220_00005.arj -out D:\SKAD\form440SKAD\temp\work\AFN_MIFNS00_7102803_20191220_00005.arj.test -silent D:\SKAD\form440SKAD\log\21122019_spki.log 
+Инициализация
+Проверка ЭП файла
+Результат: OK (00000000)
+ЭП 1: OK (00000000)
+Fri Dec 20 13:58:17 2019
+Владелец: CN=FNS,O=FNS,ST=00
+Хэш: EA:8E:16:6E:68:26:01:0E:D2:3E:1B:6F:97:6C:BE:76:57:53:78:D9:DA:00:E0:6F:AC:90:75:F8:62:93:29:F4
+
+Текущее время: Sat Dec 21 14:36:41 2019
+"C:\Program Files\MDPREI\spki\spki1utl.exe" -verify -delete -1 -profile r2880_2 -registry -in D:\SKAD\form440SKAD\temp\work\AFN_MIFNS00_7102803_20191220_00002.arj -out D:\SKAD\form440SKAD\temp\work\AFN_MIFNS00_7102803_20191220_00002.arj.test -silent D:\SKAD\form440SKAD\log\21122019_spki.log 
+Инициализация
+Проверка ЭП файла
+Результат: OK (00000000)
+ЭП 1: OK (00000000)
+Fri Dec 20 09:26:50 2019
+Владелец: CN=FNS,O=FNS,ST=00
+Хэш: EA:8E:16:6E:68:26:01:0E:D2:3E:1B:6F:97:6C:BE:76:57:53:78:D9:DA:00:E0:6F:AC:90:75:F8:62:93:29:F4
+
+Текущее время: Sat Dec 21 14:36:42 2019
+"C:\Program Files\MDPREI\spki\spki1utl.exe" -verify -delete -1 -profile r2880_2 -registry -in D:\SKAD\form440SKAD\temp\work\AFN_MIFNS00_7102803_20191220_00005.arj -out D:\SKAD\form440SKAD\temp\work\AFN_MIFNS00_7102803_20191220_00005.arj.test -silent D:\SKAD\form440SKAD\log\21122019_spki.log 
+Инициализация
+Проверка ЭП файла
+Результат: OK (00000000)
+ЭП 1: OK (00000000)
+Fri Dec 20 13:58:17 2019
+Владелец: CN=FNS,O=FNS,ST=00
+Хэш: EA:8E:16:6E:68:26:01:0E:D2:3E:1B:6F:97:6C:BE:76:57:53:78:D9:DA:00:E0:6F:AC:90:75:F8:62:93:29:F4
+
+Текущее время: Sat Dec 21 14:37:00 2019
+"C:\Program Files\MDPREI\spki\spki1utl.exe" -decrypt -verify -delete -1 -profile r2880_2 -registry -in D:\SKAD\form440SKAD\temp\work\ROO17102803_890520191220_538374.vrb -out D:\SKAD\form440SKAD\temp\work\ROO17102803_890520191220_538374.vrb.test -silent D:\SKAD\form440SKAD\log\21122019_spki.log 
+Инициализация
+Расшифрование и проверка ЭП файла
+Результат: Сообщение не подписано или формат искажен   (E070001A)
+Текущее время: Sat Dec 21 14:37:01 2019
+"C:\Program Files\MDPREI\spki\spki1utl.exe" -decrypt -verify -delete -1 -profile r2880_2 -registry -in D:\SKAD\form440SKAD\temp\work\RPO17102803_860220191220_531084.vrb -out D:\SKAD\form440SKAD\temp\work\RPO17102803_860220191220_531084.vrb.test -silent D:\SKAD\form440SKAD\log\21122019_spki.log 
+Инициализация
+Расшифрование и проверка ЭП файла
+Результат: Сообщение не подписано или формат искажен   (E070001A)
+Текущее время: Sat Dec 21 14:37:02 2019
+"C:\Program Files\MDPREI\spki\spki1utl.exe" -decrypt -verify -delete -1 -profile r2880_2 -registry -in D:\SKAD\form440SKAD\temp\work\RPO17102803_890520191220_531550.vrb -out D:\SKAD\form440SKAD\temp\work\RPO17102803_890520191220_531550.vrb.test -silent D:\SKAD\form440SKAD\log\21122019_spki.log 
+Инициализация
+Расшифрование и проверка ЭП файла
+Результат: Сообщение не подписано или формат искажен   (E070001A)
+Текущее время: Sat Dec 21 14:38:34 2019
+"C:\Program Files\MDPREI\spki\spki1utl.exe" -verify -delete -1 -profile r2880_2 -registry -in D:\SKAD\form440SKAD\temp\work\AFN_MIFNS00_7102803_20191220_00002.arj -out D:\SKAD\form440SKAD\temp\work\AFN_MIFNS00_7102803_20191220_00002.arj.test -silent D:\SKAD\form440SKAD\log\21122019_spki.log 
+Инициализация
+Проверка ЭП файла
+Результат: OK (00000000)
+ЭП 1: OK (00000000)
+Fri Dec 20 09:26:50 2019
+Владелец: CN=FNS,O=FNS,ST=00
+Хэш: EA:8E:16:6E:68:26:01:0E:D2:3E:1B:6F:97:6C:BE:76:57:53:78:D9:DA:00:E0:6F:AC:90:75:F8:62:93:29:F4
+
+Текущее время: Sat Dec 21 14:38:35 2019
+"C:\Program Files\MDPREI\spki\spki1utl.exe" -verify -delete -1 -profile r2880_2 -registry -in D:\SKAD\form440SKAD\temp\work\AFN_MIFNS00_7102803_20191220_00005.arj -out D:\SKAD\form440SKAD\temp\work\AFN_MIFNS00_7102803_20191220_00005.arj.test -silent D:\SKAD\form440SKAD\log\21122019_spki.log 
+Инициализация
+Проверка ЭП файла
+Результат: OK (00000000)
+ЭП 1: OK (00000000)
+Fri Dec 20 13:58:17 2019
+Владелец: CN=FNS,O=FNS,ST=00
+Хэш: EA:8E:16:6E:68:26:01:0E:D2:3E:1B:6F:97:6C:BE:76:57:53:78:D9:DA:00:E0:6F:AC:90:75:F8:62:93:29:F4
+
+Текущее время: Sat Dec 21 14:38:46 2019
+"C:\Program Files\MDPREI\spki\spki1utl.exe" -verify -delete -1 -profile r2880_2 -registry -in D:\SKAD\form440SKAD\temp\work\KWTFCB_BOS1_RPO17102803_860320191218_590125_20191219_0002.xml -out D:\SKAD\form440SKAD\temp\work\KWTFCB_BOS1_RPO17102803_860320191218_590125_20191219_0002.xml.test -silent D:\SKAD\form440SKAD\log\21122019_spki.log 
+Инициализация
+Проверка ЭП файла
+Результат: OK (00000000)
+ЭП 1: OK (00000000)
+Fri Dec 20 13:58:17 2019
+Владелец: CN=FNS,O=FNS,ST=00
+Хэш: EA:8E:16:6E:68:26:01:0E:D2:3E:1B:6F:97:6C:BE:76:57:53:78:D9:DA:00:E0:6F:AC:90:75:F8:62:93:29:F4
+
+Текущее время: Sat Dec 21 14:38:47 2019
+"C:\Program Files\MDPREI\spki\spki1utl.exe" -verify -delete -1 -profile r2880_2 -registry -in D:\SKAD\form440SKAD\temp\work\KWTFCB_BOS1_RPO17102803_860320191218_595139_20191219_0002.xml -out D:\SKAD\form440SKAD\temp\work\KWTFCB_BOS1_RPO17102803_860320191218_595139_20191219_0002.xml.test -silent D:\SKAD\form440SKAD\log\21122019_spki.log 
+Инициализация
+Проверка ЭП файла
+Результат: OK (00000000)
+ЭП 1: OK (00000000)
+Fri Dec 20 13:58:17 2019
+Владелец: CN=FNS,O=FNS,ST=00
+Хэш: EA:8E:16:6E:68:26:01:0E:D2:3E:1B:6F:97:6C:BE:76:57:53:78:D9:DA:00:E0:6F:AC:90:75:F8:62:93:29:F4
+
+Текущее время: Sat Dec 21 14:38:48 2019
+"C:\Program Files\MDPREI\spki\spki1utl.exe" -verify -delete -1 -profile r2880_2 -registry -in D:\SKAD\form440SKAD\temp\work\KWTFCB_BOS1_RPO17102803_890120191218_606125_20191219_0002.xml -out D:\SKAD\form440SKAD\temp\work\KWTFCB_BOS1_RPO17102803_890120191218_606125_20191219_0002.xml.test -silent D:\SKAD\form440SKAD\log\21122019_spki.log 
+Инициализация
+Проверка ЭП файла
+Результат: OK (00000000)
+ЭП 1: OK (00000000)
+Fri Dec 20 13:58:17 2019
+Владелец: CN=FNS,O=FNS,ST=00
+Хэш: EA:8E:16:6E:68:26:01:0E:D2:3E:1B:6F:97:6C:BE:76:57:53:78:D9:DA:00:E0:6F:AC:90:75:F8:62:93:29:F4
+
+Текущее время: Sat Dec 21 14:38:49 2019
+"C:\Program Files\MDPREI\spki\spki1utl.exe" -verify -delete -1 -profile r2880_2 -registry -in D:\SKAD\form440SKAD\temp\work\KWTFCB_BVD1_ZSV17102803_860220191219_102912_20191219_0002_000001_000001.xml -out D:\SKAD\form440SKAD\temp\work\KWTFCB_BVD1_ZSV17102803_860220191219_102912_20191219_0002_000001_000001.xml.test -silent D:\SKAD\form440SKAD\log\21122019_spki.log 
+Инициализация
+Проверка ЭП файла
+Результат: OK (00000000)
+ЭП 1: OK (00000000)
+Fri Dec 20 13:58:17 2019
+Владелец: CN=FNS,O=FNS,ST=00
+Хэш: EA:8E:16:6E:68:26:01:0E:D2:3E:1B:6F:97:6C:BE:76:57:53:78:D9:DA:00:E0:6F:AC:90:75:F8:62:93:29:F4
+
+Текущее время: Sat Dec 21 14:38:50 2019
+"C:\Program Files\MDPREI\spki\spki1utl.exe" -verify -delete -1 -profile r2880_2 -registry -in D:\SKAD\form440SKAD\temp\work\KWTFCB_BVD1_ZSV17102803_860220191219_102912_20191219_0002_000002_000001.xml -out D:\SKAD\form440SKAD\temp\work\KWTFCB_BVD1_ZSV17102803_860220191219_102912_20191219_0002_000002_000001.xml.test -silent D:\SKAD\form440SKAD\log\21122019_spki.log 
+Инициализация
+Проверка ЭП файла
+Результат: OK (00000000)
+ЭП 1: OK (00000000)
+Fri Dec 20 13:58:17 2019
+Владелец: CN=FNS,O=FNS,ST=00
+Хэш: EA:8E:16:6E:68:26:01:0E:D2:3E:1B:6F:97:6C:BE:76:57:53:78:D9:DA:00:E0:6F:AC:90:75:F8:62:93:29:F4
+
+Текущее время: Sat Dec 21 14:38:51 2019
+"C:\Program Files\MDPREI\spki\spki1utl.exe" -verify -delete -1 -profile r2880_2 -registry -in D:\SKAD\form440SKAD\temp\work\KWTFCB_BVS1_ZSV17102803_860220191219_102912_20191219_0002.xml -out D:\SKAD\form440SKAD\temp\work\KWTFCB_BVS1_ZSV17102803_860220191219_102912_20191219_0002.xml.test -silent D:\SKAD\form440SKAD\log\21122019_spki.log 
+Инициализация
+Проверка ЭП файла
+Результат: OK (00000000)
+ЭП 1: OK (00000000)
+Fri Dec 20 13:58:17 2019
+Владелец: CN=FNS,O=FNS,ST=00
+Хэш: EA:8E:16:6E:68:26:01:0E:D2:3E:1B:6F:97:6C:BE:76:57:53:78:D9:DA:00:E0:6F:AC:90:75:F8:62:93:29:F4
+
+Текущее время: Sat Dec 21 14:38:52 2019
+"C:\Program Files\MDPREI\spki\spki1utl.exe" -verify -delete -1 -profile r2880_2 -registry -in D:\SKAD\form440SKAD\temp\work\ROO17102803_890520191220_538374.vrb -out D:\SKAD\form440SKAD\temp\work\ROO17102803_890520191220_538374.vrb.test -silent D:\SKAD\form440SKAD\log\21122019_spki.log 
+Инициализация
+Проверка ЭП файла
+Результат: Неверный тип сообщения в формате PKCS#7   (E0700022)
+Текущее время: Sat Dec 21 14:38:54 2019
+"C:\Program Files\MDPREI\spki\spki1utl.exe" -verify -delete -1 -profile r2880_2 -registry -in D:\SKAD\form440SKAD\temp\work\RPO17102803_860220191220_531084.vrb -out D:\SKAD\form440SKAD\temp\work\RPO17102803_860220191220_531084.vrb.test -silent D:\SKAD\form440SKAD\log\21122019_spki.log 
+Инициализация
+Проверка ЭП файла
+Результат: Неверный тип сообщения в формате PKCS#7   (E0700022)
+Текущее время: Sat Dec 21 14:38:55 2019
+"C:\Program Files\MDPREI\spki\spki1utl.exe" -verify -delete -1 -profile r2880_2 -registry -in D:\SKAD\form440SKAD\temp\work\RPO17102803_890520191220_531550.vrb -out D:\SKAD\form440SKAD\temp\work\RPO17102803_890520191220_531550.vrb.test -silent D:\SKAD\form440SKAD\log\21122019_spki.log 
+Инициализация
+Проверка ЭП файла
+Результат: Неверный тип сообщения в формате PKCS#7   (E0700022)
+Текущее время: Sat Dec 21 14:39:43 2019
+"C:\Program Files\MDPREI\spki\spki1utl.exe" -verify -delete -1 -profile r2880_2 -registry -in D:\SKAD\form440SKAD\temp\work\AFN_MIFNS00_7102803_20191220_00002.arj -out D:\SKAD\form440SKAD\temp\work\AFN_MIFNS00_7102803_20191220_00002.arj.test -silent D:\SKAD\form440SKAD\log\21122019_spki.log 
+Инициализация
+Проверка ЭП файла
+Результат: OK (00000000)
+ЭП 1: OK (00000000)
+Fri Dec 20 09:26:50 2019
+Владелец: CN=FNS,O=FNS,ST=00
+Хэш: EA:8E:16:6E:68:26:01:0E:D2:3E:1B:6F:97:6C:BE:76:57:53:78:D9:DA:00:E0:6F:AC:90:75:F8:62:93:29:F4
+
+Текущее время: Sat Dec 21 14:39:45 2019
+"C:\Program Files\MDPREI\spki\spki1utl.exe" -verify -delete -1 -profile r2880_2 -registry -in D:\SKAD\form440SKAD\temp\work\AFN_MIFNS00_7102803_20191220_00005.arj -out D:\SKAD\form440SKAD\temp\work\AFN_MIFNS00_7102803_20191220_00005.arj.test -silent D:\SKAD\form440SKAD\log\21122019_spki.log 
+Инициализация
+Проверка ЭП файла
+Результат: OK (00000000)
+ЭП 1: OK (00000000)
+Fri Dec 20 13:58:17 2019
+Владелец: CN=FNS,O=FNS,ST=00
+Хэш: EA:8E:16:6E:68:26:01:0E:D2:3E:1B:6F:97:6C:BE:76:57:53:78:D9:DA:00:E0:6F:AC:90:75:F8:62:93:29:F4
+
+Текущее время: Sat Dec 21 14:40:23 2019
+"C:\Program Files\MDPREI\spki\spki1utl.exe" -verify -delete -1 -profile r2880_2 -registry -in D:\SKAD\form440SKAD\temp\work\KWTFCB_BOS1_RPO17102803_860320191218_590125_20191219_0002.xml -out D:\SKAD\form440SKAD\temp\work\KWTFCB_BOS1_RPO17102803_860320191218_590125_20191219_0002.xml.test -silent D:\SKAD\form440SKAD\log\21122019_spki.log 
+Инициализация
+Проверка ЭП файла
+Результат: OK (00000000)
+ЭП 1: OK (00000000)
+Fri Dec 20 13:58:17 2019
+Владелец: CN=FNS,O=FNS,ST=00
+Хэш: EA:8E:16:6E:68:26:01:0E:D2:3E:1B:6F:97:6C:BE:76:57:53:78:D9:DA:00:E0:6F:AC:90:75:F8:62:93:29:F4
+
+Текущее время: Sat Dec 21 14:40:24 2019
+"C:\Program Files\MDPREI\spki\spki1utl.exe" -verify -delete -1 -profile r2880_2 -registry -in D:\SKAD\form440SKAD\temp\work\KWTFCB_BOS1_RPO17102803_860320191218_595139_20191219_0002.xml -out D:\SKAD\form440SKAD\temp\work\KWTFCB_BOS1_RPO17102803_860320191218_595139_20191219_0002.xml.test -silent D:\SKAD\form440SKAD\log\21122019_spki.log 
+Инициализация
+Проверка ЭП файла
+Результат: OK (00000000)
+ЭП 1: OK (00000000)
+Fri Dec 20 13:58:17 2019
+Владелец: CN=FNS,O=FNS,ST=00
+Хэш: EA:8E:16:6E:68:26:01:0E:D2:3E:1B:6F:97:6C:BE:76:57:53:78:D9:DA:00:E0:6F:AC:90:75:F8:62:93:29:F4
+
+Текущее время: Sat Dec 21 14:40:25 2019
+"C:\Program Files\MDPREI\spki\spki1utl.exe" -verify -delete -1 -profile r2880_2 -registry -in D:\SKAD\form440SKAD\temp\work\KWTFCB_BOS1_RPO17102803_890120191218_606125_20191219_0002.xml -out D:\SKAD\form440SKAD\temp\work\KWTFCB_BOS1_RPO17102803_890120191218_606125_20191219_0002.xml.test -silent D:\SKAD\form440SKAD\log\21122019_spki.log 
+Инициализация
+Проверка ЭП файла
+Результат: OK (00000000)
+ЭП 1: OK (00000000)
+Fri Dec 20 13:58:17 2019
+Владелец: CN=FNS,O=FNS,ST=00
+Хэш: EA:8E:16:6E:68:26:01:0E:D2:3E:1B:6F:97:6C:BE:76:57:53:78:D9:DA:00:E0:6F:AC:90:75:F8:62:93:29:F4
+
+Текущее время: Sat Dec 21 14:40:27 2019
+"C:\Program Files\MDPREI\spki\spki1utl.exe" -verify -delete -1 -profile r2880_2 -registry -in D:\SKAD\form440SKAD\temp\work\KWTFCB_BVD1_ZSV17102803_860220191219_102912_20191219_0002_000001_000001.xml -out D:\SKAD\form440SKAD\temp\work\KWTFCB_BVD1_ZSV17102803_860220191219_102912_20191219_0002_000001_000001.xml.test -silent D:\SKAD\form440SKAD\log\21122019_spki.log 
+Инициализация
+Проверка ЭП файла
+Результат: OK (00000000)
+ЭП 1: OK (00000000)
+Fri Dec 20 13:58:17 2019
+Владелец: CN=FNS,O=FNS,ST=00
+Хэш: EA:8E:16:6E:68:26:01:0E:D2:3E:1B:6F:97:6C:BE:76:57:53:78:D9:DA:00:E0:6F:AC:90:75:F8:62:93:29:F4
+
+Текущее время: Sat Dec 21 14:40:28 2019
+"C:\Program Files\MDPREI\spki\spki1utl.exe" -verify -delete -1 -profile r2880_2 -registry -in D:\SKAD\form440SKAD\temp\work\KWTFCB_BVD1_ZSV17102803_860220191219_102912_20191219_0002_000002_000001.xml -out D:\SKAD\form440SKAD\temp\work\KWTFCB_BVD1_ZSV17102803_860220191219_102912_20191219_0002_000002_000001.xml.test -silent D:\SKAD\form440SKAD\log\21122019_spki.log 
+Инициализация
+Проверка ЭП файла
+Результат: OK (00000000)
+ЭП 1: OK (00000000)
+Fri Dec 20 13:58:17 2019
+Владелец: CN=FNS,O=FNS,ST=00
+Хэш: EA:8E:16:6E:68:26:01:0E:D2:3E:1B:6F:97:6C:BE:76:57:53:78:D9:DA:00:E0:6F:AC:90:75:F8:62:93:29:F4
+
+Текущее время: Sat Dec 21 14:40:29 2019
+"C:\Program Files\MDPREI\spki\spki1utl.exe" -verify -delete -1 -profile r2880_2 -registry -in D:\SKAD\form440SKAD\temp\work\KWTFCB_BVS1_ZSV17102803_860220191219_102912_20191219_0002.xml -out D:\SKAD\form440SKAD\temp\work\KWTFCB_BVS1_ZSV17102803_860220191219_102912_20191219_0002.xml.test -silent D:\SKAD\form440SKAD\log\21122019_spki.log 
+Инициализация
+Проверка ЭП файла
+Результат: OK (00000000)
+ЭП 1: OK (00000000)
+Fri Dec 20 13:58:17 2019
+Владелец: CN=FNS,O=FNS,ST=00
+Хэш: EA:8E:16:6E:68:26:01:0E:D2:3E:1B:6F:97:6C:BE:76:57:53:78:D9:DA:00:E0:6F:AC:90:75:F8:62:93:29:F4
+
+Текущее время: Sat Dec 21 14:40:30 2019
+"C:\Program Files\MDPREI\spki\spki1utl.exe" -verify -delete -1 -profile r2880_2 -registry -in D:\SKAD\form440SKAD\temp\work\ROO17102803_890520191220_538374.vrb -out D:\SKAD\form440SKAD\temp\work\ROO17102803_890520191220_538374.vrb.test -silent D:\SKAD\form440SKAD\log\21122019_spki.log 
+Инициализация
+Проверка ЭП файла
+Результат: Неверный тип сообщения в формате PKCS#7   (E0700022)
+Текущее время: Sat Dec 21 14:40:31 2019
+"C:\Program Files\MDPREI\spki\spki1utl.exe" -verify -delete -1 -profile r2880_2 -registry -in D:\SKAD\form440SKAD\temp\work\RPO17102803_860220191220_531084.vrb -out D:\SKAD\form440SKAD\temp\work\RPO17102803_860220191220_531084.vrb.test -silent D:\SKAD\form440SKAD\log\21122019_spki.log 
+Инициализация
+Проверка ЭП файла
+Результат: Неверный тип сообщения в формате PKCS#7   (E0700022)
+Текущее время: Sat Dec 21 14:40:32 2019
+"C:\Program Files\MDPREI\spki\spki1utl.exe" -verify -delete -1 -profile r2880_2 -registry -in D:\SKAD\form440SKAD\temp\work\RPO17102803_890520191220_531550.vrb -out D:\SKAD\form440SKAD\temp\work\RPO17102803_890520191220_531550.vrb.test -silent D:\SKAD\form440SKAD\log\21122019_spki.log 
+Инициализация
+Проверка ЭП файла
+Результат: Неверный тип сообщения в формате PKCS#7   (E0700022)
+Текущее время: Sat Dec 21 14:47:25 2019
+"C:\Program Files\MDPREI\spki\spki1utl.exe" -verify -delete -1 -profile r2880_2 -registry -in D:\SKAD\form440SKAD\temp\work\AFN_MIFNS00_7102803_20191220_00002.arj -out D:\SKAD\form440SKAD\temp\work\AFN_MIFNS00_7102803_20191220_00002.arj.test -silent D:\SKAD\form440SKAD\log\21122019_spki.log 
+Инициализация
+Проверка ЭП файла
+Результат: OK (00000000)
+ЭП 1: OK (00000000)
+Fri Dec 20 09:26:50 2019
+Владелец: CN=FNS,O=FNS,ST=00
+Хэш: EA:8E:16:6E:68:26:01:0E:D2:3E:1B:6F:97:6C:BE:76:57:53:78:D9:DA:00:E0:6F:AC:90:75:F8:62:93:29:F4
+
+Текущее время: Sat Dec 21 14:47:26 2019
+"C:\Program Files\MDPREI\spki\spki1utl.exe" -verify -delete -1 -profile r2880_2 -registry -in D:\SKAD\form440SKAD\temp\work\AFN_MIFNS00_7102803_20191220_00005.arj -out D:\SKAD\form440SKAD\temp\work\AFN_MIFNS00_7102803_20191220_00005.arj.test -silent D:\SKAD\form440SKAD\log\21122019_spki.log 
+Инициализация
+Проверка ЭП файла
+Результат: OK (00000000)
+ЭП 1: OK (00000000)
+Fri Dec 20 13:58:17 2019
+Владелец: CN=FNS,O=FNS,ST=00
+Хэш: EA:8E:16:6E:68:26:01:0E:D2:3E:1B:6F:97:6C:BE:76:57:53:78:D9:DA:00:E0:6F:AC:90:75:F8:62:93:29:F4
+
+Текущее время: Sat Dec 21 15:05:11 2019
+"C:\Program Files\MDPREI\spki\spki1utl.exe" -verify -delete -1 -profile r2880_2 -registry -in D:\SKAD\form440SKAD\temp\work\AFN_MIFNS00_7102803_20191220_00002.arj -out D:\SKAD\form440SKAD\temp\work\AFN_MIFNS00_7102803_20191220_00002.arj.test -silent D:\SKAD\form440SKAD\log\21122019_spki.log 
+Инициализация
+Проверка ЭП файла
+Результат: OK (00000000)
+ЭП 1: OK (00000000)
+Fri Dec 20 09:26:50 2019
+Владелец: CN=FNS,O=FNS,ST=00
+Хэш: EA:8E:16:6E:68:26:01:0E:D2:3E:1B:6F:97:6C:BE:76:57:53:78:D9:DA:00:E0:6F:AC:90:75:F8:62:93:29:F4
+
+Текущее время: Sat Dec 21 15:05:13 2019
+"C:\Program Files\MDPREI\spki\spki1utl.exe" -verify -delete -1 -profile r2880_2 -registry -in D:\SKAD\form440SKAD\temp\work\AFN_MIFNS00_7102803_20191220_00005.arj -out D:\SKAD\form440SKAD\temp\work\AFN_MIFNS00_7102803_20191220_00005.arj.test -silent D:\SKAD\form440SKAD\log\21122019_spki.log 
+Инициализация
+Проверка ЭП файла
+Результат: OK (00000000)
+ЭП 1: OK (00000000)
+Fri Dec 20 13:58:17 2019
+Владелец: CN=FNS,O=FNS,ST=00
+Хэш: EA:8E:16:6E:68:26:01:0E:D2:3E:1B:6F:97:6C:BE:76:57:53:78:D9:DA:00:E0:6F:AC:90:75:F8:62:93:29:F4
+
