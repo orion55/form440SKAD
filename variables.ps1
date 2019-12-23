@@ -28,6 +28,7 @@
 
 #комита
 [string]$comita_in = "$tmp\BANK"
+[string]$comita_out = "$tmp\GCI"
 
 #Параметры СКАД-Сигнатуры
 [string]$spki = "C:\Program Files\MDPREI\spki\spki1utl.exe"
