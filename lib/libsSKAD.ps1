@@ -415,15 +415,15 @@ Function 440_out {
 		New-Item -ItemType directory -Path $arhivePath | out-Null
 	}
 
-	Write-Log -EntryType Information -Message "Копирование файлов в архив $arhivePath"
+	<#Write-Log -EntryType Information -Message "Копирование файлов в архив $arhivePath"
 	$msg = Copy-Item -Path "$work\*.xml" -Destination $arhivePath -Verbose -Force *>&1
-	Write-Log -EntryType Information -Message ($msg | Out-String)
+	Write-Log -EntryType Information -Message ($msg | Out-String)#>
 
 	Write-Log -EntryType Information -Message "Загружаем ключевую дискету $vdkeys"
 	Copy_dirs -from $vdkeys -to 'a:'
 
 	Write-Log -EntryType Information -Message "Переименовываем файлы *.xml -> *.vrb"
-	Get-ChildItem "$work\b*.xml" -Exclude "$work\bz1*.xml" | rename-item -newname { $_.name -replace '\.xml', '.vrb' }
+	Get-ChildItem "$work\b*.xml" | rename-item -newname { $_.name -replace '\.xml', '.vrb' }
 
 	Write-Log -EntryType Information -Message "Подписываем все файлы"
 	SKAD_Encrypt -encrypt $false -maskFiles "*.*"
