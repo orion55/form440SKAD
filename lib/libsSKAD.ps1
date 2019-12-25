@@ -712,3 +712,15 @@ function SKAD_Decompress {
 	$arguments = "-d $work\$maskFiles"
 	Start-Process $archiver $arguments -NoNewWindow -Wait
 }
+
+function copyArchive {
+	$curDate = Get-Date -Format "ddMMyyyy"
+	$arhivePath = $440p_arhive + '\' + $curDate
+	if (!(Test-Path $arhivePath)) {
+		New-Item -ItemType directory -Path $arhivePath | out-Null
+	}
+
+	Write-Log -EntryType Information -Message "Копирование файлов в архив $arhivePath"
+	$msg = Copy-Item -Path "$work\*.xml" -Destination $arhivePath -Verbose -Force *>&1
+	Write-Log -EntryType Information -Message ($msg | Out-String)
+}
