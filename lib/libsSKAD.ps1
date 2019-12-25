@@ -554,7 +554,7 @@ function SKAD_Encrypt_old {
 		}
 		else {
 			Write-Log -EntryType Error -Message "Ошибка при работе программы $spki"
-			exit
+			#exit
 		}
 
 		#проверяем действительно или все файлы подписаны\расшифрованы
@@ -647,7 +647,7 @@ function SKAD_Decrypt {
 	}
 	else {
 		Write-Log -EntryType Error -Message "Ошибка при работе программы $spki"
-		exit
+		#exit
 	}
 
 }
@@ -684,7 +684,7 @@ function SKAD_Encrypt {
 	}
 	else {
 		Write-Log -EntryType Error -Message "Ошибка при работе программы $spki"
-		exit
+		#exit
 	}
 }
 function SKAD_archive {
