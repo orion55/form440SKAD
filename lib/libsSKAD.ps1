@@ -629,12 +629,13 @@ function SKAD_Decrypt {
 		$arguments = ''
 		if ($decrypt) {
 			$arguments = "-decrypt -profile $profile -registry -in ""$($file.FullName)"" -out ""$tmpFile"" -silent $logSpki"
+			Write-Log -EntryType Information -Message "Расшифровываем файл $($file.Name)"
 		}
 		else {
 			$arguments = "-verify -delete -1 -profile $profile -registry -in ""$($file.FullName)"" -out ""$tmpFile"" -silent $logSpki"
+			Write-Log -EntryType Information -Message "Снимаем подпись с файла $($file.Name)"
 		}
 
-		Write-Log -EntryType Information -Message "Обрабатываем файл $($file.Name)"
 		Start-Process $spki $arguments -NoNewWindow -Wait
 	}
 
@@ -660,20 +661,25 @@ function SKAD_Encrypt {
 
 	$mask = Get-ChildItem -path $work $maskFiles
 
+	Set-Location "$curDir\util"
+
 	foreach ($file in $mask) {
 		$tmpFile = $file.FullName + '.test'
 
 		$arguments = ''
 		if ($encrypt) {
-			$arguments = "-sign -encrypt -profile $profile -registry -algorithm 1.2.643.7.1.1.2.2 -in ""$($file.FullName)"" -out ""$tmpFile"" -reclist $recList -silent $logSpki"
+			$arguments = "-sign -encrypt -profile $profile -algorithm 1.2.643.7.1.1.2.2 -in ""$($file.FullName)"" -out ""$tmpFile"" -reclist $recList -silent $logSpki"
+			Write-Log -EntryType Information -Message "Шифруем файл ключами $($file.Name) ФНС и ФСС"
 		}
 		else {
-			$arguments = "-sign -profile $profile -registry -algorithm 1.2.643.7.1.1.2.2 -data ""$($file.FullName)"" -out ""$tmpFile"" -reclist $recList -silent $logSpki"
+			$arguments = "-sign -profile $profile -algorithm 1.2.643.7.1.1.2.2 -data ""$($file.FullName)"" -out ""$tmpFile"" -silent $logSpki"
+			Write-Log -EntryType Information -Message "Подписываем файл $($file.Name)"
 		}
 
-		Write-Log -EntryType Information -Message "Обрабатываем файл $($file.Name)"
 		Start-Process $spki $arguments -NoNewWindow -Wait
 	}
+
+	Set-Location $curDir
 
 	$testFiles = Get-ChildItem "$work\*.test"
 	if (($testFiles | Measure-Object).count -gt 0) {
