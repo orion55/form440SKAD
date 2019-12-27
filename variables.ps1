@@ -3,7 +3,7 @@
 #рабочий каталог, где будут подписываться и шифроваться файлы
 [string]$tmp = "$curDir\temp"
 [string]$work = "$tmp\work"
-[boolean]$debug = $true
+[boolean]$debug = $false
 
 [string]$arj32 = "$curDir\util\arj32.exe"
 [string]$archiver = "$curDir\util\gzip.exe"
