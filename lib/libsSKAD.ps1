@@ -94,8 +94,8 @@ function kwtfcbCheck {
 
 	$msg = Copy-Item -Path "$work\KWTFCB_*.xml" -Destination $arm440 -ErrorAction "SilentlyContinue"  -Verbose -Force *>&1
 	Write-Log -EntryType Information -Message ($msg | Out-String)
-	$msg = Copy-Item -Path "$work\KWTFCB_*.xml" -Destination $comita_in -ErrorAction "SilentlyContinue"  -Verbose -Force *>&1
-	Write-Log -EntryType Information -Message ($msg | Out-String)
+	<#$msg = Copy-Item -Path "$work\KWTFCB_*.xml" -Destination $comita_in -ErrorAction "SilentlyContinue"  -Verbose -Force *>&1
+	Write-Log -EntryType Information -Message ($msg | Out-String)#>
 	$msg = Remove-Item -Path "$work\KWTFCB_*.xml" -Verbose -Force *>&1
 	Write-Log -EntryType Information -Message ($msg | Out-String)
 }
@@ -169,58 +169,10 @@ function documentsCheck {
 	Write-Log -EntryType Information -Message ($msg | Out-String)
 	$msg = Copy-Item -Path "$work\*.xml" -Destination $arm440 -ErrorAction "SilentlyContinue" -Verbose -Force *>&1
 	Write-Log -EntryType Information -Message ($msg | Out-String)
-	$msg = Copy-Item -Path "$work\*.xml" -Destination $comita_in -ErrorAction "SilentlyContinue" -Verbose -Force *>&1
-	Write-Log -EntryType Information -Message ($msg | Out-String)
+	<#$msg = Copy-Item -Path "$work\*.xml" -Destination $comita_in -ErrorAction "SilentlyContinue" -Verbose -Force *>&1
+	Write-Log -EntryType Information -Message ($msg | Out-String)#>
 	$msg = Remove-Item -Path "$work\*.xml" -Verbose -Force *>&1
 	Write-Log -EntryType Information -Message ($msg | Out-String)
-}
-
-function Test-FileLock {
-	param (
-		[parameter(Mandatory = $true)][string]$Path
-	)
-
-	$oFile = New-Object System.IO.FileInfo $Path
-
-	if ((Test-Path -Path $Path) -eq $false) {
-		return $false
-	}
-
-	try {
-		$oStream = $oFile.Open([System.IO.FileMode]::Open, [System.IO.FileAccess]::ReadWrite, [System.IO.FileShare]::None)
-
-		if ($oStream) {
-			$oStream.Close()
-		}
-		$false
-	}
- catch {
-		# file is locked by a process.
-		return $true
-	}
-}
-
-function Check-FilesLock {
-	param (
-		[parameter(Mandatory = $true)][array]$in_files
-	)
-
-	$lock_files = @()
-	foreach ($in_file in $in_files) {
-		if (Test-FileLock -Path $in_file.FullName) {
-			$lock_files += $in_file.FullName;
-		}
-	}
-
-	if ($lock_files.count -gt 0) {
-		$encoding = [System.Text.Encoding]::UTF8
-		$title = "Автоматический приём по форме 440П - прекращён!"
-		$body = "Приём прекращён. Файлы заблокированы. Проведите разблокировку`n"
-		$body += ($lock_files | Out-String)
-		Send-MailMessage -To $mail_addr -Body $body -Encoding $encoding -From $mail_from -Subject $title -SmtpServer $mail_server
-		Write-Log -EntryType Error -Message $body
-		exit
-	}
 }
 
 function 440_in {
@@ -238,13 +190,13 @@ function 440_in {
 		Write-Log -EntryType Error -Message "Файлы отчетности не найдены в каталоге $work"
 		exit
 	}
-	#Проверяем блокировку файлов
-	#Check-FilesLock -in_files $arj_files
 
 	#переносим файлы в архив
 	Write-Log -EntryType Information -Message "Копирование файлов в архив $arhivePath"
 	$msg = Copy-Item -Path "$work\*.$extArchiver" -Destination $arhivePath -Verbose -Force *>&1
 	Write-Log -EntryType Information -Message ($msg | Out-String)
+
+	comitaIn -arhivePath $arhivePath
 
 	#снимаем подпись с отчетов
 	Write-Log -EntryType Information -Message "Снимаем подпись с $extArchiver-архивов"
@@ -479,142 +431,6 @@ Function 440_out {
 	Write-Log -EntryType Information -Message $body
 }
 
-function SKAD_Encrypt_old {
-	Param(
-		$encrypt = $false,
-		[string]$maskFiles = "*.*")
-
-	<#$Database = "$tmp\Names.SQLite"
-	if (Test-Path -Path $Database) {
-		Remove-Item $Database
-	}#>
-	$Database = ":MEMORY:"
-	$memoryConn = New-SQLiteConnection -DataSource $Database
-
-	[int]$amount = 0
-	[string]$tmp = "$curDir\tmp"
-
-	do {
-		$query = "CREATE TABLE FiLES (
-	    namefile VARCHAR (100) NOT NULL UNIQUE,
-	    lengthfile INTEGER NOT NULL,
-	    PRIMARY KEY(namefile)
-        );
-        CREATE TABLE NEWFiLES (
-	    namefile VARCHAR (100) NOT NULL UNIQUE,
-	    lengthfile INTEGER NOT NULL,
-	    PRIMARY KEY(namefile)
-        );"
-
-		Invoke-SqliteQuery -Query $query -SQLiteConnection $memoryConn
-
-		$mask = Get-ChildItem -path $work $maskFiles
-		$DataTable = $mask | % {
-			[pscustomobject]@{
-				namefile   = $_.Name
-				lengthfile = $_.Length
-			}
-		} | Out-DataTable
-
-		if (($DataTable | Measure-Object).count -eq 0) {
-			$amount = 1
-			break
-		}
-
-		Invoke-SQLiteBulkCopy -DataTable $DataTable -Table FiLES -Force -SQLiteConnection $memoryConn
-
-		Write-Log -EntryType Information -Message "Начинаем преобразование..."
-
-		foreach ($file in $mask) {
-			$tmpFile = $file.FullName + '.test'
-
-			$arguments = ''
-			if ($encrypt) {
-				$arguments = "-sign -encrypt -profile $profile -registry -algorithm 1.2.643.7.1.1.2.2 -in $($file.FullName) -out $tmpFile -reclist $recList -silent $logSpki"
-			}
-			else {
-				$arguments = "-sign -profile $profile -registry -algorithm 1.2.643.7.1.1.2.2 -data $($file.FullName) -out $tmpFile -reclist $recList -silent $logSpki"
-			}
-
-			Write-Log -EntryType Information -Message "Обрабатываем файл $($file.Name)"
-			Start-Process $spki $arguments -NoNewWindow -Wait
-		}
-		$testFiles = Get-ChildItem "$work\*.test"
-		if (($testFiles | Measure-Object).count -gt 0) {
-			$msg = $mask | Remove-Item -Verbose -Force *>&1
-			Write-Log -EntryType Information -Message ($msg | Out-String)
-			if ($debug) {
-				$msg = Get-ChildItem -path $work '*.test' | Rename-Item -NewName { $_.Name -replace '.test$', '.tst' } -Verbose *>&1
-			}
-			else {
-				$msg = Get-ChildItem -path $work '*.test' | Rename-Item -NewName { $_.Name -replace '.test$', '' } -Verbose *>&1
-			}
-
-			Write-Log -EntryType Information -Message ($msg | Out-String)
-		}
-		else {
-			Write-Log -EntryType Error -Message "Ошибка при работе программы $spki"
-			#exit
-		}
-
-		#проверяем действительно или все файлы подписаны\расшифрованы
-		Write-Log -EntryType Information -Message "Сравниваем до и после преобразования..."
-
-		$DataTable = Get-ChildItem -path $work $maskFiles | % {
-			[pscustomobject]@{
-				namefile   = $_.Name
-				lengthfile = $_.Length
-			}
-		} | Out-DataTable
-
-		if (($DataTable | Measure-Object).count -eq 0) {
-			$amount = 1
-			break
-		}
-		Invoke-SQLiteBulkCopy -DataTable $DataTable -Table NEWFiLES -Force -SQLiteConnection $memoryConn
-
-		#сравниваем старую и новую длину файлов, и показываем те файлы у которых длина не изменилась (т.е. преобразование не было осуществлено)
-		$query = "select FiLES.namefile from FiLES join NEWFiLES on FiLES.namefile = NEWFiLES.namefile where FiLES.lengthfile = NEWFiLES.lengthfile"
-		$namefiles = Invoke-SqliteQuery -Query $query -SQLiteConnection $memoryConn
-
-		#если не все преобразованы, повторяем процесс
-		$count = ($namefiles | Measure-Object).Count
-		if ($count -ne 0) {
-
-			Write-Log -EntryType Error -Message "Часть файлов не были преобразованы!"
-
-			if (!(Test-Path $tmp)) {
-				New-Item -ItemType directory -Path $tmp | out-Null
-			}
-			$excludeArray = @()
-			$namefiles.namefile | % { $excludeArray += $_ }
-
-			$files1 = Get-ChildItem "$work\$mask" -Exclude $excludeArray
-			foreach ($ff2 in $files1) {
-				Move-Item -Path $ff2 -Destination $tmp
-			}
-
-			$query = "drop table FiLES;
-				drop table NEWFiLES;"
-
-			Invoke-SqliteQuery -Query $query -SQLiteConnection $memoryConn
-		}
-		$amount--
-	} until ($count -eq 0 -or $amount -eq 0)
-
-	if (Test-Path $tmp) {
-		Move-Item -Path "$tmp\*.*" -Destination $work
-		Remove-Item -Recurse $tmp
-	}
-
-	if ($amount -eq 0) {
-		Write-Log -EntryType Error -Message "Ошибка при работе со SKAD Signatura"
-		exit
-	}
-
-	$memoryConn.Close()
-
-}
 function SKAD_Decrypt {
 	Param(
 		$decrypt = $false,
@@ -729,4 +545,27 @@ function copyArchive {
 	Write-Log -EntryType Information -Message "Копирование файлов в архив $arhivePath"
 	$msg = Copy-Item -Path "$work\*.xml" -Destination $arhivePath -Verbose -Force *>&1
 	Write-Log -EntryType Information -Message ($msg | Out-String)
+}
+
+function comitaIn {
+	param (
+		$arhivePath
+	)
+	$msg = Copy-Item -Path "$work\*.$extArchiver" -Destination $comita_cscp_in -Verbose -Force *>&1
+	Write-Log -EntryType Information -Message ($msg | Out-String)
+
+	$body = "Загрузите архивы в систему Comita`n"
+	$msg = Get-ChildItem "$work\*.$extArchiver" | ForEach-Object { $_.Name } | Out-String
+	$body += $msg
+
+	if (Test-Connection $mail_server -Quiet -Count 2) {
+		$encoding = [System.Text.Encoding]::UTF8
+		$title = "Поступили архивы для загрузки в систему Comita"
+
+		Send-MailMessage -To $mail_addr -Body $body -Encoding $encoding -From $mail_from -Subject $title -SmtpServer $mail_server
+	}
+	else {
+		Write-Log -EntryType Error -Message "Не удалось соединиться с почтовым сервером $mail_server"
+	}
+	Write-Log -EntryType Information -Message ($body | Out-String)
 }

@@ -3,7 +3,7 @@
 #рабочий каталог, где будут подписываться и шифроваться файлы
 [string]$tmp = "$curDir\temp"
 [string]$work = "$tmp\work"
-[boolean]$debug = $false
+[boolean]$debug = $true
 
 [string]$arj32 = "$curDir\util\arj32.exe"
 [string]$archiver = "$curDir\util\gzip.exe"
@@ -29,6 +29,7 @@
 #комита
 [string]$comita_in = "$tmp\BANK"
 [string]$comita_out = "$tmp\GCI"
+[string]$comita_cscp_in = "$tmp\IN"
 
 #Параметры СКАД-Сигнатуры
 [string]$spki = "C:\Program Files\MDPREI\spki\spki1utl.exe"
